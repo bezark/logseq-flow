@@ -1,0 +1,40 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/blue-mountains.jpg");
+    --background-color-h: 204;
+    --background-color-s: 14%;
+    --background-color-l: 21%;
+    --primary-color-h: 172;
+    --primary-color-s: 31%;
+    --primary-color-l: 62%;
+    --secondary-color-h: 331;
+    --secondary-color-s: 43%;
+    --secondary-color-l: 72%;
+    --accent-color-h: 135;
+    --accent-color-s: 33%;
+    --accent-color-l: 63%;
+    --primary-text-h: 41;
+    --primary-text-s: 31%;
+    --primary-text-l: 74%;
+}
+
+.white-theme,
+html[data-theme='light'] {
+    --background-color-h: 44;
+    --background-color-s: 87%;
+    --background-color-l: 94%;
+    --secondary-color-h: 319;
+    --secondary-color-s: 65%;
+    --secondary-color-l: 64%;
+    --primary-color-h: 172;
+    --primary-color-s: 31%;
+    --primary-color-l: 52%;
+    --accent-color-h: 157;
+    --accent-color-s: 52%;
+    --accent-color-l: 43%;
+    --primary-text-h: 202;
+    --primary-text-s: 11%;
+    --primary-text-l: 40%;
+}

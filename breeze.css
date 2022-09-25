@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/blue-mountains.jpg");
+    --background-color-h: 210;
+    --background-color-s: 9%;
+    --background-color-l: 21%;
+    --primary-color-h: 159;
+    --primary-color-s: 77%;
+    --primary-color-l: 49%;
+    --secondary-color-h: 201;
+    --secondary-color-s: 80%;
+    --secondary-color-l: 58%;
+    --accent-color-h: 38;
+    --accent-color-s: 98%;
+    --accent-color-l: 64%;
+    --primary-text-h: 210;
+    --primary-text-s: 7%;
+    --primary-text-l: 94%;
+}

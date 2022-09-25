@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/moon-tower.jpg");
+    --background-color-h: 235;
+    --background-color-s: 25%;
+    --background-color-l: 17%;
+    --primary-color-h: 263;
+    --primary-color-s: 100%;
+    --primary-color-l: 80%;
+    --secondary-color-h: 199;
+    --secondary-color-s: 94%;
+    --secondary-color-l: 65%;
+    --accent-color-h: 194;
+    --accent-color-s: 95%;
+    --accent-color-l: 76%;
+    --primary-text-h: 225;
+    --primary-text-s: 69%;
+    --primary-text-l: 87%;
+}

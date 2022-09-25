@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-evening-deer-minimal-art-landscape-scenic-panorama-7680x3215-4585.png);
+    --background-color-h: 220;
+    --background-color-s: 13%;
+    --background-color-l: 18%;
+    --primary-color-h: 204;
+    --primary-color-s: 83%;
+    --primary-color-l: 62%;
+    --secondary-color-h: 95;
+    --secondary-color-s: 38%;
+    --secondary-color-l: 62%;
+    --accent-color-h: 286;
+    --accent-color-s: 60%;
+    --accent-color-l: 67%;
+    --primary-text-h: 204;
+    --primary-text-s: 20%;
+    --primary-text-l: 69%;
+}

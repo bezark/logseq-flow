@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/river-sunset.jpg");
+    --background-color-h: 192;
+    --background-color-s: 100%;
+    --background-color-l: 11%;
+    --secondary-color-h: 171;
+    --secondary-color-s: 95%;
+    --secondary-color-l: 54%;
+    --accent-color-h: 359;
+    --accent-color-s: 55%;
+    --accent-color-l: 70%;
+    --primary-color-h: 187;
+    --primary-color-s: 100%;
+    --primary-color-l: 34%;
+    --primary-text-h: 190;
+    --primary-text-s: 13%;
+    --primary-text-l: 63%;
+}

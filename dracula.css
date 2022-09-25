@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("https://i.redd.it/c6ep2jzmou921.png");
+    --background-color-h: 231;
+    --background-color-s: 15%;
+    --background-color-l: 18%;
+    --primary-color-h: 326;
+    --primary-color-s: 100%;
+    --primary-color-l: 74%;
+    --secondary-color-h: 265;
+    --secondary-color-s: 89%;
+    --secondary-color-l: 78%;
+    --accent-color-h: 65;
+    --accent-color-s: 92%;
+    --accent-color-l: 76%;
+    --primary-text-h: 60;
+    --primary-text-s: 30%;
+    --primary-text-l: 96%;
+}

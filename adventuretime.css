@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/mountains-triangles.png");
+    --background-color-h: 243;
+    --background-color-s: 41%;
+    --background-color-l: 19%;
+    --primary-color-h: 100;
+    --primary-color-s: 100%;
+    --primary-color-l: 72%;
+    --secondary-color-h: 196;
+    --secondary-color-s: 78%;
+    --secondary-color-l: 44%;
+    --accent-color-h: 328;
+    --accent-color-s: 100%;
+    --accent-color-l: 70%;
+    --primary-text-h: 30;
+    --primary-text-s: 80%;
+    --primary-text-l: 86%;
+}

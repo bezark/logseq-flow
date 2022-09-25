@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/blue-lake.jpg");
+    --background-color-h: 245;
+    --background-color-s: 52%;
+    --background-color-l: 8%;
+    --primary-color-h: 203;
+    --primary-color-s: 97%;
+    --primary-color-l: 55%;
+    --secondary-color-h: 312;
+    --secondary-color-s: 46%;
+    --secondary-color-l: 50%;
+    --accent-color-h: 76;
+    --accent-color-s: 76%;
+    --accent-color-l: 49%;
+    --primary-text-h: 228;
+    --primary-text-s: 24%;
+    --primary-text-l: 96%;
+}

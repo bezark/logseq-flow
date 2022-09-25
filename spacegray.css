@@ -1,0 +1,41 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-evening-deer-minimal-art-landscape-scenic-panorama-7680x3215-4585.png);
+    --background-color-h: 216;
+    --background-color-s: 11%;
+    --background-color-l: 18%;
+    --primary-color-h: 14;
+    --primary-color-s: 51%;
+    --primary-color-l: 63%;
+    --secondary-color-h: 209;
+    --secondary-color-s: 13%;
+    --secondary-color-l: 35%;
+    --accent-color-h: 14;
+    --accent-color-s: 51%;
+    --accent-color-l: 63%;
+    --primary-text-h: 74;
+    --primary-text-s: 15%;
+    --primary-text-l: 73%;
+}
+
+.white-theme,
+html[data-theme='light'] {
+    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-pink-sky-sunset-minimal-art-gradient-background-7680x3215-4584.png);
+    --background-color-h: 220;
+    --background-color-s: 23%;
+    --background-color-l: 95%;
+    --primary-color-h: 16;
+    --primary-color-s: 29%;
+    --primary-color-l: 54%;
+    --secondary-color-h: 210;
+    --secondary-color-s: 19%;
+    --secondary-color-l: 63%;
+    --accent-color-h: 210;
+    --accent-color-s: 19%;
+    --accent-color-l: 63%;
+    --primary-text-h: 209;
+    --primary-text-s: 13%;
+    --primary-text-l: 35%;
+}

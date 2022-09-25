@@ -1,0 +1,41 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url(https://i.imgur.com/HXoGeOC.jpg);
+    --background-color-h: 0;
+    --background-color-s: 0%;
+    --background-color-l: 15%;
+    --primary-color-h: 200;
+    --primary-color-s: 17%;
+    --primary-color-l: 48%;
+    --secondary-color-h: 20;
+    --secondary-color-s: 19%;
+    --secondary-color-l: 48%;
+    --accent-color-h: 0;
+    --accent-color-s: 87%;
+    --accent-color-l: 74%;
+    --primary-text-h: 0;
+    --primary-text-s: 0%;
+    --primary-text-l: 82%;
+}
+
+.white-theme,
+html[data-theme='light'] {
+    --bg-url: url("./bg-images/big-sur.jpg");
+    --background-color-h: 0;
+    --background-color-s: 0%;
+    --background-color-l: 100%;
+    --accent-color-h: 358;
+    --accent-color-s: 99%;
+    --accent-color-l: 35%;
+    --primary-color-h: 196;
+    --primary-color-s: 85%;
+    --primary-color-l: 35%;
+    --secondary-color-h: 40;
+    --secondary-color-s: 100%;
+    --secondary-color-l: 43%;
+    --primary-text-h: 38;
+    --primary-text-s: 9%;
+    --primary-text-l: 24%;
+}

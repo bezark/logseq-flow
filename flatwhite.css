@@ -1,0 +1,20 @@
+@import './base.css';
+.white-theme,
+html[data-theme='light'] {
+    --bg-url: url("https://wallpaperaccess.com/download/minimalist-art-287898");
+    --background-color-h: 33;
+    --background-color-s: 36%;
+    --background-color-l: 98%;
+    --primary-color-h: 0;
+    --primary-color-s: 22%;
+    --primary-color-l: 48%;
+    --secondary-color-h: 300;
+    --secondary-color-s: 17%;
+    --secondary-color-l: 53%;
+    --accent-color-h: 160;    
+    --accent-color-s: 19%;
+    --accent-color-l: 46%;
+    --primary-text-h: 34;
+    --primary-text-s: 8%;
+    --primary-text-l: 35%;
+}

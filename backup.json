@@ -1,0 +1,42 @@
+{
+    "name": "Vue",
+    "url": "./vue.css",
+    "description": "Vue",
+    "mode": "dark"
+},
+{
+    "name": "Watermelon",
+    "url": "./watermelon.css",
+    "description": "Watermelon",
+    "mode": "light"
+},
+{
+    "name": "Watermelon",
+    "url": "./watermelon.css",
+    "description": "Watermelon",
+    "mode": "dark"
+}
+{
+    "name": "Teady",
+    "url": "./teady.css",
+    "description": "Teady",
+    "mode": "dark"
+},
+{
+    "name": "Noctis 1",
+    "url": "./noctis1.css",
+    "description": "Light Default with Improvements",
+    "mode": "light"
+},
+{
+    "name": "Noctis 2",
+    "url": "./noctis2.css",
+    "description": "Light Default with Improvements",
+    "mode": "light"
+},
+{
+    "name": "Obsidian",
+    "url": "./obsidian.css",
+    "description": "Obsidian",
+    "mode": "light"
+},

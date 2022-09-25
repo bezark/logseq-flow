@@ -1,0 +1,21 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url(https://i.imgur.com/HXoGeOC.jpg);
+    --background-color-h: 236;
+    --background-color-s: 45%;
+    --background-color-l: 19%;
+    --primary-color-h: 331;
+    --primary-color-s: 100%;
+    --primary-color-l: 65%;
+    --secondary-color-h: 280;
+    --secondary-color-s: 62%;
+    --secondary-color-l: 64%;
+    --accent-color-h: 101;
+    --accent-color-s: 35%;
+    --accent-color-l: 55%;
+    --primary-text-h: 0;
+    --primary-text-s: 0%;
+    --primary-text-l: 82%;
+}

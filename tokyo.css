@@ -1,0 +1,22 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/beach-sunset.jpg");
+    --background-color-h: 235;
+    --background-color-s: 19%;
+    --background-color-l: 13%;
+    --primary-color-h: 89;
+    --primary-color-s: 51%;
+    --primary-color-l: 61%;
+    --secondary-color-h: 22;
+    --secondary-color-s: 100%;
+    --secondary-color-l: 70%;
+    --accent-color-h: 261;
+    --accent-color-s: 64%;
+    --accent-color-l: 73%;
+    --primary-text-h: 229;
+    --primary-text-s: 35%;
+    --primary-text-l: 75%;
+    --cl-gray: rgb(68,75,106);
+}

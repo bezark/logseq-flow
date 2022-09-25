@@ -1,0 +1,42 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --background-color-h: 200;
+    --background-color-s: 19%;
+    --background-color-l: 18%;
+    --primary-color-h: 197;
+    --primary-color-s: 100%;
+    --primary-color-l: 77%;
+    --secondary-color-h: 350;
+    --secondary-color-s: 100%;
+    --secondary-color-l: 81%;
+    --accent-color-h: 39;
+    --accent-color-s: 100%;
+    --accent-color-l: 71%;
+    --primary-text-h: 180;
+    --primary-text-s: 100%;
+    --primary-text-l: 97%;
+    --cl-gray: rgb(140,166,166);
+}
+
+.white-theme,
+html[data-theme='light'] {
+    --bg-url: url("https://wallpaperaccess.com/download/minimalist-art-284639");
+    --background-color-h: 0;
+    --background-color-s: 0%;
+    --background-color-l: 98%;
+    --primary-color-h: 184;
+    --primary-color-s: 52%;
+    --primary-color-l: 47%;
+    --secondary-color-h: 36;
+    --secondary-color-s: 77%;
+    --secondary-color-l: 50%;
+    --accent-color-h: 85;
+    --accent-color-s: 40%;
+    --accent-color-l: 54%;
+    --primary-text-h: 200;
+    --primary-text-s: 16%;
+    --primary-text-l: 52%;
+    --cl-gray: rgb(144,164,174);
+}

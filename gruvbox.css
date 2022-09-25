@@ -1,0 +1,41 @@
+@import './base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --bg-url: url("./bg-images/lake-ducks.jpg");
+    --background-color-h: 0;
+    --background-color-s: 1%;
+    --background-color-l: 16%;
+    --primary-color-h: 3;
+    --primary-color-s: 76%;
+    --primary-color-l: 65%;
+    --secondary-color-h: 37;
+    --secondary-color-s: 62%;
+    --secondary-color-l: 59%;
+    --accent-color-h: 24;
+    --accent-color-s: 76%;
+    --accent-color-l: 61%;
+    --primary-text-h: 38;
+    --primary-text-s: 41%;
+    --primary-text-l: 71%;
+}
+
+.white-theme,
+html[data-theme='light'] {
+    --bg-url: url("https://wallpaperaccess.com/download/firewatch-1267209");
+    --background-color-h: 46;
+    --background-color-s: 33%;
+    --background-color-l: 96%;
+    --primary-color-h: 0;
+    --primary-color-s: 49%;
+    --primary-color-l: 52%;
+    --secondary-color-h: 191;
+    --secondary-color-s: 28%;
+    --secondary-color-l: 37%;
+    --accent-color-h: 70;
+    --accent-color-s: 45%;
+    --accent-color-l: 33%;
+    --primary-text-h: 36;
+    --primary-text-s: 14%;
+    --primary-text-l: 22%;
+}
