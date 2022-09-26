@@ -2,6 +2,9 @@
     --ls-font-family: "Euclid Circular A", "SF Pro Text", Inter, "FiraCode Nerd Font";
     --ls-main-content-max-width: 1000px;
     --ls-main-content-max-width-wide: 100%;
+    --ls-page-title-size: 28px;
+    --ls-left-sidebar-width: 200px;
+    --ls-right-sidebar-width: 30%;
     /* General Settings */
     --cl-box-shadow: rgba(23, 42, 53, 0.1) 0 1px 2px 0;
     /* Border Settings */
@@ -128,9 +131,9 @@ html[data-theme='dark'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: var(--color-primary);
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: var(--cl-transparent-text);
-    --ls-block-bullet-references-border-color: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l), 0.4);
-    --ls-block-bullet-color: var(--cl-transparent-text-4);
+    --ls-block-bullet-border-color: var(--cl-transparent-primary);
+    --ls-block-bullet-references-border-color: var(--cl-transparent-primary);
+    --ls-block-bullet-color: var(--cl-transparent-primary-4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: var(--color-primary);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -232,9 +235,9 @@ html[data-theme='light'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: var(--color-primary);
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: var(--cl-transparent-text);
-    --ls-block-bullet-references-border-color: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l), 0.4);
-    --ls-block-bullet-color: var(--cl-transparent-text-4);
+    --ls-block-bullet-border-color: var(--cl-transparent-primary);
+    --ls-block-bullet-references-border-color: var(--cl-transparent-primary);
+    --ls-block-bullet-color: var(--cl-transparent-primary-4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: var(--color-primary);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -369,10 +372,15 @@ html[data-theme='light'] {
     color: var(--color-primary);
 }
 
+/* Inline Code */
+:not(pre):not(mark)>code {
+    padding: 1px 5px !important;
+}
+
 /* Highlights */
 mark {
-    background: var(--cl-transparent-secondary-4);
-    color: var(--ls-primary-text-color);
+    background: var(--cl-transparent-secondary-2);
+    color: var(--cl-secondary);
     padding: 1px 3px;
     border-radius: 0px;
 }
@@ -385,6 +393,9 @@ blockquote {
 }
 
 /*  === Headings ===  */
+.editor-inner .uniline-block:is(.h1,.h2), .ls-block :is(h1,h2) {
+    margin: 0px;
+}
 .ls-block h1 {
     font-size: 128% !important;
     border-bottom: 0px;
@@ -452,6 +463,11 @@ blockquote {
     border-radius: 0px;
 }
 
+/* Block Control Arrow */
+svg.h-4.w-4 {
+    color: var(--ls-secondary-text-color);
+}
+/* Block Properties */
 .page-property-key {
     color: var(--ls-primary-text-color);
 }
@@ -459,25 +475,54 @@ blockquote {
     color: var(--cl-primary);
     background: transparent;
 }
-.block-properties {
-    display: inline-block;
-}
+
 .color-level .block-properties {
     background-color: var(--bg-color-2);
 }
 .color-level .page-properties {
     background-color: transparent !important;
 }
+/* Block Property Tags & Page References */
+.block-properties .tag, .block-properties .tag:hover {
+    color: var(--ls-secondary-text-color);
+    font-weight: 500;
+}
+/* TASK NAMES */
 .block-marker {
     font-family: "SF Pro Text", "Euclid Circular A";
     font-size: inherit;
-    color: var(--cl-gray, grey);
+    color: var(--cl-secondary, grey);
     opacity: 0.5;
-    font-weight: 400;
+    font-weight: 500;
 }
 .block-marker:hover {
     color: var(--cl-secondary);
     opacity: 1;
+}
+.block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.WAIT, .block-marker.WAITING, .block-marker.LATER {
+    font-size: 0px;
+}
+.block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.WAITING:before, .block-marker.LATER:before {
+    font-size: 16px;
+    font-weight: 700;
+}
+.block-marker.TODO:before {
+    content: "T";
+}
+.block-marker.DOING:before {
+    content: "D";
+}
+.block-marker.NOW:before {
+    content: "N";
+}
+.block-marker.WAIT:before {
+    content: "W";
+}
+.block-marker.WAITING:before {
+    content: "W";
+}
+.block-marker.LATER:before {
+    content: "L";
 }
 
 .mr-1.flex.flex-row.items-center.sm\:mr-2 {
@@ -499,10 +544,10 @@ a svg {
 /* References Panel */
 /*** References Container ***/
 #main-container .lazy-visibility .color-level {
-    background: transparent;
+    background: var(--bg-color-1);
 }
 /* main references panel */
-.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
+/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
     background: var(--bg-color-1);
     padding: 5px 0px;
     border-radius: var(--cl-border-minor);
@@ -512,11 +557,11 @@ a svg {
     padding-right: 20px;
 }
 /* Add padding to breadcrumbs in references panel to keep it from the edge */
-.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
+/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
     padding: 0px 20px;
 }
 /* Styling block references in side the reference panel */
-.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
+/*.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
     background: var(--bg-color-2);
 }
 .color-level .flex-1.flex-row.foldable-title {
