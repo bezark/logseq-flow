@@ -1,5 +1,5 @@
 :root {
-    --ls-font-family: "Euclid Circular A", "SF Pro Text", Inter, "FiraCode Nerd Font";
+    --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     --ls-main-content-max-width: 1000px;
     --ls-main-content-max-width-wide: 100%;
     --ls-page-title-size: 28px;
@@ -550,7 +550,7 @@ svg.h-4.w-4 {
 }
 /* TASK NAMES */
 .block-marker {
-    font-family: "SF Pro Text", "Euclid Circular A";
+    font-family: "SF Pro Text", "Euclid Circular A", Inter;
     font-size: inherit;
     color: var(--cl-secondary, grey);
     opacity: 0.5;
