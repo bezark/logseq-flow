@@ -433,6 +433,16 @@ h1.title {
     color: var(--color-primary);
 }
 
+.external-link {
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 0;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
 /* Inline Code */
 :not(pre):not(mark)>code {
     padding: 1px 5px !important;
