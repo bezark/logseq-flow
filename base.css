@@ -326,6 +326,11 @@ h1.title {
     opacity: 0.8;
 }
 
+/* Fixing the default query space-between */
+.lazy-visibility {
+    min-height: 0px !important;
+}
+
 /* Setting up the container view */
 #main-content-container, .sidebar-item {
     background-color: var(--ls-primary-background-color);
