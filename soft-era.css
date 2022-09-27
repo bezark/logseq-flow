@@ -1,0 +1,24 @@
+@import './base.css';
+
+/* Comment */
+
+.white-theme,
+html[data-theme='light'] {
+    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-pink-sky-sunset-minimal-art-gradient-background-7680x3215-4584.png);
+    --background-color-h: 0;
+    --background-color-s: 25%;
+    --background-color-l: 97%;
+    --primary-color-h: 288;
+    --primary-color-s: 40%;
+    --primary-color-l: 73%;
+    --secondary-color-h: 248;
+    --secondary-color-s: 44%;
+    --secondary-color-l: 78%;
+    --accent-color-h: 209;
+    --accent-color-s: 63%;
+    --accent-color-l: 70%;
+    --primary-text-h: 348;
+    --primary-text-s: 24%;
+    --primary-text-l: 68%;
+    --cl-gray: rgb(217,200,200);
+}

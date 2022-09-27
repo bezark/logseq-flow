@@ -240,6 +240,12 @@
                 "mode": "dark"
             },
             {
+                "name": "Soft Era",
+                "url": "./soft-era.css",
+                "description": "Soft Era",
+                "mode": "light"
+            },
+            {
                 "name": "Snazzy",
                 "url": "./snazzy.css",
                 "description": "Snazzy",
