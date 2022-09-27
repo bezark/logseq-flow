@@ -135,7 +135,7 @@ html[data-theme='dark'] {
     --ls-block-bullet-references-border-color: var(--cl-transparent-primary);
     --ls-block-bullet-color: var(--cl-transparent-primary-4);
     --ls-block-highlight-color: var(--color-level-3);
-    --ls-selection-background-color: var(--color-primary);
+    --ls-selection-background-color: var(--cl-transparent-primary);
     --ls-page-checkbox-color: var(--cl-transparent-text);
     --ls-page-checkbox-border-color: var(--color-primary);
     --ls-page-blockquote-color: var(--color-secondary);
@@ -148,7 +148,7 @@ html[data-theme='dark'] {
     --ls-scrollbar-thumb-hover-color: var(--color-accent);
     --ls-head-text-color: var(--ls-link-text-color);
     --ls-cloze-text-color: var(--color-primary);
-    --ls-icon-color: var(--ls-secondary-text-color, grey);
+    --ls-icon-color: var(--cl-primary);
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: var(--ls-secondary-background-color);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
@@ -239,7 +239,7 @@ html[data-theme='light'] {
     --ls-block-bullet-references-border-color: var(--cl-transparent-primary);
     --ls-block-bullet-color: var(--cl-transparent-primary-4);
     --ls-block-highlight-color: var(--color-level-3);
-    --ls-selection-background-color: var(--color-primary);
+    --ls-selection-background-color: var(--cl-transparent-primary);
     --ls-page-checkbox-color: var(--cl-transparent-text);
     --ls-page-checkbox-border-color: var(--color-primary);
     --ls-page-blockquote-color: var(--color-secondary);
@@ -252,7 +252,7 @@ html[data-theme='light'] {
     --ls-scrollbar-thumb-hover-color: var(--color-accent);
     --ls-head-text-color: var(--ls-link-text-color);
     --ls-cloze-text-color: var(--color-primary);
-    --ls-icon-color: var(--ls-secondary-text-color);
+    --ls-icon-color: var(--cl-primary);
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: var(--ls-secondary-background-color);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
@@ -264,6 +264,67 @@ html[data-theme='light'] {
     --color-level-6: var(--bg-color-5);
 }
 
+/*  ===== Base Settings =====  */
+::selection {
+    color: var(--cl-primary);
+}
+
+.ls-block.selected {
+    background: var(--cl-transparent-primary);
+    color: var(--cl-primary);
+}
+
+/*  ===== Main Interface =====  */
+
+/* Match Button's to primary color */
+.button i, .ti {
+    color: var(--cl-primary);
+}
+
+/* Hides the Favorite & Recent Titles */
+/*.left-sidebar-inner .nav-content-item .header {
+    visibility: hidden;
+}*/
+
+/* Color Left Sidebar Items */
+a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th {
+    color: var(--cl-primary);
+    opacity: 0.7;
+}
+a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
+    color: var(--cl-primary);
+    opacity: 1;
+}
+.left-sidebar-inner a.item.active, .left-sidebar-inner a.item:active {
+    color: var(--cl-primary) !important;
+    opacity: 1;
+    background: var(--cl-transparent-primary);
+    border-radius: var(--cl-border-minor);
+}
+
+/* Color Right Sidebar */
+.sidebar-item-list > .sidebar-item {
+    background: var(--bg-color)
+}
+.color-level .color-level {
+    background: var(--bg-color-1);
+}
+
+/* Page Titles */
+h1.title {
+    color: var(--cl-secondary);
+}
+
+/* References Section */
+.references h2.font-bold.opacity-80 {
+    color: var(--cl-accent);
+}
+.references h2.font-bold.opacity-50 {
+    color: var(--cl-accent);
+    opacity: 0.8;
+}
+
+/* Setting up the container view */
 #main-content-container, .sidebar-item {
     background-color: var(--ls-primary-background-color);
     border-radius: 3px;
@@ -530,12 +591,6 @@ svg.h-4.w-4 {
     top: 2px;
 }
 
-/* Left Sidebar */
-
-.left-sidebar-inner .nav-content-item .header {
-    visibility: hidden;
-}
-
 /* Block Control Arrow */
 a svg {
     color: var(--ls-block-bullet-color);
@@ -575,10 +630,6 @@ a svg {
     border-top-right-radius: var(--cl-border-minor);
 }*/
 
-/* Right sidebar references panel */
-.color-level .color-level {
-    background: var(--bg-color-1);
-}
 /*    ====== TYPOGRAPHY ======    */
 .ls-block {
     padding: 1px 0px;
