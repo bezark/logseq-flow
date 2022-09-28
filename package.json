@@ -1,307 +1,307 @@
 {
     "name": "Flow",
     "author": "nmartin84",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "A minimal theme that comes with 30+ color schemes.",
     "logseq": {
         "themes": [
             {
                 "name": "Adventure Time",
-                "url": "./adventuretime.css",
+                "url": "./src/adventuretime.css",
                 "description": "Adventure Time",
                 "mode": "dark"
             },
             {
                 "name": "Anderson",
-                "url": "./anderson.css",
+                "url": "./src/anderson.css",
                 "description": "Anderson",
                 "mode": "dark"
             },
             {
                 "name": "Andromeda",
-                "url": "./andromeda.css",
+                "url": "./src/andromeda.css",
                 "description": "Andromeda",
                 "mode": "dark"
             },
             {
                 "name": "Ark",
-                "url": "./ark.css",
+                "url": "./src/ark.css",
                 "description": "Ark",
                 "mode": "dark"
             },
             {
                 "name": "Bear",
-                "url": "./bear.css",
+                "url": "./src/bear.css",
                 "description": "Bear",
                 "mode": "dark"
             },
             {
                 "name": "Breeze",
-                "url": "./breeze.css",
+                "url": "./src/breeze.css",
                 "description": "Breeze",
                 "mode": "dark"
             },
             {
                 "name": "Flatwhite",
-                "url": "./flatwhite.css",
+                "url": "./src/flatwhite.css",
                 "description": "Flatwhite Colors",
                 "mode": "light"
             },
             {
                 "name": "Calamity",
-                "url": "./calamity.css",
+                "url": "./src/calamity.css",
                 "description": "Calamity",
                 "mode": "dark"
             },
             {
                 "name": "Chocolate",
-                "url": "./chocolate.css",
+                "url": "./src/chocolate.css",
                 "description": "Vanilla Chocolate",
                 "mode": "light"
             },
             {
                 "name": "Chocolate",
-                "url": "./chocolate.css",
+                "url": "./src/chocolate.css",
                 "description": "Dark Chocolate",
                 "mode": "dark"
             },
             {
                 "name": "Cobalt",
-                "url": "./cobalt.css",
+                "url": "./src/cobalt.css",
                 "description": "Cobalt",
                 "mode": "dark"
             },
             {
                 "name": "Daycula",
-                "url": "./daycula.css",
+                "url": "./src/daycula.css",
                 "description": "Daycula",
                 "mode": "dark"
             },
             {
                 "name": "Default",
-                "url": "./default.css",
+                "url": "./src/default.css",
                 "description": "Light Default with Improvements",
                 "mode": "light"
             },
             {
                 "name": "Default",
-                "url": "./default.css",
+                "url": "./src/default.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
             {
                 "name": "Dracula",
-                "url": "./dracula.css",
+                "url": "./src/dracula.css",
                 "description": "Dracula",
                 "mode": "dark"
             },
             {
                 "name": "Electric",
-                "url": "./electric.css",
+                "url": "./src/electric.css",
                 "description": "Electric",
                 "mode": "dark"
             },
             {
                 "name": "Ephemeral",
-                "url": "./ephemeral.css",
+                "url": "./src/ephemeral.css",
                 "description": "Ephemeral",
                 "mode": "dark"
             },
             {
                 "name": "Everforest",
-                "url": "./everforest.css",
+                "url": "./src/everforest.css",
                 "description": "Everforest",
                 "mode": "dark"
             },
             {
                 "name": "Everforest",
-                "url": "./everforest.css",
+                "url": "./src/everforest.css",
                 "description": "Everforest",
                 "mode": "light"
             },
             {
                 "name": "Gruvbox",
-                "url": "./gruvbox.css",
+                "url": "./src/gruvbox.css",
                 "description": "Gruvbox",
                 "mode": "light"
             },
             {
                 "name": "Gruvbox",
-                "url": "./gruvbox.css",
+                "url": "./src/gruvbox.css",
                 "description": "Gruvbox",
                 "mode": "dark"
             },
             {
                 "name": "Hatsunemiku",
-                "url": "./hatsunemiku.css",
+                "url": "./src/hatsunemiku.css",
                 "description": "Hatsunemiku",
                 "mode": "dark"
             },
             {
                 "name": "Hatsunemiku",
-                "url": "./hatsunemiku.css",
+                "url": "./src/hatsunemiku.css",
                 "description": "Hatsunemiku",
                 "mode": "light"
             },
             {
                 "name": "Material",
-                "url": "./material.css",
+                "url": "./src/material.css",
                 "description": "material",
                 "mode": "dark"
             },
             {
                 "name": "Material",
-                "url": "./material.css",
+                "url": "./src/material.css",
                 "description": "material",
                 "mode": "light"
             },
             {
                 "name": "Miramare",
-                "url": "./miramare.css",
+                "url": "./src/miramare.css",
                 "description": "Miramare",
                 "mode": "dark"
             },
             {
                 "name": "Moonlight",
-                "url": "./moonlight.css",
+                "url": "./src/moonlight.css",
                 "description": "Moonlight",
                 "mode": "dark"
             },
             {
                 "name": "Noctis 2",
-                "url": "./noctis2.css",
+                "url": "./src/noctis2.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
             {
                 "name": "Nord",
-                "url": "./nord.css",
+                "url": "./src/nord.css",
                 "description": "Nord",
                 "mode": "light"
             },
             {
                 "name": "Nord",
-                "url": "./nord.css",
+                "url": "./src/nord.css",
                 "description": "Nord",
                 "mode": "dark"
             },
             {
                 "name": "Obsidian",
-                "url": "./obsidian.css",
+                "url": "./src/obsidian.css",
                 "description": "Obsidian",
                 "mode": "dark"
             },
             {
                 "name": "Oceanic Next",
-                "url": "./oceanic.css",
+                "url": "./src/oceanic.css",
                 "description": "Oceanic Dark",
                 "mode": "dark"
             },
             {
                 "name": "Old Hope",
-                "url": "./oldhope.css",
+                "url": "./src/oldhope.css",
                 "description": "Old Hope",
                 "mode": "dark"
             },
             {
                 "name": "One Dark Pro",
-                "url": "./one-dark-pro.css",
+                "url": "./src/one-dark-pro.css",
                 "description": "One Dark Pro",
                 "mode": "dark"
             },
             {
                 "name": "Paper",
-                "url": "./paper.css",
+                "url": "./src/paper.css",
                 "description": "Paper",
                 "mode": "light"
             },
             {
                 "name": "Primary",
-                "url": "./primary.css",
+                "url": "./src/primary.css",
                 "description": "Primary",
                 "mode": "dark"
             },
             {
                 "name": "Primary",
-                "url": "./primary.css",
+                "url": "./src/primary.css",
                 "description": "Primary",
                 "mode": "light"
             },
             {
                 "name": "Panda",
-                "url": "./panda.css",
+                "url": "./src/panda.css",
                 "description": "Panda",
                 "mode": "dark"
             },
             {
                 "name": "Rogue",
-                "url": "./rogue.css",
+                "url": "./src/rogue.css",
                 "description": "Rogue",
                 "mode": "dark"
             },
             {
                 "name": "Soft Era",
-                "url": "./soft-era.css",
+                "url": "./src/soft-era.css",
                 "description": "Soft Era",
                 "mode": "light"
             },
             {
                 "name": "Snazzy",
-                "url": "./snazzy.css",
+                "url": "./src/snazzy.css",
                 "description": "Snazzy",
                 "mode": "dark"
             },
             {
                 "name": "Snazzy",
-                "url": "./snazzy.css",
+                "url": "./src/snazzy.css",
                 "description": "Snazzy",
                 "mode": "light"
             },
             {
                 "name": "Solarized",
-                "url": "./solarized.css",
+                "url": "./src/solarized.css",
                 "description": "Light Default with Improvements",
                 "mode": "light"
             },
             {
                 "name": "Solarized",
-                "url": "./solarized.css",
+                "url": "./src/solarized.css",
                 "description": "Dark Default with Improvements",
                 "mode": "dark"
             },
             {
                 "name": "Spacegray",
-                "url": "./spacegray.css",
+                "url": "./src/spacegray.css",
                 "description": "Spacegray",
                 "mode": "light"
             },
             {
                 "name": "Spacegray",
-                "url": "./spacegray.css",
+                "url": "./src/spacegray.css",
                 "description": "Spacegray",
                 "mode": "dark"
             },
             {
                 "name": "Tokyo",
-                "url": "./tokyo.css",
+                "url": "./src/tokyo.css",
                 "description": "Tokyo",
                 "mode": "dark"
             },
             {
                 "name": "Tomorrow",
-                "url": "./tomorrow.css",
+                "url": "./src/tomorrow.css",
                 "description": "Tomorrow",
                 "mode": "light"
             },
             {
                 "name": "Zengarden",
-                "url": "./zengarden.css",
+                "url": "./src/zengarden.css",
                 "description": "Zengarden",
                 "mode": "dark"
             },
             {
                 "name": "Zengarden",
-                "url": "./zengarden.css",
+                "url": "./src/zengarden.css",
                 "description": "Zengarden",
                 "mode": "light"
             }
