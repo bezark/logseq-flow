@@ -4,7 +4,6 @@
 
 .white-theme,
 html[data-theme='light'] {
-    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-pink-sky-sunset-minimal-art-gradient-background-7680x3215-4584.png);
     --background-color-h: 0;
     --background-color-s: 25%;
     --background-color-l: 97%;

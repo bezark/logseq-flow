@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-evening-deer-minimal-art-landscape-scenic-panorama-7680x3215-4585.png);
     --background-color-h: 216;
     --background-color-s: 11%;
     --background-color-l: 18%;
@@ -22,7 +21,6 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-pink-sky-sunset-minimal-art-gradient-background-7680x3215-4584.png);
     --background-color-h: 220;
     --background-color-s: 23%;
     --background-color-l: 95%;

@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url("./bg-images/fire-watch.jpg");
     --background-color-h: 278;
     --background-color-s: 12%;
     --background-color-l: 18%;

@@ -1,7 +1,6 @@
 @import './base.css';
 .white-theme,
 html[data-theme='light'] {
-    --bg-url: url("https://wallpaperaccess.com/download/minimalist-art-287898");
     --background-color-h: 33;
     --background-color-s: 36%;
     --background-color-l: 98%;

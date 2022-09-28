@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url("./bg-images/blue-lake.jpg");
     --background-color-h: 245;
     --background-color-s: 52%;
     --background-color-l: 8%;

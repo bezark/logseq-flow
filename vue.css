@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url("./bg-images/river-sunset.jpg");
     --background-color-h: 192;
     --background-color-s: 100%;
     --background-color-l: 11%;

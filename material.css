@@ -22,7 +22,6 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --bg-url: url("https://wallpaperaccess.com/download/minimalist-art-284639");
     --background-color-h: 0;
     --background-color-s: 0%;
     --background-color-l: 98%;

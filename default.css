@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url(https://i.imgur.com/HXoGeOC.jpg);
     --background-color-h: 0;
     --background-color-s: 0%;
     --background-color-l: 15%;
@@ -22,7 +21,6 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --bg-url: url("./bg-images/big-sur.jpg");
     --background-color-h: 0;
     --background-color-s: 0%;
     --background-color-l: 100%;

@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url("./bg-images/lake-ducks.jpg");
     --background-color-h: 0;
     --background-color-s: 1%;
     --background-color-l: 16%;
@@ -22,7 +21,6 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --bg-url: url("https://wallpaperaccess.com/download/firewatch-1267209");
     --background-color-h: 46;
     --background-color-s: 33%;
     --background-color-l: 96%;

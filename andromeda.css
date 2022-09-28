@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url("./bg-images/blue-mountains.jpg");
     --background-color-h: 222;
     --background-color-s: 15%;
     --background-color-l: 17%;

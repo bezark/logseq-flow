@@ -334,7 +334,7 @@ h1.title {
 /* Setting up the container view */
 #main-content-container, .sidebar-item {
     background-color: var(--ls-primary-background-color);
-    border-radius: 3px;
+    border-radius: var(--cl-border-max);
     margin: 0 12px 12px 12px;
     padding-top: 32px;
     box-shadow: var(--box-shadow-med);

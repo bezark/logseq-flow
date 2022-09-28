@@ -3,7 +3,6 @@
 .dark-theme,
 html[data-theme='dark'] {
     --bg-gradient: radial-gradient(circle, rgba(242,78,66,1) 0%, rgba(44,38,33,1) 41%);
-    --bg-url: url(https://4kwallpapers.com/images/wallpapers/lakeside-evening-deer-minimal-art-landscape-scenic-panorama-7680x3215-4585.png);
     --background-color-h: 27;
     --background-color-s: 14%;
     --background-color-l: 15%;
@@ -24,7 +23,6 @@ html[data-theme='dark'] {
 .white-theme,
 html[data-theme='light'] {
     --bg-gradient: radial-gradient(circle, rgba(44,38,33,1) 82%, rgba(242,78,66,1) 100%);
-    --bg-url: url(https://4kwallpapers.com/images/wallpapers/goonies-evening-silhouette-minimal-art-landscape-panorama-4637x1935-4591.png);
     --background-color-h: 0;
     --background-color-s: 0%;
     --background-color-l: 93%;

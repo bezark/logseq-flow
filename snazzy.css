@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url(https://images.unsplash.com/photo-1481151500463-1fa2dd2d5dbe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3000&q=80);
     --background-color-h: 231;
     --background-color-s: 15%;
     --background-color-l: 18%;
@@ -22,7 +21,6 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --bg-url: url(https://wallpaperaccess.com/download/minimalist-art-284639);
     --background-color-h: 210;
     --background-color-s: 25%;
     --background-color-l: 98%;

@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url(https://i.imgur.com/HXoGeOC.jpg);
     --background-color-h: 236;
     --background-color-s: 45%;
     --background-color-l: 19%;

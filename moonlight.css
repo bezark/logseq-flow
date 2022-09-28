@@ -2,7 +2,6 @@
 
 .dark-theme,
 html[data-theme='dark'] {
-    --bg-url: url("./bg-images/moon-tower.jpg");
     --background-color-h: 235;
     --background-color-s: 25%;
     --background-color-l: 17%;
