@@ -462,10 +462,10 @@ h1.title {
 
 /* Highlights */
 mark {
-    background: var(--cl-transparent-secondary-2);
+    background: var(--cl-transparent-secondary);
     color: var(--cl-secondary);
-    padding: 1px 3px;
-    border-radius: 0px;
+    padding: 1px 6px;
+    border-radius: var(--cl-border-max);
 }
 
 /* Blockquotes */
