@@ -5,18 +5,6 @@
     "mode": "dark"
 },
 {
-    "name": "Watermelon",
-    "url": "./watermelon.css",
-    "description": "Watermelon",
-    "mode": "light"
-},
-{
-    "name": "Watermelon",
-    "url": "./watermelon.css",
-    "description": "Watermelon",
-    "mode": "dark"
-}
-{
     "name": "Teady",
     "url": "./teady.css",
     "description": "Teady",

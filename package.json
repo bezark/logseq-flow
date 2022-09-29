@@ -294,6 +294,18 @@
                 "mode": "light"
             },
             {
+                "name": "Watermelon",
+                "url": "./src/watermelon.css",
+                "description": "Watermelon",
+                "mode": "light"
+            },
+            {
+                "name": "Watermelon",
+                "url": "./src/watermelon.css",
+                "description": "Watermelon",
+                "mode": "dark"
+            },
+            {
                 "name": "Zengarden",
                 "url": "./src/zengarden.css",
                 "description": "Zengarden",
