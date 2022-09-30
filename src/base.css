@@ -458,7 +458,7 @@ h1.title {
 }
 :not(pre):not(mark)>code {
     padding: 2px 5px !important;
-    background: hsl(var(--cl-primary), 0.1);
+    background: hsl(var(--cl-primary), 0.05);
     color: hsl(var(--cl-primary));
 }
 
