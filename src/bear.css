@@ -5,17 +5,22 @@ html[data-theme='dark'] {
     --background-color-h: 225;
     --background-color-s: 6%;
     --background-color-l: 13%;
+    --cl-text-color: 47,26%,65%;
     --primary-color-h: 331;
     --primary-color-s: 73%;
     --primary-color-l: 56%;
+    --cl-primary: 331,73%,56%;
     --secondary-color-h: 199;
     --secondary-color-s: 65%;
     --secondary-color-l: 60%;
+    --cl-secondary: 199,65%,60%;
     --accent-color-h: 120;
     --accent-color-s: 27%;
     --accent-color-l: 53%;
+    --cl-accent: 120,27%,53%;
     --primary-text-h: 47;
     --primary-text-s: 26%;
     --primary-text-l: 65%;
     --cl-gray: rgb(112,124,116);
+    --cl-yellow: ;
 }

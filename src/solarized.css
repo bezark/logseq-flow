@@ -5,18 +5,23 @@ html[data-theme='dark'] {
     --background-color-h: 192;
     --background-color-s: 100%;
     --background-color-l: 11%;
+    --cl-text-color: 186,8%,55%;
     --primary-color-h: 205;
     --primary-color-s: 69%;
     --primary-color-l: 49%;
+    --cl-primary: 205,69%,49%;
     --secondary-color-h: 68;
     --secondary-color-s: 100%;
     --secondary-color-l: 30%;
+    --cl-secondary: 68,100%,30%;
     --accent-color-h: 175;
     --accent-color-s: 52%;
     --accent-color-l: 43%;
+    --cl-accent: 175,52%,43%;
     --primary-text-h: 186;
     --primary-text-s: 8%;
     --primary-text-l: 55%;
+    --cl-yellow: ;
 }
 
 .white-theme,
@@ -24,16 +29,21 @@ html[data-theme='light'] {
     --background-color-h: 44;
     --background-color-s: 87%;
     --background-color-l: 94%;
+    --cl-text-color: 194,15%,39%;
     --primary-color-h: 205;
     --primary-color-s: 69%;
     --primary-color-l: 39%;
+    --cl-primary: 205,69%,39%;
     --secondary-color-h: 68;
     --secondary-color-s: 100%;
     --secondary-color-l: 30%;
+    --cl-secondary: 68,100%,30%;
     --accent-color-h: 331;
     --accent-color-s: 64%;
     --accent-color-l: 52%;
+    --cl-accent: 331,64%,52%;
     --primary-text-h: 194;
     --primary-text-s: 15%;
     --primary-text-l: 39%;
+    --cl-yellow: ;
 }

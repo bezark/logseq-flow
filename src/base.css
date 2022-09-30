@@ -14,21 +14,6 @@
     --cl-border-max: 4px;
     --cl-border-solid: 1px solid var(--ls-border-color);
     /* Transparency Settings */
-    --cl-transparent-primary: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l), 0.1);
-    --cl-transparent-primary-05: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l), 0.05);
-    --cl-transparent-primary-2: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l), 0.2);
-    --cl-transparent-primary-4: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l), 0.4);
-    --cl-transparent-primary-6: hsl(var(--primary-color-h), var(--primary-color-s), var(--primary-color-l), 0.6);
-    --cl-transparent-secondary: hsl(var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l), 0.1);
-    --cl-transparent-secondary-05: hsl(var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l), 0.05);
-    --cl-transparent-secondary-2: hsl(var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l), 0.2);
-    --cl-transparent-secondary-4: hsl(var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l), 0.4);
-    --cl-transparent-secondary-6: hsl(var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l), 0.6);
-    --cl-transparent-accent: hsl(var(--accent-color-h), var(--accent-color-s), var(--accent-color-l), 0.1);
-    --cl-transparent-accent-05: hsl(var(--accent-color-h), var(--accent-color-s), var(--accent-color-l), 0.05);
-    --cl-transparent-accent-2: hsl(var(--accent-color-h), var(--accent-color-s), var(--accent-color-l), 0.2);
-    --cl-transparent-accent-4: hsl(var(--accent-color-h), var(--accent-color-s), var(--accent-color-l), 0.4);
-    --cl-transparent-accent-6: hsl(var(--accent-color-h), var(--accent-color-s), var(--accent-color-l), 0.6);
     --cl-transparent-text: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.1);
     --cl-transparent-text-2: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.2);
     --cl-transparent-text-4: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.4);
@@ -46,16 +31,6 @@
     --cl-primary-darker: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) / 1.20));
     --cl-primary-light: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.10));
     --cl-primary-lighter: hsl(var(--primary-color-h), var(--primary-color-s), calc(var(--primary-color-l) * 1.20));
-    --cl-secondary: hsl(var(--secondary-color-h), var(--secondary-color-s), var(--secondary-color-l));
-    --cl-secondary-dark: ;
-    --cl-secondary-darker: ;
-    --cl-secondary-light: ;
-    --cl-secondary-lighter: ;
-    --cl-accent: hsl(var(--accent-color-h), var(--accent-color-s), var(--accent-color-l));
-    --cl-accent-dark: ;
-    --cl-accent-darker: ;
-    --cl-accent-light: ;
-    --cl-accent-lighter: ;
 }
 
 .dark-theme,
@@ -126,31 +101,31 @@ html[data-theme='dark'] {
     --ls-primary-text-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l));
     --ls-secondary-text-color: var(--cl-gray,grey);
     --ls-title-text-color: var(--ls-primary-text-color);
-    --ls-link-text-color: var(--cl-primary);
-    --ls-link-text-hover-color: var(--cl-primary);
+    --ls-link-text-color: hsl(var(--cl-primary));
+    --ls-link-text-hover-color: hsl(var(--cl-primary));
     --ls-link-ref-text-color: var(--color-primary);
     --ls-link-ref-text-hover-color: var(--color-primary-light);
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: var(--color-primary);
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: var(--cl-transparent-primary);
-    --ls-block-bullet-references-border-color: var(--cl-transparent-primary);
-    --ls-block-bullet-color: var(--cl-transparent-primary-4);
+    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
-    --ls-selection-background-color: var(--cl-transparent-primary);
+    --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
     --ls-page-checkbox-border-color: var(--color-primary);
     --ls-page-blockquote-color: var(--color-secondary);
-    --ls-page-blockquote-bg-color: var(--cl-transparent-secondary-2);
+    --ls-page-blockquote-bg-color: hsl(var(--cl-secondary), 0.2);
     --ls-page-blockquote-border-color: var(--ls-border-color);
-    --ls-page-inline-code-color: var(--cl-primary);
-    --ls-page-inline-code-bg-color: var(--cl-transparent-primary);
+    --ls-page-inline-code-color: hsl(var(--cl-primary));
+    --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
     --ls-scrollbar-foreground-color: transparent;
     --ls-scrollbar-background-color: transparent;
     --ls-scrollbar-thumb-hover-color: var(--color-accent);
     --ls-head-text-color: var(--ls-link-text-color);
     --ls-cloze-text-color: var(--color-primary);
-    --ls-icon-color: var(--cl-primary);
+    --ls-icon-color: hsl(var(--cl-primary));
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: var(--ls-secondary-background-color);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
@@ -230,31 +205,31 @@ html[data-theme='light'] {
     --ls-primary-text-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l));
     --ls-secondary-text-color: var(--cl-gray);
     --ls-title-text-color: var(--ls-primary-text-color);
-    --ls-link-text-color: var(--cl-primary);
-    --ls-link-text-hover-color: var(--cl-primary);
+    --ls-link-text-color: hsl(var(--cl-primary));
+    --ls-link-text-hover-color: hsl(var(--cl-primary));
     --ls-link-ref-text-color: var(--color-primary);
     --ls-link-ref-text-hover-color: var(--color-primary-light);
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: var(--color-primary);
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: var(--cl-transparent-primary);
-    --ls-block-bullet-references-border-color: var(--cl-transparent-primary);
-    --ls-block-bullet-color: var(--cl-transparent-primary-4);
+    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
-    --ls-selection-background-color: var(--cl-transparent-primary);
+    --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
     --ls-page-checkbox-border-color: var(--color-primary);
     --ls-page-blockquote-color: var(--color-secondary);
-    --ls-page-blockquote-bg-color: var(--cl-transparent-secondary-2);
+    --ls-page-blockquote-bg-color: hsl(var(--cl-secondary), 0.2);
     --ls-page-blockquote-border-color: var(--ls-border-color);
-    --ls-page-inline-code-color: var(--cl-primary);
-    --ls-page-inline-code-bg-color: var(--cl-transparent-primary);
+    --ls-page-inline-code-color: hsl(var(--cl-primary));
+    --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
     --ls-scrollbar-foreground-color: transparent;
     --ls-scrollbar-background-color: transparent;
     --ls-scrollbar-thumb-hover-color: var(--color-accent);
     --ls-head-text-color: var(--ls-link-text-color);
     --ls-cloze-text-color: var(--color-primary);
-    --ls-icon-color: var(--cl-primary);
+    --ls-icon-color: hsl(var(--cl-primary));
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: var(--ls-secondary-background-color);
     --ls-right-sidebar-code-bg-color: var(--bg-color-3);
@@ -268,19 +243,19 @@ html[data-theme='light'] {
 
 /*  ===== Base Settings =====  */
 ::selection {
-    color: var(--cl-primary);
+    color: hsl(var(--cl-primary));
 }
 
 .ls-block.selected {
-    background: var(--cl-transparent-primary);
-    color: var(--cl-primary);
+    background: hsl(var(--cl-primary), 0.1);
+    color: hsl(var(--cl-primary));
 }
 
 /*  ===== Main Interface =====  */
 
 /* Match Button's to primary color */
 .button i, .ti {
-    color: var(--cl-primary);
+    color: hsl(var(--cl-primary));
 }
 
 /* Hides the Favorite & Recent Titles */
@@ -290,17 +265,17 @@ html[data-theme='light'] {
 
 /* Color Left Sidebar Items */
 a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th {
-    color: var(--cl-primary);
+    color: hsl(var(--cl-primary));
     opacity: 0.7;
 }
 a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
-    color: var(--cl-primary);
+    color: hsl(var(--cl-primary));
     opacity: 1;
 }
 .left-sidebar-inner a.item.active, .left-sidebar-inner a.item:active {
-    color: var(--cl-primary) !important;
+    color: hsl(var(--cl-primary)) !important;
     opacity: 1;
-    background: var(--cl-transparent-primary);
+    background: hsl(var(--cl-primary), 0.1);
     border-radius: var(--cl-border-minor);
 }
 
@@ -314,16 +289,43 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 
 /* Page Titles */
 h1.title {
-    color: var(--cl-secondary);
+    color: hsl(var(--cl-secondary));
 }
 
 /* References Section */
 .references h2.font-bold.opacity-80 {
-    color: var(--cl-accent);
+    color: hsl(var(--cl-accent));
 }
 .references h2.font-bold.opacity-50 {
-    color: var(--cl-accent);
+    color: hsl(var(--cl-accent));
     opacity: 0.8;
+}
+
+/* Dimming out breadcrumbs except the last block */
+.color-level .breadcrumb a:not(:last-child) {
+    color: hsl(var(--cl-text-color), 0.5);
+    transition: 0.2s;
+}
+.block-parents a .page-reference {
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -3px;
+    text-decoration-color: hsl(var(--cl-text-color), 0.2);
+    text-decoration-thickness: 4px;
+}
+.block-parents a:last-child .page-reference {
+    color: hsl(var(--cl-primary));
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-underline-offset: -3px;
+    text-decoration-color: hsl(var(--cl-primary), 0.2);
+    text-decoration-thickness: 4px;
+    transition: 0.2s;
+}
+.block-parents a .page-reference .bracket {
+    display: none;
 }
 
 /* Fixing the default query space-between */
@@ -398,7 +400,7 @@ h1.title {
 }
 
 .extensions__code-lang {
-    color: var(--cl-secondary);
+    color: hsl(var(--cl-secondary));
 }
 
 /* Code Mirror Colors */
@@ -456,23 +458,24 @@ h1.title {
 }
 :not(pre):not(mark)>code {
     padding: 2px 5px !important;
-    background: var(--cl-transparent-primary);
-    color: var(--cl-primary);
+    background: hsl(var(--cl-primary), 0.1);
+    color: hsl(var(--cl-primary));
 }
 
 /* Highlights */
 mark {
-    background: var(--cl-transparent-secondary);
-    color: var(--cl-secondary);
+    background: hsl(var(--cl-secondary), 0.1);
+    background: rgba(var(--cl-yellow), 0.2);
+    color: hsl(var(--cl-secondary));
     padding: 1px 6px;
     border-radius: var(--cl-border-max);
 }
 
 /* Blockquotes */
 blockquote {
-    border-left-color: var(--cl-secondary);
-    background: var(--cl-transparent-secondary);
-    color: var(--cl-secondary);
+    border-left-color: hsl(var(--cl-secondary));
+    background: hsl(var(--cl-secondary), 0.1);
+    color: hsl(var(--cl-secondary));
 }
 
 /*  === Headings ===  */
@@ -507,13 +510,13 @@ blockquote {
     border-radius: var(--cl-border-minor);
 }
 .form-checkbox:checked {
-    background-color: var(--cl-primary);
+    background-color: hsl(var(--cl-primary));
     opacity: 0.6;
 }
 
 /* Tags */
 a.tag {
-    background-color: var(--cl-secondary);
+    background-color: hsl(var(--cl-secondary));
     color: var(--bg-color) !important;
     padding: 1px 8px;
     text-align: center;
@@ -544,7 +547,7 @@ a.tag {
 }
 
 .block-ref:hover {
-    background: var(--cl-transparent-primary);
+    background: hsl(var(--cl-primary), 0.1);
     cursor: pointer;
     color: var(--ls-primary-text-color);
     border-radius: var(--cl-border-radius);
@@ -553,7 +556,7 @@ a.tag {
 }
 
 .block-ref mark {
-    background: var(--cl-transparent-secondary-2);
+    background: hsl(var(--cl-secondary), 0.2);
     color: var(--ls-primary-text-color);
     padding: 0px 1px;
     border-radius: 0px;
@@ -568,7 +571,7 @@ svg.h-4.w-4 {
     color: var(--ls-primary-text-color);
 }
 .page-property-key:hover {
-    color: var(--cl-primary);
+    color: hsl(var(--cl-primary));
     background: transparent;
 }
 
@@ -583,12 +586,12 @@ svg.h-4.w-4 {
 .block-marker {
     font-family: "SF Pro Text", "Euclid Circular A", Inter;
     font-size: inherit;
-    color: var(--cl-secondary, grey);
+    color: hsl(var(--cl-secondary), (0, 0, 50));
     opacity: 0.5;
     font-weight: 500;
 }
 .block-marker:hover {
-    color: var(--cl-secondary);
+    color: hsl(var(--cl-secondary));
     opacity: 1;
 }
 .block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.WAIT, .block-marker.WAITING, .block-marker.LATER {

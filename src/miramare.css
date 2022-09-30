@@ -6,16 +6,21 @@ html[data-theme='dark'] {
     --background-color-h: 340;
     --background-color-s: 8%;
     --background-color-l: 15%;
+    --cl-text-color: 43,54%,79%;
     --primary-color-h: 18;
     --primary-color-s: 65%;
     --primary-color-l: 69%;
+    --cl-primary: 18,65%,69%;
     --secondary-color-h: 40;
     --secondary-color-s: 54%;
     --secondary-color-l: 68%;
+    --cl-secondary: 40,54%,68%;
     --accent-color-h: 135;
     --accent-color-s: 31%;
     --accent-color-l: 64%;
+    --cl-accent: 135,31%,64%;
     --primary-text-h: 43;
     --primary-text-s: 54%;
     --primary-text-l: 79%;
+    --cl-yellow: ;
 }
