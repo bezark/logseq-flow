@@ -22,7 +22,6 @@ html[data-theme='dark'] {
     --primary-text-s: 11%;
     --primary-text-l: 77%;
     --cl-gray: rgb(140,166,166);
-    --cl-yellow: ;
 }
 
 .white-theme,
@@ -47,5 +46,4 @@ html[data-theme='light'] {
     --primary-text-s: 100%;
     --primary-text-l: 17%;
     --cl-gray: rgb(140,166,166);
-    --cl-yellow: ;
 }

@@ -21,7 +21,6 @@ html[data-theme='dark'] {
     --primary-text-h: 207;
     --primary-text-s: 18%;
     --primary-text-l: 70%;
-    --cl-yellow: ;
 }
 
 .white-theme,
@@ -45,5 +44,4 @@ html[data-theme='light'] {
     --primary-text-h: 203;
     --primary-text-s: 24%;
     --primary-text-l: 15%;
-    --cl-yellow: ;
 }
