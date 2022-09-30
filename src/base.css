@@ -85,16 +85,16 @@ html[data-theme='dark'] {
     --ls-tertiary-background-color: var(--bg-color-2);
     --ls-quaternary-background-color: var(--bg-color-3);
     --ls-table-tr-even-background-color: var(--color-level-3);
-    --ls-active-primary-color: var(--color-primary);
-    --ls-active-secondary-color: var(--color-secondary);
+    --ls-active-primary-color: hsl(var(--cl-primary));
+    --ls-active-secondary-color: hsl(var(--cl-secondary));
     --ls-block-properties-background-color: var(--color-level-1);
     --ls-page-properties-background-color: var(--color-level-1);
-    --ls-block-ref-link-text-color: var(--color-primary);
+    --ls-block-ref-link-text-color: hsl(var(--cl-primary));
     --ls-search-background-color: var(--color-level-3);
     --ls-mark-bg-color: var(--color-accent);
-    --ls-mark-color: var(--color-primary);
+    --ls-mark-color: hsl(var(--cl-primary));
     --ls-border-color: var(--bg-color-1);
-    --ls-secondary-border-color: var(--color-secondary);
+    --ls-secondary-border-color: hsl(var(--cl-secondary));
     --ls-guideline-color: var(--cl-transparent-text);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
@@ -103,10 +103,10 @@ html[data-theme='dark'] {
     --ls-title-text-color: var(--ls-primary-text-color);
     --ls-link-text-color: hsl(var(--cl-primary));
     --ls-link-text-hover-color: hsl(var(--cl-primary));
-    --ls-link-ref-text-color: var(--color-primary);
+    --ls-link-ref-text-color: hsl(var(--cl-primary));
     --ls-link-ref-text-hover-color: var(--color-primary-light);
     --ls-tag-text-color: var(--ls-secondary-text-color);
-    --ls-tag-text-hover-color: var(--color-primary);
+    --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
@@ -114,8 +114,8 @@ html[data-theme='dark'] {
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
-    --ls-page-checkbox-border-color: var(--color-primary);
-    --ls-page-blockquote-color: var(--color-secondary);
+    --ls-page-checkbox-border-color: hsl(var(--cl-primary));
+    --ls-page-blockquote-color: hsl(var(--cl-secondary));
     --ls-page-blockquote-bg-color: hsl(var(--cl-secondary), 0.2);
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-primary));
@@ -124,7 +124,7 @@ html[data-theme='dark'] {
     --ls-scrollbar-background-color: transparent;
     --ls-scrollbar-thumb-hover-color: var(--color-accent);
     --ls-head-text-color: var(--ls-link-text-color);
-    --ls-cloze-text-color: var(--color-primary);
+    --ls-cloze-text-color: hsl(var(--cl-primary));
     --ls-icon-color: hsl(var(--cl-primary));
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: var(--ls-secondary-background-color);
@@ -189,16 +189,16 @@ html[data-theme='light'] {
     --ls-tertiary-background-color: var(--bg-color-2);
     --ls-quaternary-background-color: var(--bg-color-3);
     --ls-table-tr-even-background-color: var(--color-level-3);
-    --ls-active-primary-color: var(--color-primary);
-    --ls-active-secondary-color: var(--color-secondary);
+    --ls-active-primary-color: hsl(var(--cl-primary));
+    --ls-active-secondary-color: hsl(var(--cl-secondary));
     --ls-block-properties-background-color: var(--color-level-1);
     --ls-page-properties-background-color: var(--color-level-1);
-    --ls-block-ref-link-text-color: var(--color-primary);
+    --ls-block-ref-link-text-color: hsl(var(--cl-primary));
     --ls-search-background-color: var(--color-level-3);
     --ls-mark-bg-color: var(--color-accent);
-    --ls-mark-color: var(--color-primary);
+    --ls-mark-color: hsl(var(--cl-primary));
     --ls-border-color: var(--bg-color-1);
-    --ls-secondary-border-color: var(--color-secondary);
+    --ls-secondary-border-color: hsl(var(--cl-secondary));
     --ls-guideline-color: var(--cl-transparent-text);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
@@ -207,10 +207,10 @@ html[data-theme='light'] {
     --ls-title-text-color: var(--ls-primary-text-color);
     --ls-link-text-color: hsl(var(--cl-primary));
     --ls-link-text-hover-color: hsl(var(--cl-primary));
-    --ls-link-ref-text-color: var(--color-primary);
+    --ls-link-ref-text-color: hsl(var(--cl-primary));
     --ls-link-ref-text-hover-color: var(--color-primary-light);
     --ls-tag-text-color: var(--ls-secondary-text-color);
-    --ls-tag-text-hover-color: var(--color-primary);
+    --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
@@ -218,8 +218,8 @@ html[data-theme='light'] {
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
-    --ls-page-checkbox-border-color: var(--color-primary);
-    --ls-page-blockquote-color: var(--color-secondary);
+    --ls-page-checkbox-border-color: hsl(var(--cl-primary));
+    --ls-page-blockquote-color: hsl(var(--cl-secondary));
     --ls-page-blockquote-bg-color: hsl(var(--cl-secondary), 0.2);
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-primary));
@@ -228,7 +228,7 @@ html[data-theme='light'] {
     --ls-scrollbar-background-color: transparent;
     --ls-scrollbar-thumb-hover-color: var(--color-accent);
     --ls-head-text-color: var(--ls-link-text-color);
-    --ls-cloze-text-color: var(--color-primary);
+    --ls-cloze-text-color: hsl(var(--cl-primary));
     --ls-icon-color: hsl(var(--cl-primary));
     --ls-search-icon-color: var(--ls-link-text-color);
     --ls-a-chosen-bg: var(--ls-secondary-background-color);
@@ -281,7 +281,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 
 /* Color Right Sidebar */
 .sidebar-item-list > .sidebar-item {
-    background: var(--bg-color)
+    background: var(--bg-color);
 }
 .color-level .color-level {
     background: var(--bg-color-1);
@@ -406,19 +406,19 @@ h1.title {
 /* Code Mirror Colors */
 
 .cm-s-solarized .cm-keyword {
-    color: var(--color-primary);
+    color: hsl(var(--cl-primary));
 }
 
 .cm-s-solarized .cm-operator {
-    color: var(--color-primary);
+    color: hsl(var(--cl-primary));
 }
 
 .cm-s-solarized .cm-property {
-    color: var(--color-secondary);
+    color: hsl(var(--cl-secondary));
 }
 
 .cm-s-solarized .cm-builtin {
-    color: var(--color-secondary);
+    color: hsl(var(--cl-secondary));
 }
 
 .cm-s-solarized .cm-number {
@@ -439,7 +439,7 @@ h1.title {
 
 .cm-s-solarized .cm-def,
 .cm-s-solarized .cm-attribute {
-    color: var(--color-primary);
+    color: hsl(var(--cl-primary));
 }
 
 .external-link {
@@ -540,7 +540,7 @@ a.tag {
 }
 .block-ref:before {
     content: "";
-    color: var(--color-primary);
+    color: hsl(var(--cl-primary));
     font-family: 'tabler-icons';
     margin: 0px 4px 0px 0px;
 }
@@ -807,22 +807,22 @@ body {
 }
 
 .block-children-left-border:hover {
-	background-color: var(--color-primary);
+	background-color: hsl(var(--cl-primary));
 	transition: var(--transition);
 }
 
 a:hover>.bullet-container .bullet {
-	background-color: var(--color-primary);
+	background-color: hsl(var(--cl-primary));
 	box-shadow: 0 0 0 2px var(--ls-primary-background-color),
-		0 0 0 4px var(--color-primary);
+		0 0 0 4px hsl(var(--cl-primary));
     transform: scale(1.0);
 	transition: all 0.3s ease-in-out;
 }
 
 .ls-block .bullet {
-	background-color: var(--color-primary);
+	background-color: hsl(var(--cl-primary));
 	box-shadow: 0 0 0 2px var(--ls-primary-background-color),
-		0 0 0 4px var(--color-primary);
+		0 0 0 4px hsl(var(--cl-primary));
 	display: block;
 	transition: all 0.3s ease-in-out;
 }
