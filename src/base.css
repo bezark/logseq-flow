@@ -98,8 +98,8 @@ html[data-theme='dark'] {
     --ls-guideline-color: var(--cl-transparent-text);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
-    --ls-primary-text-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l));
-    --ls-secondary-text-color: var(--cl-gray,grey);
+    --ls-primary-text-color: hsl(var(--cl-text-color));
+    --ls-secondary-text-color: hsl(var(--cl-text-color), 0.5);
     --ls-title-text-color: var(--ls-primary-text-color);
     --ls-link-text-color: hsl(var(--cl-primary));
     --ls-link-text-hover-color: hsl(var(--cl-primary));
@@ -202,8 +202,8 @@ html[data-theme='light'] {
     --ls-guideline-color: var(--cl-transparent-text);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
-    --ls-primary-text-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l));
-    --ls-secondary-text-color: var(--cl-gray);
+    --ls-primary-text-color: hsl(var(--cl-text-color));
+    --ls-secondary-text-color: hsl(var(--cl-text-color), 0.5);
     --ls-title-text-color: var(--ls-primary-text-color);
     --ls-link-text-color: hsl(var(--cl-primary));
     --ls-link-text-hover-color: hsl(var(--cl-primary));
@@ -599,6 +599,7 @@ svg.h-4.w-4 {
 .block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.WAITING:before, .block-marker.LATER:before {
     font-size: 16px;
     font-weight: 700;
+    color: hsl(var(--cl-secondary));
 }
 .block-marker.TODO:before {
     content: "T";

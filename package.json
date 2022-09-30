@@ -120,6 +120,18 @@
                 "mode": "light"
             },
             {
+                "name": "FlatUI",
+                "url": "./src/flatui.css",
+                "description": "FlatUI",
+                "mode": "light"
+            },
+            {
+                "name": "FlatUI",
+                "url": "./src/flatui.css",
+                "description": "FlatUI",
+                "mode": "dark"
+            },
+            {
                 "name": "Gruvbox",
                 "url": "./src/gruvbox.css",
                 "description": "Gruvbox",
