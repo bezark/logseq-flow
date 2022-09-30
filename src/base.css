@@ -465,7 +465,6 @@ h1.title {
 /* Highlights */
 mark {
     background: hsl(var(--cl-secondary), 0.1);
-    background: rgba(var(--cl-yellow), 0.2);
     color: hsl(var(--cl-secondary));
     padding: 1px 6px;
     border-radius: var(--cl-border-max);
