@@ -95,7 +95,7 @@ html[data-theme='dark'] {
     --ls-mark-color: hsl(var(--cl-primary));
     --ls-border-color: var(--bg-color-1);
     --ls-secondary-border-color: hsl(var(--cl-secondary));
-    --ls-guideline-color: var(--cl-transparent-text);
+    --ls-guideline-color: hsl(var(--cl-text-color), 0.05);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
@@ -108,9 +108,9 @@ html[data-theme='dark'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -199,7 +199,7 @@ html[data-theme='light'] {
     --ls-mark-color: hsl(var(--cl-primary));
     --ls-border-color: var(--bg-color-1);
     --ls-secondary-border-color: hsl(var(--cl-secondary));
-    --ls-guideline-color: var(--cl-transparent-text);
+    --ls-guideline-color: hsl(var(--cl-text-color), 0.05);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
@@ -212,9 +212,9 @@ html[data-theme='light'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -305,27 +305,6 @@ h1.title {
 .color-level .breadcrumb a:not(:last-child) {
     color: hsl(var(--cl-text-color), 0.5);
     transition: 0.2s;
-}
-.block-parents a .page-reference {
-    font-weight: 500;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-underline-offset: -3px;
-    text-decoration-color: hsl(var(--cl-text-color), 0.2);
-    text-decoration-thickness: 4px;
-}
-.block-parents a:last-child .page-reference {
-    color: hsl(var(--cl-primary));
-    font-weight: 500;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    text-underline-offset: -3px;
-    text-decoration-color: hsl(var(--cl-primary), 0.2);
-    text-decoration-thickness: 4px;
-    transition: 0.2s;
-}
-.block-parents a .page-reference .bracket {
-    display: none;
 }
 
 /* Fixing the default query space-between */
@@ -505,7 +484,7 @@ blockquote {
 /*  === Checkboxes ===  */
 .form-checkbox {
     background-color: var(--bg-dark);
-    border: var(--cl-border-solid);
+    border: 1px solid hsl(var(--cl-text-color), 0.15);
     border-radius: var(--cl-border-minor);
 }
 .form-checkbox:checked {
@@ -530,13 +509,15 @@ a.tag {
 
 /* Bullet Container */
 .bullet-container.bullet-closed {
-    border: 1px dashed hsl(var(--cl-primary), 0.5);
+    border: 0px dashed hsl(var(--cl-primary), 0.5);
     width: 13px;
     height: 13px;
 }
 .bullet-container {
     width: 13px;
     height: 13px;
+    position: relative;
+    left: 1.5px;
 }
 
 
