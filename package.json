@@ -48,6 +48,30 @@
                 "mode": "light"
             },
             {
+                "name": "Catppuccin Latte",
+                "url": "./src/catppuccin-latte.css",
+                "description": "Catppuccin Latte",
+                "mode": "light"
+            },
+            {
+                "name": "Catppuccin Frappe",
+                "url": "./src/catppuccin-frappe.css",
+                "description": "Catppuccin Frappe",
+                "mode": "dark"
+            },
+            {
+                "name": "Catppuccin Macchiato",
+                "url": "./src/catppuccin-macchiato.css",
+                "description": "Catppuccin Macchiato",
+                "mode": "dark"
+            },
+            {
+                "name": "Catppuccin Mocha",
+                "url": "./src/catppuccin-mocha.css",
+                "description": "Catppuccin Mocha",
+                "mode": "dark"
+            },
+            {
                 "name": "Calamity",
                 "url": "./src/calamity.css",
                 "description": "Calamity",
