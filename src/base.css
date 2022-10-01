@@ -108,9 +108,9 @@ html[data-theme='dark'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -212,9 +212,9 @@ html[data-theme='light'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -431,6 +431,14 @@ h1.title {
     text-underline-offset: 2px;
 }
 
+/* Body Text */
+.flex.flex-row + .block-body .is-paragraph {
+    font-size: 85%;
+    filter: grayscale(0.7);
+    opacity: 0.7;
+    font-weight: 400;
+}
+
 /* Inline Code */
 :not(pre):not(mark)>code:before, :not(pre):not(mark)>code:after {
     content: "`";
@@ -509,7 +517,7 @@ a.tag {
 
 /* Bullet Container */
 .bullet-container.bullet-closed {
-    border: 0px dashed hsl(var(--cl-primary), 0.5);
+    border: 1px dashed hsl(var(--cl-primary), 0.3);
     width: 13px;
     height: 13px;
 }
@@ -520,7 +528,7 @@ a.tag {
     left: 1.5px;
 }
 
-
+/* Block References */
 .block-ref {
     border-bottom: 1px solid var(--ls-guideline-color);
     color: var(--ls-primary-text-color);
@@ -621,6 +629,11 @@ svg.h-4.w-4 {
 /* Block Control Arrow */
 a svg {
     color: var(--ls-block-bullet-color);
+}
+
+/* Warning & Error Messages */
+a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
+    background: hsl(var(--cl-red), (0,88%,68%));
 }
 
 /* References Panel */
