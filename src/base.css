@@ -506,12 +506,17 @@ blockquote {
 a.tag {
     background-color: hsl(var(--cl-accent), 1);
     color: var(--ls-primary-background-color);
+    opacity: 0.8;
     padding: 0px 4px;
     text-align: center;
     display: inline-block;
     border-radius: 4px;
     font-weight: 600;
     font-size: 14px;
+}
+a.tag:hover {
+    color: var(--ls-primary-background-color);
+    opacity: 1;
 }
 
 /*      ====== LOGSEQ MARKUP ======      */
