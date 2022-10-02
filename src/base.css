@@ -108,9 +108,9 @@ html[data-theme='dark'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -120,7 +120,7 @@ html[data-theme='dark'] {
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-primary));
     --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
-    --ls-scrollbar-foreground-color: hsl(var(--cl-accent));
+    --ls-scrollbar-foreground-color: hsl(var(--cl-accent), 0.4);
     --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0.1);
     --ls-scrollbar-thumb-hover-color: hsl(var(--cl-primary));
     --ls-head-text-color: var(--ls-link-text-color);
@@ -212,9 +212,9 @@ html[data-theme='light'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -224,9 +224,9 @@ html[data-theme='light'] {
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-primary));
     --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
-    --ls-scrollbar-foreground-color: transparent;
-    --ls-scrollbar-background-color: transparent;
-    --ls-scrollbar-thumb-hover-color: var(--color-accent);
+    --ls-scrollbar-foreground-color: hsl(var(--cl-accent), 0.4);
+    --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0.1);
+    --ls-scrollbar-thumb-hover-color: hsl(var(--cl-primary));
     --ls-head-text-color: var(--ls-link-text-color);
     --ls-cloze-text-color: hsl(var(--cl-primary));
     --ls-icon-color: hsl(var(--cl-primary));
@@ -451,7 +451,7 @@ h1.title {
 
 /* Highlights */
 mark {
-    background: hsl(var(--cl-secondary), 0.1);
+    background: hsl(var(--cl-secondary), 0.15);
     color: hsl(var(--cl-secondary));
     padding: 1px 0px !important;
     border-radius: 0px;
@@ -633,9 +633,9 @@ a svg {
 }
 
 /* Warning & Error Messages */
-a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
+/*a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
     background: hsl(var(--cl-red), (0,88%,68%));
-}
+}*/
 
 /* References Panel */
 /*** References Container ***/
