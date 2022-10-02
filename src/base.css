@@ -120,9 +120,9 @@ html[data-theme='dark'] {
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-primary));
     --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
-    --ls-scrollbar-foreground-color: transparent;
-    --ls-scrollbar-background-color: transparent;
-    --ls-scrollbar-thumb-hover-color: var(--color-accent);
+    --ls-scrollbar-foreground-color: hsl(var(--cl-accent));
+    --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0.1);
+    --ls-scrollbar-thumb-hover-color: hsl(var(--cl-primary));
     --ls-head-text-color: var(--ls-link-text-color);
     --ls-cloze-text-color: hsl(var(--cl-primary));
     --ls-icon-color: hsl(var(--cl-primary));
@@ -504,8 +504,8 @@ blockquote {
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-accent), 0.1);
-    color: hsl(var(--cl-accent));
+    background-color: hsl(var(--cl-accent), 1);
+    color: var(--ls-primary-background-color);
     padding: 0px 4px;
     text-align: center;
     display: inline-block;
