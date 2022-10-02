@@ -108,9 +108,9 @@ html[data-theme='dark'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -212,9 +212,9 @@ html[data-theme='light'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -434,8 +434,8 @@ h1.title {
 /* Body Text */
 .flex.flex-row + .block-body .is-paragraph {
     font-size: 85%;
+    color: hsl(var(--cl-text-color), 0.5);
     filter: grayscale(0.7);
-    opacity: 0.7;
     font-weight: 400;
 }
 
@@ -453,8 +453,9 @@ h1.title {
 mark {
     background: hsl(var(--cl-secondary), 0.1);
     color: hsl(var(--cl-secondary));
-    padding: 1px 6px;
-    border-radius: var(--cl-border-max);
+    padding: 1px 0px !important;
+    border-radius: 0px;
+    filter: brightness(1.2);
 }
 
 /* Blockquotes */
@@ -492,32 +493,32 @@ blockquote {
 /*  === Checkboxes ===  */
 .form-checkbox {
     background-color: var(--bg-dark);
-    border: 1px solid hsl(var(--cl-text-color), 0.15);
+    border: 1.5px solid hsl(var(--cl-text-color), 0.15);
     border-radius: var(--cl-border-minor);
 }
 .form-checkbox:checked {
-    background-color: hsl(var(--cl-primary));
+    background-color: hsl(var(--cl-primary), 0.4);
+    border: 1.5px solid hsl(var(--cl-primary), 0.4);
     opacity: 0.6;
 }
 
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-secondary));
-    color: var(--bg-color) !important;
-    padding: 1px 8px;
+    background-color: hsl(var(--cl-accent), 0.1);
+    color: hsl(var(--cl-accent));
+    padding: 0px 4px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 4px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 /*      ====== LOGSEQ MARKUP ======      */
 
 /* Bullet Container */
 .bullet-container.bullet-closed {
-    border: 1px dashed hsl(var(--cl-primary), 0.3);
+    border: 0px dashed var(--ls-block-bullet-color);
     width: 13px;
     height: 13px;
 }
