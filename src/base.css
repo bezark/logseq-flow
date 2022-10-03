@@ -498,11 +498,32 @@ blockquote {
 }
 .form-checkbox:checked {
     background-color: hsl(var(--cl-primary), 0.4);
-    border: 1.5px solid hsl(var(--cl-primary), 0.4);
+    border: 1.5px solid hsl(var(--cl-primary), 0.2);
     opacity: 0.6;
 }
 
+/* Block Properties */
+.block-properties {
+    background-color: hsl(var(--cl-text-color), 0.05);
+    border-radius: var(--cl-border-minor);
+    display: inline-block;
+    margin: 0px;
+    margin-bottom: 4px;
+}
+/* hide icons for properties */
+.block-properties .page-ref .link-icon {
+    display: none;
+}
+
 /* Tags */
+.block-properties a.tag {
+    background-color: transparent;
+    padding: 0px;
+    color: hsl(var(--cl-accent));
+}
+.block-properties a.tag:hover {
+    color: hsl(var(--cl-accent));
+}
 a.tag {
     background-color: hsl(var(--cl-accent), 1);
     color: var(--ls-primary-background-color);
