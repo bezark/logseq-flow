@@ -520,6 +520,7 @@ blockquote {
     background-color: transparent;
     padding: 0px;
     color: hsl(var(--cl-accent));
+    font-weight: 300;
 }
 .block-properties a.tag:hover {
     color: hsl(var(--cl-accent));
