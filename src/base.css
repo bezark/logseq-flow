@@ -550,8 +550,8 @@ a.tag:hover {
     height: 13px;
 }
 .bullet-container {
-    width: 13px;
-    height: 13px;
+    width: 16px;
+    height: 16px;
     position: relative;
     left: 1.5px;
 }
@@ -715,6 +715,11 @@ a svg {
 body {
     font-size: 14px;
 }*/
+
+/* Admonition Panels */
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
+    margin-left: -3px;
+}
 
 /* === GALLERY VIEW === */
     /*===========================================================*/
