@@ -36,6 +36,18 @@
                 "mode": "dark"
             },
             {
+                "name": "Belafonte",
+                "url": "./src/belafonte.css",
+                "description": "Belafonte",
+                "mode": "light"
+            },
+            {
+                "name": "Belafonte",
+                "url": "./src/belafonte.css",
+                "description": "Belafonte",
+                "mode": "dark"
+            },
+            {
                 "name": "Breeze",
                 "url": "./src/breeze.css",
                 "description": "Breeze",
