@@ -302,9 +302,21 @@ h1.title {
 }
 
 /* Dimming out breadcrumbs except the last block */
-.color-level .breadcrumb a:not(:last-child) {
-    color: hsl(var(--cl-text-color), 0.5);
+.color-level .breadcrumb a {
+    color: hsl(var(--cl-text-color), 0.8);
     transition: 0.2s;
+}
+
+/* Hide the fat arrow in breadcrumbs & replace it */
+span.mx-2.opacity-50 {
+    font-size: 0px;
+}
+span.mx-2.opacity-50:before {
+    font-size: 16px;
+    content: "\ea61";
+    font-family: 'tabler-icons';
+    vertical-align: bottom;
+    color: hsl(var(--cl-text-color), 0.4)
 }
 
 /* Fixing the default query space-between */
@@ -451,11 +463,10 @@ h1.title {
 
 /* Highlights */
 mark {
-    background: hsl(var(--cl-secondary), 0.15);
-    color: hsl(var(--cl-secondary));
-    padding: 1px 0px !important;
-    border-radius: 0px;
-    filter: brightness(1.2);
+    background: hsl(var(--cl-secondary), 0.2);
+    color: hsl(var(--cl-text-color));
+    padding: 0px 2px !important;
+    border-radius: 2px;
 }
 
 /* Blockquotes */
