@@ -561,11 +561,12 @@ blockquote {
 
 /* Block Properties */
 .block-properties {
-    background-color: hsl(var(--cl-text-color), 0.05);
+    background-color: var(--bg-color-1);
     border-radius: var(--cl-border-minor);
     display: inline-block;
     margin: 0px;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
+    padding: 3px 5px !important;
 }
 /* hide icons for properties */
 .block-properties .page-ref .link-icon {
@@ -725,6 +726,10 @@ a svg {
 /*** References Container ***/
 #main-container .lazy-visibility .color-level {
     background: transparent;
+}
+/* Fix today queries to align breadcrumb */
+.custom-query .color-level .breadcrumb {
+    padding: 0px 23px !important;
 }
 /* main references panel */
 .lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
