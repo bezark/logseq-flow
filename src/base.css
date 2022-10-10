@@ -612,7 +612,7 @@ a.tag:hover {
 
 /* Block References */
 .block-ref {
-    border-bottom: 1px solid var(--ls-guideline-color);
+    border-bottom: 1px solid hsl(var(--cl-primary), 0.4);
     color: var(--ls-primary-text-color);
     padding: 0px 3px;
     display: inline;
@@ -721,24 +721,25 @@ a svg {
 /* References Panel */
 /*** References Container ***/
 #main-container .lazy-visibility .color-level {
-    background: var(--bg-color-1);
+    background: transparent;
 }
 /* main references panel */
-/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
+.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
     background: var(--bg-color-1);
     padding: 5px 0px;
     border-radius: var(--cl-border-minor);
     margin: 10px -15px;
+    margin-top: 15px;
     border-top-left-radius: var(--cl-border-minor);
-    border: 0px solid var(--bg-color-2);
+    border: 1px solid hsl(var(--cl-primary), 0.1);
     padding-right: 20px;
 }
 /* Add padding to breadcrumbs in references panel to keep it from the edge */
-/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
-    padding: 0px 20px;
+.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
+    padding: 0px 0px;
 }
 /* Styling block references in side the reference panel */
-/*.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
+.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
     background: var(--bg-color-2);
 }
 .color-level .flex-1.flex-row.foldable-title {
