@@ -324,6 +324,49 @@ span.mx-2.opacity-50:before {
     min-height: 0px !important;
 }
 
+/* Dimming block control arrow on queries */
+span.rotating-arrow.collapsed:not(:hover) {
+    opacity: 0.01;
+}
+
+/* Improving search panel */
+span.mx-2.opacity-50:before {
+    font-size: 16px;
+    content: "\ea61";
+    font-family: 'tabler-icons';
+    vertical-align: top;
+    color: hsl(var(--cl-text-color), 0.2);
+}
+.block-parents a {
+    color: hsl(var(--cl-text-color), 0.5);
+}
+.menu-link:hover, button.menu:focus, button.pull:hover {
+    background: hsl(var(--cl-primary), 0.1);
+}
+/* Give search results better icons */
+div[title="Page"], div[title="File"], div[title="Block"] {
+    font-size: 0px;
+    border: 0px solid;
+}
+div[title="Page"]:before {
+    content: "\ec41";
+    font-family: 'tabler-icons';
+    font-size: 18px;
+    font-weight: 100;
+}
+div[title="File"]:before {
+    content: "\eaa4";
+    font-family: 'tabler-icons';
+    font-size: 18px;
+    font-weight: 100;
+}
+div[title="Block"]:before {
+    content: "\ee09";
+    font-family: 'tabler-icons';
+    font-size: 18px;
+    font-weight: 100;
+}
+
 /* Setting up the container view */
 #main-content-container, .sidebar-item {
     background-color: var(--ls-primary-background-color);
@@ -444,7 +487,7 @@ span.mx-2.opacity-50:before {
 }
 
 /* Body Text */
-.flex.flex-row + .block-body .is-paragraph {
+.flex.flex-row + .block-body > .is-paragraph {
     font-size: 85%;
     color: hsl(var(--cl-text-color), 0.5);
     filter: grayscale(0.7);
@@ -463,10 +506,10 @@ span.mx-2.opacity-50:before {
 
 /* Highlights */
 mark {
-    background: hsl(var(--cl-secondary), 0.2);
-    color: hsl(var(--cl-text-color));
-    padding: 0px 2px !important;
-    border-radius: 2px;
+    background: hsl(var(--cl-secondary), 0.15);
+    color: hsl(var(--cl-secondary));
+    padding: 1px 4px !important;
+    border-radius: 1px;
 }
 
 /* Blockquotes */
