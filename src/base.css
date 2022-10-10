@@ -303,8 +303,11 @@ h1.title {
 
 /* Dimming out breadcrumbs except the last block */
 .color-level .breadcrumb a {
-    color: hsl(var(--cl-text-color), 0.8);
+    color: hsl(var(--cl-text-color), 0.5);
     transition: 0.2s;
+}
+.color-level .breadcrumb a:hover {
+    color: hsl(var(--cl-text-color));
 }
 
 /* Hide the fat arrow in breadcrumbs & replace it */
@@ -658,7 +661,7 @@ svg.h-4.w-4 {
 }
 
 .color-level .block-properties {
-    background-color: var(--bg-color-2);
+    background-color: hsl(var(--cl-primary), 0.05);
 }
 .color-level .page-properties {
     background-color: transparent !important;
