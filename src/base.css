@@ -506,7 +506,7 @@ div[title="Block"]:before {
 
 /* Highlights */
 mark {
-    background: hsl(var(--cl-secondary), 0.15);
+    background: hsl(var(--cl-secondary), 0.2);
     color: hsl(var(--cl-secondary));
     padding: 1px 4px !important;
     border-radius: 1px;
