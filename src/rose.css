@@ -7,8 +7,8 @@ html[data-theme='dark'] {
     --background-color-l: 17%;
     --cl-text-color: 245, 50%, 91%;
     --cl-primary: 343, 76%, 68%;
-    --cl-accent: 35, 88%, 72%;
     --cl-secondary: 267, 57%, 78%;
+    --cl-accent: 2, 66%, 75%;
 }
 
 .white-theme,
@@ -17,7 +17,7 @@ html[data-theme='light'] {
     --background-color-s: 57%;
     --background-color-l: 95%;
     --cl-text-color: 248, 19%, 40%;
-    --cl-primary: 3, 53%, 67%;
+    --cl-primary: 343, 35%, 55%;
     --cl-secondary: 268, 21%, 57%;
-    --cl-accent: 35, 81%, 56%;
+    --cl-accent: 3, 53%, 67%;
 }
