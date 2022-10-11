@@ -288,6 +288,18 @@
                 "mode": "dark"
             },
             {
+                "name": "Rose",
+                "url": "./src/rose.css",
+                "description": "Rose",
+                "mode": "dark"
+            },
+            {
+                "name": "Rose",
+                "url": "./src/rose.css",
+                "description": "Rose",
+                "mode": "light"
+            },
+            {
                 "name": "Soft Era",
                 "url": "./src/soft-era.css",
                 "description": "Soft Era",

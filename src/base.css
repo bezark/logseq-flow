@@ -289,7 +289,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 
 /* Page Titles */
 h1.title {
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-primary));
 }
 
 /* References Section */
@@ -302,14 +302,72 @@ h1.title {
 }
 
 /* Dimming out breadcrumbs except the last block */
-.color-level .breadcrumb a:not(:last-child) {
+.color-level .breadcrumb a {
     color: hsl(var(--cl-text-color), 0.5);
     transition: 0.2s;
+}
+.color-level .breadcrumb a:hover {
+    color: hsl(var(--cl-text-color));
+}
+
+/* Hide the fat arrow in breadcrumbs & replace it */
+span.mx-2.opacity-50 {
+    font-size: 0px;
+}
+span.mx-2.opacity-50:before {
+    font-size: 16px;
+    content: "\ea61";
+    font-family: 'tabler-icons';
+    vertical-align: bottom;
+    color: hsl(var(--cl-text-color), 0.4)
 }
 
 /* Fixing the default query space-between */
 .lazy-visibility {
     min-height: 0px !important;
+}
+
+/* Dimming block control arrow on queries */
+span.rotating-arrow.collapsed:not(:hover) {
+    opacity: 0.01;
+}
+
+/* Improving search panel */
+span.mx-2.opacity-50:before {
+    font-size: 16px;
+    content: "\ea61";
+    font-family: 'tabler-icons';
+    vertical-align: top;
+    color: hsl(var(--cl-text-color), 0.2);
+}
+.block-parents a {
+    color: hsl(var(--cl-text-color), 0.5);
+}
+.menu-link:hover, button.menu:focus, button.pull:hover {
+    background: hsl(var(--cl-primary), 0.1);
+}
+/* Give search results better icons */
+div[title="Page"], div[title="File"], div[title="Block"] {
+    font-size: 0px;
+    border: 0px solid;
+}
+div[title="Page"]:before {
+    content: "\ec41";
+    font-family: 'tabler-icons';
+    font-size: 18px;
+    font-weight: 100;
+}
+div[title="File"]:before {
+    content: "\eaa4";
+    font-family: 'tabler-icons';
+    font-size: 18px;
+    font-weight: 100;
+}
+div[title="Block"]:before {
+    content: "\ee09";
+    font-family: 'tabler-icons';
+    font-size: 18px;
+    font-weight: 100;
 }
 
 /* Setting up the container view */
@@ -432,7 +490,7 @@ h1.title {
 }
 
 /* Body Text */
-.flex.flex-row + .block-body .is-paragraph {
+.flex.flex-row + .block-body > .is-paragraph {
     font-size: 85%;
     color: hsl(var(--cl-text-color), 0.5);
     filter: grayscale(0.7);
@@ -451,11 +509,10 @@ h1.title {
 
 /* Highlights */
 mark {
-    background: hsl(var(--cl-secondary), 0.15);
+    background: hsl(var(--cl-secondary), 0.2);
     color: hsl(var(--cl-secondary));
-    padding: 1px 0px !important;
-    border-radius: 0px;
-    filter: brightness(1.2);
+    padding: 1px 4px !important;
+    border-radius: 1px;
 }
 
 /* Blockquotes */
@@ -504,11 +561,12 @@ blockquote {
 
 /* Block Properties */
 .block-properties {
-    background-color: hsl(var(--cl-text-color), 0.05);
+    background-color: var(--bg-color-1);
     border-radius: var(--cl-border-minor);
     display: inline-block;
     margin: 0px;
-    margin-bottom: 4px;
+    margin-bottom: 0px;
+    padding: 3px 5px !important;
 }
 /* hide icons for properties */
 .block-properties .page-ref .link-icon {
@@ -558,7 +616,7 @@ a.tag:hover {
 
 /* Block References */
 .block-ref {
-    border-bottom: 1px solid var(--ls-guideline-color);
+    border-bottom: 1px solid hsl(var(--cl-primary), 0.4);
     color: var(--ls-primary-text-color);
     padding: 0px 3px;
     display: inline;
@@ -604,7 +662,7 @@ svg.h-4.w-4 {
 }
 
 .color-level .block-properties {
-    background-color: var(--bg-color-2);
+    background-color: hsl(var(--cl-primary), 0.05);
 }
 .color-level .page-properties {
     background-color: transparent !important;
@@ -664,27 +722,58 @@ a svg {
     background: hsl(var(--cl-red), (0,88%,68%));
 }*/
 
+/* Customer Query Panels */
+.ls-block .custom-query-title.flex.justify-between.w-full {
+    background: var(--bg-color-2);
+    padding: 5px;
+  }
+  .ls-block .custom-query {
+    background: var(--bg-color-1);
+    border: 1px solid var(--bg-color-2);
+    border-radius: 2px;
+  }
+  
+  .ls-block .custom-query .query-title {
+    background: transparent;
+  }
+  
+  .ls-block .custom-query .color-level > .flex > .initial > div {
+    background: var(--bg-color) !important;
+    border: 1px solid var(--bg-color-1) !important;
+  }
+
+  .ls-block .custom-query .results-count {
+    background: hsl(var(--cl-secondary), 0.2);
+    color: hsl(var(--cl-secondary));
+    padding: 0px 5px;
+  }
+
 /* References Panel */
 /*** References Container ***/
 #main-container .lazy-visibility .color-level {
-    background: var(--bg-color-1);
+    background: transparent;
+}
+/* Fix today queries to align breadcrumb */
+.custom-query .color-level .breadcrumb {
+    padding: 0px 23px !important;
 }
 /* main references panel */
-/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
+.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
     background: var(--bg-color-1);
     padding: 5px 0px;
     border-radius: var(--cl-border-minor);
     margin: 10px -15px;
+    margin-top: 15px;
     border-top-left-radius: var(--cl-border-minor);
-    border: 0px solid var(--bg-color-2);
+    border: 1px solid hsl(var(--cl-primary), 0.1);
     padding-right: 20px;
 }
 /* Add padding to breadcrumbs in references panel to keep it from the edge */
-/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
-    padding: 0px 20px;
+.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
+    padding: 0px 0px;
 }
 /* Styling block references in side the reference panel */
-/*.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
+.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
     background: var(--bg-color-2);
 }
 .color-level .flex-1.flex-row.foldable-title {
