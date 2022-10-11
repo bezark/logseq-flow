@@ -289,7 +289,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 
 /* Page Titles */
 h1.title {
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-primary));
 }
 
 /* References Section */
@@ -721,6 +721,32 @@ a svg {
 /*a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
     background: hsl(var(--cl-red), (0,88%,68%));
 }*/
+
+/* Customer Query Panels */
+.ls-block .custom-query-title.flex.justify-between.w-full {
+    background: var(--bg-color-2);
+    padding: 5px;
+  }
+  .ls-block .custom-query {
+    background: var(--bg-color-1);
+    border: 1px solid var(--bg-color-2);
+    border-radius: 2px;
+  }
+  
+  .ls-block .custom-query .query-title {
+    background: transparent;
+  }
+  
+  .ls-block .custom-query .color-level > .flex > .initial > div {
+    background: var(--bg-color) !important;
+    border: 1px solid var(--bg-color-1) !important;
+  }
+
+  .ls-block .custom-query .results-count {
+    background: hsl(var(--cl-secondary), 0.2);
+    color: hsl(var(--cl-secondary));
+    padding: 0px 5px;
+  }
 
 /* References Panel */
 /*** References Container ***/
