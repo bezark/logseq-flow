@@ -728,57 +728,33 @@ a svg {
 }*/
 
 /* Customer Query Panels */
-.ls-block .custom-query-title.flex.justify-between.w-full {
-    background-color: var(--bg-color-2);
-    padding: 5px;
-  }
-  .ls-block .custom-query {
-    background-color: var(--bg-color-1);
-    border: 1px solid var(--bg-color-2);
-    border-radius: 2px;
-  }
-  
-  .ls-block .custom-query .query-title {
-    background-color: transparent;
-  }
-  
-  .ls-block .custom-query .color-level > .flex > .initial > div {
-    background-color: var(--bg-color) !important;
-    border: 1px solid var(--bg-color-1) !important;
-  }
-
-  .ls-block .custom-query .results-count {
-    background-color: hsl(var(--cl-secondary), 0.2);
-    color: hsl(var(--cl-secondary));
-    padding: 0px 5px;
-  }
 
 /* References Panel */
 /*** References Container ***/
-#main-container .lazy-visibility .color-level {
+/*#main-container .lazy-visibility .color-level {
     background-color: transparent;
 }
 /* Fix today queries to align breadcrumb */
-.custom-query .color-level .breadcrumb {
+/*.custom-query .color-level .breadcrumb {
     padding: 0px 23px !important;
 }
 /* main references panel */
-.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
+/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
     background-color: var(--bg-color-1);
     padding: 5px 0px;
     border-radius: var(--cl-border-minor);
     margin: 10px -15px;
     margin-top: 15px;
     border-top-left-radius: var(--cl-border-minor);
-    border: 1px solid hsl(var(--cl-primary), 0.1);
+    border: 0px solid hsl(var(--cl-primary), 0.1);
     padding-right: 20px;
 }
 /* Add padding to breadcrumbs in references panel to keep it from the edge */
-.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
+/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
     padding: 0px 0px;
 }
 /* Styling block references in side the reference panel */
-.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
+/*.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
     background-color: var(--bg-color-2);
 }
 .color-level .flex-1.flex-row.foldable-title {
