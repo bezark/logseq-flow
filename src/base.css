@@ -667,7 +667,7 @@ svg.h-4.w-4 {
 }
 
 .color-level .block-properties {
-    background-color: hsl(var(--cl-primary), 0.05);
+    background-color: var(--bg-color-2);
 }
 .color-level .page-properties {
     background-color: transparent !important;
