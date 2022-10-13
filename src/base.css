@@ -415,6 +415,9 @@ div[title="Block"]:before {
 /*          ===== MARKDOWN  =====           */
 
 /* CodeMirror Blocks */
+.cp__fenced-code-block {
+    margin-top: 10px;
+}
 .cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
     background-color: var(--bg-color-1);
     text-shadow: none;
@@ -490,7 +493,7 @@ div[title="Block"]:before {
 }
 
 /* Body Text */
-.flex.flex-row + .block-body > .is-paragraph {
+.flex.flex-row ~ .block-body > .is-paragraph {
     font-size: 85%;
     color: hsl(var(--cl-text-color), 0.5);
     filter: grayscale(0.7);
@@ -566,22 +569,26 @@ blockquote {
     display: inline-block;
     margin: 0px;
     margin-bottom: 0px;
-    padding: 3px 5px !important;
+    padding: 1px 7px !important;
+    font-size: small;
 }
 /* hide icons for properties */
 .block-properties .page-ref .link-icon {
     display: none;
 }
-
 /* Tags */
 .block-properties a.tag {
     background-color: transparent;
     padding: 0px;
     color: hsl(var(--cl-accent));
     font-weight: 400;
+    font-size: 13px;
 }
 .block-properties a.tag:hover {
     color: hsl(var(--cl-accent));
+}
+.block-properties .bracket {
+    display: none;
 }
 a.tag {
     background-color: hsl(var(--cl-accent), 1);
@@ -660,6 +667,7 @@ svg.h-4.w-4 {
 /* Block Properties */
 .page-property-key {
     color: var(--ls-primary-text-color);
+    text-transform: lowercase;
 }
 .page-property-key:hover {
     color: hsl(var(--cl-primary));
@@ -671,6 +679,8 @@ svg.h-4.w-4 {
 }
 .color-level .page-properties {
     background-color: transparent !important;
+    padding: 0px !important;
+    margin: 0px;
 }
 
 /* TASK NAMES */
