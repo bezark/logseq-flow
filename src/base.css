@@ -247,7 +247,7 @@ html[data-theme='light'] {
 }
 
 .ls-block.selected {
-    background: hsl(var(--cl-primary), 0.1);
+    background-color: hsl(var(--cl-primary), 0.1);
     color: hsl(var(--cl-primary));
 }
 
@@ -275,16 +275,16 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 .left-sidebar-inner a.item.active, .left-sidebar-inner a.item:active {
     color: hsl(var(--cl-primary)) !important;
     opacity: 1;
-    background: hsl(var(--cl-primary), 0.1);
+    background-color: hsl(var(--cl-primary), 0.1);
     border-radius: var(--cl-border-minor);
 }
 
 /* Color Right Sidebar */
 .sidebar-item-list > .sidebar-item {
-    background: var(--bg-color);
+    background-color: var(--bg-color);
 }
 .color-level .color-level {
-    background: var(--bg-color-1);
+    background-color: var(--bg-color-1);
 }
 
 /* Page Titles */
@@ -344,7 +344,7 @@ span.mx-2.opacity-50:before {
     color: hsl(var(--cl-text-color), 0.5);
 }
 .menu-link:hover, button.menu:focus, button.pull:hover {
-    background: hsl(var(--cl-primary), 0.1);
+    background-color: hsl(var(--cl-primary), 0.1);
 }
 /* Give search results better icons */
 div[title="Page"], div[title="File"], div[title="Block"] {
@@ -382,7 +382,7 @@ div[title="Block"]:before {
 }
 
 .cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
-    background: var(--ls-secondary-background-color);
+    background-color: var(--ls-secondary-background-color);
 }
 .left-sidebar-inner {
     padding-top: 0px;
@@ -415,6 +415,9 @@ div[title="Block"]:before {
 /*          ===== MARKDOWN  =====           */
 
 /* CodeMirror Blocks */
+.cp__fenced-code-block {
+    margin-top: 10px;
+}
 .cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
     background-color: var(--bg-color-1);
     text-shadow: none;
@@ -490,7 +493,7 @@ div[title="Block"]:before {
 }
 
 /* Body Text */
-.flex.flex-row + .block-body > .is-paragraph {
+.flex.flex-row ~ .block-body > .is-paragraph {
     font-size: 85%;
     color: hsl(var(--cl-text-color), 0.5);
     filter: grayscale(0.7);
@@ -503,13 +506,13 @@ div[title="Block"]:before {
 }
 :not(pre):not(mark)>code {
     padding: 2px 5px !important;
-    background: hsl(var(--cl-primary), 0.05);
+    background-color: hsl(var(--cl-primary), 0.05);
     color: hsl(var(--cl-primary));
 }
 
 /* Highlights */
 mark {
-    background: hsl(var(--cl-secondary), 0.2);
+    background-color: hsl(var(--cl-secondary), 0.2);
     color: hsl(var(--cl-secondary));
     padding: 1px 4px !important;
     border-radius: 1px;
@@ -518,7 +521,7 @@ mark {
 /* Blockquotes */
 blockquote {
     border-left-color: hsl(var(--cl-secondary));
-    background: hsl(var(--cl-secondary), 0.1);
+    background-color: hsl(var(--cl-secondary), 0.1);
     color: hsl(var(--cl-secondary));
 }
 
@@ -566,22 +569,26 @@ blockquote {
     display: inline-block;
     margin: 0px;
     margin-bottom: 0px;
-    padding: 3px 5px !important;
+    padding: 1px 7px !important;
+    font-size: small;
 }
 /* hide icons for properties */
 .block-properties .page-ref .link-icon {
     display: none;
 }
-
 /* Tags */
 .block-properties a.tag {
     background-color: transparent;
     padding: 0px;
     color: hsl(var(--cl-accent));
     font-weight: 400;
+    font-size: 13px;
 }
 .block-properties a.tag:hover {
     color: hsl(var(--cl-accent));
+}
+.block-properties .bracket {
+    display: none;
 }
 a.tag {
     background-color: hsl(var(--cl-accent), 1);
@@ -614,13 +621,18 @@ a.tag:hover {
     left: 1.5px;
 }
 
+/* Guideline */
+.block-children-left-border:hover {
+    background-color: hsl(var(--cl-primary), 1);
+}
+
 /* Block References */
 .block-ref {
-    border-bottom: 1px solid hsl(var(--cl-primary), 0.4);
+    border-bottom: 1px solid hsl(var(--cl-secondary), 0.4);
     color: var(--ls-primary-text-color);
     padding: 0px 3px;
     display: inline;
-    background: transparent;
+    background-color: transparent;
     border-radius: 0px;
     opacity: 1;
     transition: 0.2s;
@@ -633,7 +645,7 @@ a.tag:hover {
 }
 
 .block-ref:hover {
-    background: hsl(var(--cl-primary), 0.1);
+    background-color: hsl(var(--cl-primary), 0.1);
     cursor: pointer;
     color: var(--ls-primary-text-color);
     border-radius: var(--cl-border-radius);
@@ -642,7 +654,7 @@ a.tag:hover {
 }
 
 .block-ref mark {
-    background: hsl(var(--cl-secondary), 0.2);
+    background-color: hsl(var(--cl-secondary), 0.2);
     color: var(--ls-primary-text-color);
     padding: 0px 1px;
     border-radius: 0px;
@@ -655,17 +667,20 @@ svg.h-4.w-4 {
 /* Block Properties */
 .page-property-key {
     color: var(--ls-primary-text-color);
+    text-transform: lowercase;
 }
 .page-property-key:hover {
     color: hsl(var(--cl-primary));
-    background: transparent;
+    background-color: transparent;
 }
 
 .color-level .block-properties {
-    background-color: hsl(var(--cl-primary), 0.05);
+    background-color: var(--bg-color-2);
 }
 .color-level .page-properties {
     background-color: transparent !important;
+    padding: 0px !important;
+    margin: 0px;
 }
 
 /* TASK NAMES */
@@ -719,65 +734,41 @@ a svg {
 
 /* Warning & Error Messages */
 /*a.warning, div.warning:not(.admonitionblock), p.warning, span.warning {
-    background: hsl(var(--cl-red), (0,88%,68%));
+    background-color: hsl(var(--cl-red), (0,88%,68%));
 }*/
 
 /* Customer Query Panels */
-.ls-block .custom-query-title.flex.justify-between.w-full {
-    background: var(--bg-color-2);
-    padding: 5px;
-  }
-  .ls-block .custom-query {
-    background: var(--bg-color-1);
-    border: 1px solid var(--bg-color-2);
-    border-radius: 2px;
-  }
-  
-  .ls-block .custom-query .query-title {
-    background: transparent;
-  }
-  
-  .ls-block .custom-query .color-level > .flex > .initial > div {
-    background: var(--bg-color) !important;
-    border: 1px solid var(--bg-color-1) !important;
-  }
-
-  .ls-block .custom-query .results-count {
-    background: hsl(var(--cl-secondary), 0.2);
-    color: hsl(var(--cl-secondary));
-    padding: 0px 5px;
-  }
 
 /* References Panel */
 /*** References Container ***/
-#main-container .lazy-visibility .color-level {
-    background: transparent;
+/*#main-container .lazy-visibility .color-level {
+    background-color: transparent;
 }
 /* Fix today queries to align breadcrumb */
-.custom-query .color-level .breadcrumb {
+/*.custom-query .color-level .breadcrumb {
     padding: 0px 23px !important;
 }
 /* main references panel */
-.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
-    background: var(--bg-color-1);
+/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
+    background-color: var(--bg-color-1);
     padding: 5px 0px;
     border-radius: var(--cl-border-minor);
     margin: 10px -15px;
     margin-top: 15px;
     border-top-left-radius: var(--cl-border-minor);
-    border: 1px solid hsl(var(--cl-primary), 0.1);
+    border: 0px solid hsl(var(--cl-primary), 0.1);
     padding-right: 20px;
 }
 /* Add padding to breadcrumbs in references panel to keep it from the edge */
-.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
+/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
     padding: 0px 0px;
 }
 /* Styling block references in side the reference panel */
-.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
-    background: var(--bg-color-2);
+/*.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
+    background-color: var(--bg-color-2);
 }
 .color-level .flex-1.flex-row.foldable-title {
-    background: transparent;
+    background-color: transparent;
     padding: 0px 5px;
     position: relative;
     top: 16.2px;
