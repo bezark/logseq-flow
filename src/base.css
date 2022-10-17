@@ -563,6 +563,7 @@ blockquote {
 }
 
 /* Block Properties */
+/* Some values take on important to avoid style plugins from overriding these settings */
 .block-properties {
     background-color: var(--bg-color-1);
     border-radius: var(--cl-border-minor);
@@ -570,7 +571,10 @@ blockquote {
     margin: 0px;
     margin-bottom: 0px;
     padding: 1px 7px !important;
-    font-size: small;
+    font-size: small !important;
+    letter-spacing: 0px !important;
+    word-spacing: normal !important;
+    font-family: var(--ls-font-family) !important;
 }
 /* hide icons for properties */
 .block-properties .page-ref .link-icon {
