@@ -302,13 +302,7 @@ h1.title {
 }
 
 /* Dimming out breadcrumbs except the last block */
-.color-level .breadcrumb a {
-    color: hsl(var(--cl-text-color), 0.5);
-    transition: 0.2s;
-}
-.color-level .breadcrumb a:hover {
-    color: hsl(var(--cl-text-color));
-}
+
 
 /* Hide the fat arrow in breadcrumbs & replace it */
 span.mx-2.opacity-50 {
@@ -339,9 +333,6 @@ span.mx-2.opacity-50:before {
     font-family: 'tabler-icons';
     vertical-align: top;
     color: hsl(var(--cl-text-color), 0.2);
-}
-.block-parents a {
-    color: hsl(var(--cl-text-color), 0.5);
 }
 .menu-link:hover, button.menu:focus, button.pull:hover {
     background-color: hsl(var(--cl-primary), 0.1);
@@ -567,20 +558,26 @@ blockquote {
 .block-properties {
     background-color: var(--bg-color-1);
     border-radius: var(--cl-border-minor);
-    display: inline-block;
+    display: contents;
     margin: 0px;
     margin-bottom: 0px;
-    padding: 1px 7px !important;
+    padding: 0px 0px !important;
     font-size: small !important;
     letter-spacing: 0px !important;
     word-spacing: normal !important;
     font-family: var(--ls-font-family) !important;
+    color: hsl(var(--cl-text-color), 0.5);
 }
+/* dim out properties */
+.block-properties .page-property-key {
+    color: hsl(var(--cl-text-color), 0.5);
+}
+
 /* hide icons for properties */
 .block-properties .page-ref .link-icon {
     display: none;
 }
-/* Tags */
+/* Tags inside block properties */
 .block-properties a.tag {
     background-color: transparent;
     padding: 0px;
@@ -594,6 +591,13 @@ blockquote {
 .block-properties .bracket {
     display: none;
 }
+.block-properties + .block-body {
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+/* Tags */
 a.tag {
     background-color: hsl(var(--cl-accent), 1);
     color: var(--ls-primary-background-color);
@@ -601,9 +605,10 @@ a.tag {
     padding: 0px 4px;
     text-align: center;
     display: inline-block;
-    border-radius: 4px;
+    border-radius: 2px;
     font-weight: 600;
     font-size: 14px;
+    line-height: 1.2;
 }
 a.tag:hover {
     color: var(--ls-primary-background-color);
@@ -745,8 +750,35 @@ a svg {
 
 /* References Panel */
 /*** References Container ***/
-/*#main-container .lazy-visibility .color-level {
+#main-container .lazy-visibility .color-level {
     background-color: transparent;
+}
+.color-level .blocks-container.flex-1 {
+    background-color: var(--bg-color-1);
+    margin-bottom: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.color-level div[data-refs-self*='"card"'] {
+    box-shadow: none;
+}
+.initial > div:not(:first-child) .breadcrumb {
+    margin-top: 20px;
+}
+.flex > .lazy-visibility:nth-child(even) > .fade-enter > .color-level > .flex-col {
+    border-left: 3px solid hsl(var(--cl-primary));
+    border-radius: 4px;
+    padding-left: 28px;
+    margin-left: -28px;
+}
+
+.flex > .lazy-visibility:nth-child(odd) > .fade-enter > .color-level > .flex-col {
+    border-left: 3px solid hsl(var(--cl-primary));
+    border-radius: 4px;
+    padding-left: 28px;
+    margin-left: -28px;
 }
 /* Fix today queries to align breadcrumb */
 /*.custom-query .color-level .breadcrumb {
