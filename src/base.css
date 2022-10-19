@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 :root {
     --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
@@ -290,6 +291,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 /* Page Titles */
 h1.title {
     color: hsl(var(--cl-primary));
+    font-family: "Raleway",-apple-system,system-ui,var(--ls-font-family),sans-serif;
 }
 
 /* References Section */
@@ -337,29 +339,7 @@ span.mx-2.opacity-50:before {
 .menu-link:hover, button.menu:focus, button.pull:hover {
     background-color: hsl(var(--cl-primary), 0.1);
 }
-/* Give search results better icons */
-div[title="Page"], div[title="File"], div[title="Block"] {
-    font-size: 0px;
-    border: 0px solid;
-}
-div[title="Page"]:before {
-    content: "\ec41";
-    font-family: 'tabler-icons';
-    font-size: 18px;
-    font-weight: 100;
-}
-div[title="File"]:before {
-    content: "\eaa4";
-    font-family: 'tabler-icons';
-    font-size: 18px;
-    font-weight: 100;
-}
-div[title="Block"]:before {
-    content: "\ee09";
-    font-family: 'tabler-icons';
-    font-size: 18px;
-    font-weight: 100;
-}
+
 
 /* Setting up the container view */
 #main-content-container, .sidebar-item {
@@ -404,6 +384,12 @@ div[title="Block"]:before {
 }
 
 /*          ===== MARKDOWN  =====           */
+
+/* Example BLocks */
+.pre-wrap-white-space {
+    background-color: hsl(var(--cl-primary), 0.2);
+    display: inline-block;
+}
 
 /* CodeMirror Blocks */
 .cp__fenced-code-block {
@@ -503,12 +489,21 @@ div[title="Block"]:before {
 
 /* Highlights */
 mark {
-    background-color: hsl(var(--cl-secondary), 0.2);
-    color: hsl(var(--cl-secondary));
+    background-color: hsl(var(--cl-primary), 0.15);
+    color: hsl(var(--cl-primary));
     padding: 1px 4px !important;
     border-radius: 1px;
-}
 
+}
+mark>code {
+    background-color: transparent !important;
+    color: hsl(var(--cl-primary), 1) !important;
+    line-height: inherit!important;
+    padding: 0px 2px;
+}
+mark>code:before, mark>code:after {
+    content: "`";
+}
 /* Blockquotes */
 blockquote {
     border-left-color: hsl(var(--cl-secondary));
@@ -579,19 +574,19 @@ blockquote {
     margin: 0px;
     margin-bottom: 0px;
     padding: 0px 0px !important;
-    font-size: small !important;
+    font-size: smaller !important;
     letter-spacing: 0px !important;
     word-spacing: normal !important;
     font-family: var(--ls-font-family) !important;
-    color: hsl(var(--cl-text-color), 0.5);
+    color: hsl(var(--cl-text-color), 0.75);
 }
 /* dim out properties */
 .block-properties:not(.page-properties) .page-property-key {
-    color: hsl(var(--cl-text-color), 0.5);
+    color: hsl(var(--cl-text-color), 0.75);
 }
 
 /* hide icons for properties */
-.block-properties:not(.page-properties) .page-ref .link-icon {
+.block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
     display: none;
 }
 /* Tags inside block properties */
@@ -634,6 +629,36 @@ a.tag:hover {
 
 /*      ====== LOGSEQ MARKUP ======      */
 
+/* Makes blocks that do not contain child blocks a dim gray */
+/*[haschild]:not([haschild^="{"]) .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-text-color), 0.4);
+}
+[haschild]:not([haschild^="{"]) .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-text-color), 0.1);
+}
+[haschild]:not([haschild^="{"]) .block-children {
+    border-left-color: hsl(var(--cl-primary), 0.4) !important; 
+}*/
+
+div[data-refs="[]"] .bullet-container .bullet {
+    background-color: hsl(var(--cl-text-color), 0.4);
+}
+div[data-refs="[]"] .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-text-color), 0.1);
+    border: 1px dashed hsl(var(--cl-text-color), 0.2) !important;
+}
+div[data-refs="[]"] .bullet-container {
+    background-color: transparent;
+    border: 0px dashed !important;
+}
+.bullet-container.bullet-closed {
+    border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
+}
+.bullet-container {
+    background-color: hsl(var(--cl-primary), 0.1);
+    border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
+}
+
 /* Bullet Container */
 .bullet-container.bullet-closed {
     border: 0px dashed var(--ls-block-bullet-color);
@@ -654,7 +679,7 @@ a.tag:hover {
 
 /* Block References */
 .block-ref {
-    border-bottom: 1px solid hsl(var(--cl-secondary), 0.4);
+    border-bottom: 1px solid hsl(var(--cl-primary), 0.4);
     color: var(--ls-primary-text-color);
     padding: 0px 3px;
     display: inline;
@@ -680,8 +705,6 @@ a.tag:hover {
 }
 
 .block-ref mark {
-    background-color: hsl(var(--cl-secondary), 0.2);
-    color: var(--ls-primary-text-color);
     padding: 0px 1px;
     border-radius: 0px;
 }
@@ -721,10 +744,10 @@ svg.h-4.w-4 {
     color: hsl(var(--cl-secondary));
     opacity: 1;
 }
-.block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.WAIT, .block-marker.WAITING, .block-marker.LATER {
+.block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.WAIT, .block-marker.waiting, .block-marker.LATER {
     font-size: 0px;
 }
-.block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.WAITING:before, .block-marker.LATER:before {
+.block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.waiting:before, .block-marker.LATER:before {
     font-size: 16px;
     font-weight: 700;
     color: hsl(var(--cl-secondary));
@@ -741,7 +764,7 @@ svg.h-4.w-4 {
 .block-marker.WAIT:before {
     content: "W";
 }
-.block-marker.WAITING:before {
+.block-marker.waiting:before {
     content: "W";
 }
 .block-marker.LATER:before {
@@ -1020,3 +1043,25 @@ a:hover>.bullet-container .bullet {
 /* }  */
 
 /* Bullet & Bullet Container END */
+
+
+/* Test Area
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block > .flex-row > .block-content-wrapper {
+    padding: 5px;
+    border-radius: 2px;
+}
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:first-child > .flex-row > .block-content-wrapper {
+    color: hsl(var(--cl-primary), 1);
+}
+
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:not(:first-child, :last-child) > .flex-row > .block-content-wrapper {
+    color: hsl(var(--cl-secondary), 1);
+}
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:not(:first-child, :last-child) > .flex-row > .block-content-wrapper :is(.block-ref, mark) {
+    background-color: transparent;
+    color: hsl(var(--cl-secondary), 1);
+}
+
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:last-child > .flex-row > .block-content-wrapper {
+    color: hsl(var(--cl-accent), 1);
+}*/
