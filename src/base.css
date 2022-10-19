@@ -1100,7 +1100,7 @@ a:hover>.bullet-container .bullet {
     font-family: 'tabler-icons';
     padding-right: 4px;
     vertical-align: bottom;
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-primary));
 }
     
 .ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .page-property-key[data-ref="keywords"]:before {
