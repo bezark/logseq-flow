@@ -334,7 +334,7 @@ span.mx-2.opacity-50:before {
     content: "\ea61";
     font-family: 'tabler-icons';
     vertical-align: top;
-    color: hsl(var(--cl-text-color), 0.2);
+    color: hsl(var(--cl-text-color), 0.5);
 }
 .menu-link:hover, button.menu:focus, button.pull:hover {
     background-color: hsl(var(--cl-primary), 0.1);
@@ -343,16 +343,24 @@ span.mx-2.opacity-50:before {
 
 /* Setting up the container view */
 #main-content-container, .sidebar-item {
-    background-color: transparent;
-    background-image: radial-gradient(hsl(var(--cl-text-color), 0.02) 5%, var(--bg-color) 5%);
-    background-position: 0 0;
-    background-size: 35px 35px;
     border-radius: var(--cl-border-max);
     margin: 0 12px 12px 12px;
     padding-top: 32px;
     box-shadow: var(--box-shadow-med);
     border: 1px solid var(--ls-border-color);
     z-index: 9;
+}
+.dark-theme #main-content-container, .dark-theme .sidebar-item {
+    background-color: transparent;
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.01) 5%, var(--bg-color) 5%);
+    background-position: 0 0;
+    background-size: 35px 35px;
+}
+.white-theme #main-content-container, .white-theme .sidebar-item {
+    background-color: transparent;
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.02) 5%, var(--bg-color) 5%);
+    background-position: 0 0;
+    background-size: 35px 35px;
 }
 
 .cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
@@ -616,7 +624,7 @@ blockquote {
 a.tag {
     background-color: hsl(var(--cl-accent), 0.15);
     color: hsl(var(--cl-accent), 1);
-    opacity: 0.8;
+    opacity: 1;
     padding: 0px 4px;
     text-align: center;
     display: inline-block;
@@ -1059,7 +1067,10 @@ a:hover>.bullet-container .bullet {
     align-content: center;
     background-color: hsl(var(--cl-text-color), 0.1);
     line-height: 1.1;
-  }
+}
+.lsp-hook-ui-slot {
+    display: inline-block;
+}
 
 
 /* Test Area
