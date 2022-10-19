@@ -1093,3 +1093,60 @@ a:hover>.bullet-container .bullet {
 .ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:last-child > .flex-row > .block-content-wrapper {
     color: hsl(var(--cl-accent), 1);
 }*/
+
+/* This gives the TANA stlye properties layout ONLY when a block is not collapsed.. When collapsed we return to a clean layout */
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .page-property-key:before {
+    content: "\ee8f";
+    font-family: 'tabler-icons';
+    padding-right: 4px;
+    vertical-align: bottom;
+    color: hsl(var(--cl-secondary));
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .page-property-key[data-ref="keywords"]:before {
+    content: "\f2a2";
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .inline.mr-1:before {
+    content: "●";
+    font-size: 8px;
+    color: hsl(var(--cl-text-color), 0.6);
+    padding-right: 10px;
+    vertical-align: middle;
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties:before {
+    content: "+ Properties";
+    display: block;
+    font-size: 85%;
+    padding-left: 2px;
+    color: hsl(var(--cl-text-color), 0.5);
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div > div > .page-property-key {
+    display: -webkit-inline-box;
+    min-width: 150px;
+    max-width: 150px;
+    text-transform: capitalize;f
+    font-weight: 400;
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties {
+      background: transparent !important;
+      display: block;
+}
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div > span.mr-1 {
+    display: none;
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div {
+      padding: 2px 0px;
+      display: flex;
+}
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div:first-child {
+      border-top: 1px solid hsl(var(--cl-text-color), 0.1);
+      border-bottom: 1px solid hsl(var(--cl-text-color), 0.1);
+}
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div:not(:first-child) {
+      border-bottom: 1px solid hsl(var(--cl-text-color), 0.1);
+}
