@@ -109,7 +109,7 @@ html[data-theme='dark'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
@@ -213,7 +213,7 @@ html[data-theme='light'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
@@ -343,7 +343,10 @@ span.mx-2.opacity-50:before {
 
 /* Setting up the container view */
 #main-content-container, .sidebar-item {
-    background-color: var(--ls-primary-background-color);
+    background-color: transparent;
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.02) 5%, var(--bg-color) 5%);
+    background-position: 0 0;
+    background-size: 35px 35px;
     border-radius: var(--cl-border-max);
     margin: 0 12px 12px 12px;
     padding-top: 32px;
@@ -611,19 +614,19 @@ blockquote {
 }
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-accent), 1);
-    color: var(--ls-primary-background-color);
+    background-color: hsl(var(--cl-accent), 0.15);
+    color: hsl(var(--cl-accent), 1);
     opacity: 0.8;
     padding: 0px 4px;
     text-align: center;
     display: inline-block;
     border-radius: 2px;
-    font-weight: 600;
     font-size: 14px;
     line-height: 1.2;
 }
 a.tag:hover {
-    color: var(--ls-primary-background-color);
+    color: hsl(var(--cl-accent), 1);
+    filter: brightness(1.2);
     opacity: 1;
 }
 
@@ -645,16 +648,22 @@ a.tag:hover {
 }
 [data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(var(--cl-primary), 0.1);
-    border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-primary), 0.2);
 }
 [data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
     background-color: hsl(var(--cl-primary), 0.8);
 }
 [data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(var(--cl-primary), 0.1);
-    border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-primary), 0.2);
 }
-
+:is([data-refs^='["todo"'], [data-refs-self^='["doing"'], [data-refs-self^='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(9, 100%, 64%, 0.8) !important;
+}
+:is([data-refs^='["todo"'], [data-refs-self^='["doing"'], [data-refs-self^='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(9, 100%, 64%, 0.1) !important;
+    border: 1px dashed hsl(9, 100%, 64%, 0.2) !important;
+}
 /* Bullet Container */
 .bullet-container.bullet-closed {
     border: 1px dashed hsl(var(--cl-text-color), 0.2);
@@ -1038,7 +1047,19 @@ a:hover>.bullet-container .bullet {
   /* display: block; */
 /* }  */
 
-/* Bullet & Bullet Container END */
+/* Smart Plugins */
+.templater-btn {
+    border: 1px solid hsl(var(--cl-text-color), 0.1);
+    white-space: initial;
+    padding: 0px 4px;
+    border-radius: 4px;
+    user-select: none;
+    cursor: default;
+    display: inline-block;
+    align-content: center;
+    background-color: hsl(var(--cl-text-color), 0.1);
+    line-height: 1.1;
+  }
 
 
 /* Test Area
