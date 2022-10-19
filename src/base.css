@@ -655,8 +655,8 @@ div[data-refs="[]"] .bullet-container {
     border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
 }
 .bullet-container {
-    background-color: hsl(var(--cl-primary), 0.1);
-    border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
+    background-color: hsl(var(--cl-primary), 0);
+    border: 0px dashed hsl(var(--cl-primary), 0.2) !important;
 }
 
 /* Bullet Container */
