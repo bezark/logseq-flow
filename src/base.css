@@ -111,7 +111,7 @@ html[data-theme='dark'] {
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.8);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -215,7 +215,7 @@ html[data-theme='light'] {
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.8);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -640,28 +640,24 @@ a.tag:hover {
     border-left-color: hsl(var(--cl-primary), 0.4) !important; 
 }*/
 
-div[data-refs="[]"] .bullet-container .bullet {
-    background-color: hsl(var(--cl-text-color), 0.4);
+[data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-primary), 0.8);
 }
-div[data-refs="[]"] .bullet-container.bullet-closed {
-    background-color: hsl(var(--cl-text-color), 0.1);
-    border: 1px dashed hsl(var(--cl-text-color), 0.2) !important;
-}
-div[data-refs="[]"] .bullet-container {
-    background-color: transparent;
-    border: 0px dashed !important;
-}
-.bullet-container.bullet-closed {
+[data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-primary), 0.1);
     border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
 }
-.bullet-container {
-    background-color: hsl(var(--cl-primary), 0);
-    border: 0px dashed hsl(var(--cl-primary), 0.2) !important;
+[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-primary), 0.8);
+}
+[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-primary), 0.1);
+    border: 1px dashed hsl(var(--cl-primary), 0.2) !important;
 }
 
 /* Bullet Container */
 .bullet-container.bullet-closed {
-    border: 0px dashed var(--ls-block-bullet-color);
+    border: 1px dashed hsl(var(--cl-text-color), 0.2);
     width: 13px;
     height: 13px;
 }
