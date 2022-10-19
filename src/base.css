@@ -354,13 +354,13 @@ span.mx-2.opacity-50:before {
     background-color: transparent;
     background-image: radial-gradient(hsl(var(--cl-text-color), 0.01) 5%, var(--bg-color) 5%);
     background-position: 0 0;
-    background-size: 35px 35px;
+    background-size: 25px 25px;
 }
 .white-theme #main-content-container, .white-theme .sidebar-item {
     background-color: transparent;
     background-image: radial-gradient(hsl(var(--cl-text-color), 0.02) 5%, var(--bg-color) 5%);
     background-position: 0 0;
-    background-size: 35px 35px;
+    background-size: 25px 25px;
 }
 
 .cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
