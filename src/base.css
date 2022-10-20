@@ -599,25 +599,8 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
 }
 
 /* Block Properties */
-.page-properties {
-    letter-spacing: 0px !important;
-    word-spacing: normal !important;
-    font-family: var(--ls-font-family) !important;
-}
-.page-properties a.tag {
-    background-color: transparent;
-    padding: 0px;
-    color: hsl(var(--cl-accent));
-    font-weight: 400;
-}
-.page-properties a.tag:hover {
-    color: hsl(var(--cl-accent));
-}
-.page-properties a.tag .awLinks-page-icon {
-    display: none;
-}
 /* Some values take on important to avoid style plugins from overriding these settings */
-.block-properties:not(.page-properties) {
+.block-properties {
     background-color: var(--bg-color-1);
     border-radius: var(--cl-border-minor);
     display: contents;
@@ -631,26 +614,35 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
     color: hsl(var(--cl-text-color), 0.75);
 }
 /* dim out properties */
+<<<<<<< HEAD
 .block-properties:not(.page-properties) .page-property-key {
     color: hsl(var(--cl-text-color), 0.75);
 }
 
 /* hide icons for properties */
 .block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
+=======
+.block-properties .page-property-key {
+    color: hsl(var(--cl-text-color), 0.5);
+}
+
+/* hide icons for properties */
+.block-properties .page-ref .link-icon {
+>>>>>>> parent of d60d476 (fix side panel ref style)
     display: none;
 }
 /* Tags inside block properties */
-.block-properties:not(.page-properties) a.tag {
+.block-properties a.tag {
     background-color: transparent;
     padding: 0px;
     color: hsl(var(--cl-accent));
     font-weight: 400;
     font-size: 13px;
 }
-.block-properties:not(.page-properties) a.tag:hover {
+.block-properties a.tag:hover {
     color: hsl(var(--cl-accent));
 }
-.block-properties:not(.page-properties) .bracket {
+.block-properties .bracket {
     display: none;
 }
 .block-properties + .block-body {
@@ -893,10 +885,10 @@ a svg {
 
 /* References Panel */
 /*** References Container ***/
-#main-container .lazy-visibility .color-level, .cp__right-sidebar .color-level .color-level {
+#main-container .lazy-visibility .color-level {
     background-color: transparent;
 }
-.references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
+.color-level .blocks-container.flex-1 {
     background-color: var(--bg-color-1);
     margin-bottom: 8px;
     padding-top: 12px;
@@ -904,7 +896,7 @@ a svg {
     border-radius: 4px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-.references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
+.color-level div[data-refs-self*='"card"'] {
     box-shadow: none;
 }
 .initial > div:not(:first-child) .breadcrumb {
