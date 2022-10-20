@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 :root {
     --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
@@ -108,9 +109,9 @@ html[data-theme='dark'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.8);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -212,9 +213,9 @@ html[data-theme='light'] {
     --ls-tag-text-color: var(--ls-secondary-text-color);
     --ls-tag-text-hover-color: hsl(var(--cl-primary));
     --ls-slide-background-color: var(--ls-primary-background-color);
-    --ls-block-bullet-border-color: hsl(var(--cl-primary), 0.1);
+    --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-primary), 0.8);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -290,6 +291,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 /* Page Titles */
 h1.title {
     color: hsl(var(--cl-primary));
+    font-family: "Raleway",-apple-system,system-ui,var(--ls-font-family),sans-serif;
 }
 
 /* References Section */
@@ -332,44 +334,33 @@ span.mx-2.opacity-50:before {
     content: "\ea61";
     font-family: 'tabler-icons';
     vertical-align: top;
-    color: hsl(var(--cl-text-color), 0.2);
+    color: hsl(var(--cl-text-color), 0.5);
 }
 .menu-link:hover, button.menu:focus, button.pull:hover {
     background-color: hsl(var(--cl-primary), 0.1);
 }
-/* Give search results better icons */
-div[title="Page"], div[title="File"], div[title="Block"] {
-    font-size: 0px;
-    border: 0px solid;
-}
-div[title="Page"]:before {
-    content: "\ec41";
-    font-family: 'tabler-icons';
-    font-size: 18px;
-    font-weight: 100;
-}
-div[title="File"]:before {
-    content: "\eaa4";
-    font-family: 'tabler-icons';
-    font-size: 18px;
-    font-weight: 100;
-}
-div[title="Block"]:before {
-    content: "\ee09";
-    font-family: 'tabler-icons';
-    font-size: 18px;
-    font-weight: 100;
-}
+
 
 /* Setting up the container view */
 #main-content-container, .sidebar-item {
-    background-color: var(--ls-primary-background-color);
     border-radius: var(--cl-border-max);
     margin: 0 12px 12px 12px;
     padding-top: 32px;
     box-shadow: var(--box-shadow-med);
     border: 1px solid var(--ls-border-color);
     z-index: 9;
+}
+.dark-theme #main-content-container, .dark-theme .sidebar-item {
+    background-color: transparent;
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.01) 5%, var(--bg-color) 5%);
+    background-position: 0 0;
+    background-size: 25px 25px;
+}
+.white-theme #main-content-container, .white-theme .sidebar-item {
+    background-color: transparent;
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.02) 5%, var(--bg-color) 5%);
+    background-position: 0 0;
+    background-size: 25px 25px;
 }
 
 .cp__sidebar-main-layout, #app-container, .left-sidebar-inner {
@@ -404,6 +395,12 @@ div[title="Block"]:before {
 }
 
 /*          ===== MARKDOWN  =====           */
+
+/* Example BLocks */
+.pre-wrap-white-space {
+    background-color: hsl(var(--cl-primary), 0.2);
+    display: inline-block;
+}
 
 /* CodeMirror Blocks */
 .cp__fenced-code-block {
@@ -503,12 +500,21 @@ div[title="Block"]:before {
 
 /* Highlights */
 mark {
-    background-color: hsl(var(--cl-secondary), 0.2);
-    color: hsl(var(--cl-secondary));
+    background-color: hsl(var(--cl-primary), 0.15);
+    color: hsl(var(--cl-primary));
     padding: 1px 4px !important;
     border-radius: 1px;
-}
 
+}
+mark>code {
+    background-color: transparent !important;
+    color: hsl(var(--cl-primary), 1) !important;
+    line-height: inherit!important;
+    padding: 0px 2px;
+}
+mark>code:before, mark>code:after {
+    content: "`";
+}
 /* Blockquotes */
 blockquote {
     border-left-color: hsl(var(--cl-secondary));
@@ -540,6 +546,40 @@ blockquote {
 .ls-block h6 {
     font-size: 108% !important;
 }
+
+/* === PRIORITIES === */
+a[priority]:not(a[priority=""])::before, a.priority::before {
+    font-size: 11px;
+    padding: 0px 4px;
+    font-family: 'tabler-icons';
+    margin-right: 3px;
+    border-radius: 2px;
+  }
+  a[priority]:not(a[priority=""]), a.priority {
+    font-size: 0px;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+  a[priority="A"]::before, a.priority[href="#/page/A" i]::before {
+      content: "\ea66";
+      background-color: #ef444420;
+      color: #ef4444;
+    border: 1px solid #ef444410;
+  }
+  a[priority="B"]::before, a.priority[href="#/page/B" i]::before {
+    content: "\ee87";
+    background-color: #f59e0b20;
+    color: #f59e0b;
+    border: 1px solid #f59e0b10;
+    position: relative;
+    left: -1px;
+  }
+  a[priority="C"]::before, a.priority[href="#/page/C" i]::before {
+      content: "\ea5f";
+      background-color: #3b82f620;
+      color: #3b82f6;
+    border: 1px solid #3b82f610;
+  }
 
 /*  === Checkboxes ===  */
 .form-checkbox {
@@ -579,19 +619,19 @@ blockquote {
     margin: 0px;
     margin-bottom: 0px;
     padding: 0px 0px !important;
-    font-size: small !important;
+    font-size: smaller !important;
     letter-spacing: 0px !important;
     word-spacing: normal !important;
     font-family: var(--ls-font-family) !important;
-    color: hsl(var(--cl-text-color), 0.5);
+    color: hsl(var(--cl-text-color), 0.75);
 }
 /* dim out properties */
 .block-properties:not(.page-properties) .page-property-key {
-    color: hsl(var(--cl-text-color), 0.5);
+    color: hsl(var(--cl-text-color), 0.75);
 }
 
 /* hide icons for properties */
-.block-properties:not(.page-properties) .page-ref .link-icon {
+.block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
     display: none;
 }
 /* Tags inside block properties */
@@ -616,27 +656,63 @@ blockquote {
 }
 /* Tags */
 a.tag {
-    background-color: hsl(var(--cl-accent), 1);
-    color: var(--ls-primary-background-color);
-    opacity: 0.8;
+    background-color: hsl(var(--cl-accent), 0.15);
+    color: hsl(var(--cl-accent), 1);
+    opacity: 1;
     padding: 0px 4px;
     text-align: center;
     display: inline-block;
     border-radius: 2px;
-    font-weight: 600;
     font-size: 14px;
     line-height: 1.2;
 }
 a.tag:hover {
-    color: var(--ls-primary-background-color);
+    color: hsl(var(--cl-accent), 1);
+    filter: brightness(1.2);
     opacity: 1;
 }
 
 /*      ====== LOGSEQ MARKUP ======      */
 
+/* Makes blocks that do not contain child blocks a dim gray */
+/*[haschild]:not([haschild^="{"]) .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-text-color), 0.4);
+}
+[haschild]:not([haschild^="{"]) .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-text-color), 0.1);
+}
+[haschild]:not([haschild^="{"]) .block-children {
+    border-left-color: hsl(var(--cl-primary), 0.4) !important; 
+}*/
+
+/* Gives the parent bullet a color change if child blocks have page-references */
+[data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-primary), 0.8);
+}
+/* Re-shades the bullet closed background color and adds a border */
+[data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-primary), 0.1);
+    border: 1px dashed hsl(var(--cl-primary), 0.2);
+}
+/* Gives the block itself a highlight change if it contains a page reference */
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-primary), 0.8);
+}
+/* Again adds our background color and border for the block itself */
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-primary), 0.1);
+    border: 1px dashed hsl(var(--cl-primary), 0.2);
+}
+:is([data-refs^='["todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(9, 100%, 64%, 0.8) !important;
+}
+:is([data-refs^='["todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(9, 100%, 64%, 0.1) !important;
+    border: 1px dashed hsl(9, 100%, 64%, 0.2) !important;
+}
 /* Bullet Container */
 .bullet-container.bullet-closed {
-    border: 0px dashed var(--ls-block-bullet-color);
+    border: 1px dashed hsl(var(--cl-text-color), 0.2);
     width: 13px;
     height: 13px;
 }
@@ -654,7 +730,7 @@ a.tag:hover {
 
 /* Block References */
 .block-ref {
-    border-bottom: 1px solid hsl(var(--cl-secondary), 0.4);
+    border-bottom: 1px solid hsl(var(--cl-primary), 0.4);
     color: var(--ls-primary-text-color);
     padding: 0px 3px;
     display: inline;
@@ -664,10 +740,11 @@ a.tag:hover {
     transition: 0.2s;
 }
 .block-ref:before {
-    content: "";
+    content: "\ea02";
     color: hsl(var(--cl-primary));
-    font-family: 'tabler-icons';
+    font-family: 'tabler-icons-extension';
     margin: 0px 4px 0px 0px;
+    vertical-align: bottom;
 }
 
 .block-ref:hover {
@@ -680,8 +757,6 @@ a.tag:hover {
 }
 
 .block-ref mark {
-    background-color: hsl(var(--cl-secondary), 0.2);
-    color: var(--ls-primary-text-color);
     padding: 0px 1px;
     border-radius: 0px;
 }
@@ -721,10 +796,10 @@ svg.h-4.w-4 {
     color: hsl(var(--cl-secondary));
     opacity: 1;
 }
-.block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.WAIT, .block-marker.WAITING, .block-marker.LATER {
+.block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.WAIT, .block-marker.waiting, .block-marker.LATER {
     font-size: 0px;
 }
-.block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.WAITING:before, .block-marker.LATER:before {
+.block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.waiting:before, .block-marker.LATER:before {
     font-size: 16px;
     font-weight: 700;
     color: hsl(var(--cl-secondary));
@@ -741,8 +816,12 @@ svg.h-4.w-4 {
 .block-marker.WAIT:before {
     content: "WAIT";
 }
+
 .block-marker.WAITING:before {
     content: "WAITING";
+
+
+
 }
 .block-marker.LATER:before {
     content: "LATER";
@@ -1019,4 +1098,102 @@ a:hover>.bullet-container .bullet {
   /* display: block; */
 /* }  */
 
+
 /* Bullet & Bullet Container END */
+
+/* Smart Plugins */
+.templater-btn {
+    border: 1px solid hsl(var(--cl-text-color), 0.1);
+    white-space: initial;
+    padding: 0px 4px;
+    border-radius: 4px;
+    user-select: none;
+    cursor: default;
+    display: inline-block;
+    align-content: center;
+    background-color: hsl(var(--cl-text-color), 0.1);
+    line-height: 1.1;
+}
+.lsp-hook-ui-slot {
+    display: inline-block;
+}
+
+
+/* Test Area
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block > .flex-row > .block-content-wrapper {
+    padding: 5px;
+    border-radius: 2px;
+}
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:first-child > .flex-row > .block-content-wrapper {
+    color: hsl(var(--cl-primary), 1);
+}
+
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:not(:first-child, :last-child) > .flex-row > .block-content-wrapper {
+    color: hsl(var(--cl-secondary), 1);
+}
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:not(:first-child, :last-child) > .flex-row > .block-content-wrapper :is(.block-ref, mark) {
+    background-color: transparent;
+    color: hsl(var(--cl-secondary), 1);
+}
+
+.ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block:last-child > .flex-row > .block-content-wrapper {
+    color: hsl(var(--cl-accent), 1);
+}*/
+
+/* This gives the TANA stlye properties layout ONLY when a block is not collapsed.. When collapsed we return to a clean layout */
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .page-property-key:before {
+    content: "\ee8f";
+    font-family: 'tabler-icons';
+    padding-right: 4px;
+    vertical-align: bottom;
+    color: hsl(var(--cl-primary));
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .page-property-key[data-ref="keywords"]:before {
+    content: "\f2a2";
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .inline.mr-1:before {
+    content: "●";
+    font-size: 8px;
+    color: hsl(var(--cl-text-color), 0.6);
+    padding-right: 10px;
+    vertical-align: middle;
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties:before {
+    content: "+ Properties";
+    display: block;
+    font-size: 85%;
+    padding-left: 2px;
+    color: hsl(var(--cl-text-color), 0.5);
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div > div > .page-property-key {
+    display: -webkit-inline-box;
+    min-width: 150px;
+    max-width: 150px;
+    text-transform: capitalize;f
+    font-weight: 400;
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties {
+      background: transparent !important;
+      display: block;
+}
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div > span.mr-1 {
+    display: none;
+}
+    
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div {
+      padding: 2px 0px;
+      display: flex;
+}
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div:first-child {
+      border-top: 1px solid hsl(var(--cl-text-color), 0.1);
+      border-bottom: 1px solid hsl(var(--cl-text-color), 0.1);
+}
+.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div:not(:first-child) {
+      border-bottom: 1px solid hsl(var(--cl-text-color), 0.1);
+}
+
