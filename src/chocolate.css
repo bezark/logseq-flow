@@ -27,7 +27,7 @@ html[data-theme='dark'] {
 html[data-theme='light'] {
     --background-color-h: 21;
     --background-color-s: 28%;
-    --background-color-l: 98%;
+    --background-color-l: 96%;
     --cl-text-color: 196,20%,22%;
     --primary-color-h: 187;
     --primary-color-s: 47%;

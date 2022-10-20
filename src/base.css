@@ -2,8 +2,13 @@
 :root {
     --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
+
     text-rendering: optimizeLegibility !important;
+
+
+    --cl-block-bullet-fix: 20px;
     --ls-main-content-max-width: 700px;
+
     --ls-main-content-max-width-wide: 100%;
     --ls-page-title-size: 28px;
     --ls-left-sidebar-width: 200px;
@@ -685,7 +690,49 @@ a.tag:hover {
     border-left-color: hsl(var(--cl-primary), 0.4) !important; 
 }*/
 
-/* Gives the parent bullet a color change if child blocks have page-references */
+/********************************************
+TANA BLOCK HIGHLIGHTER by Nick Martin
+********************************************/
+
+/* ===== 
+These will only affect the block in question,
+and ignores if child blocks contain a page-reference
+or task
+===== */
+
+/* Gives the block itself a highlight change if it contains a page reference */
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-primary), 0.8);
+}
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-primary), 0.1);
+    border: 1px dashed hsl(var(--cl-primary), 0.2);
+}
+/* This will target blocks that are marked DONE but still have a page reference */
+[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-primary), 0.8);
+}
+[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+    background-color: hsl(var(--cl-primary), 0.1);
+    border: 1px dashed hsl(var(--cl-primary), 0.2);
+}
+/* Target any blocks that only contain a task page-ref name and return those to normal color */
+[data-refs-self^='["todo"]'] .bullet-container .bullet {
+    background-color: var(--ls-block-bullet-color) !important;
+}
+[data-refs-self^='["todo"]'] .bullet-container.bullet-closed {
+    background-color: var(--ls-block-bullet-border-color) !important;
+    border: 0px solid !important;
+}
+
+/* ===== 
+The below section will take into account of child blocks, 
+and change the parent blocks bullet color based 
+on rather or not those child block conditions exist 
+===== */
+
+/* Simple check to see if data-refs has any values defined but is not empty
+by Losgeq standards an empty data-ref attribute will show as "[]" */
 [data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
     background-color: hsl(var(--cl-primary), 0.8);
 }
@@ -694,39 +741,39 @@ a.tag:hover {
     background-color: hsl(var(--cl-primary), 0.1);
     border: 1px dashed hsl(var(--cl-primary), 0.2);
 }
-/* Gives the block itself a highlight change if it contains a page reference */
-[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container .bullet {
-    background-color: hsl(var(--cl-primary), 0.8);
-}
-/* Again adds our background color and border for the block itself */
-[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
-    background-color: hsl(var(--cl-primary), 0.1);
-    border: 1px dashed hsl(var(--cl-primary), 0.2);
-}
-:is([data-refs^='["todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
+
+/* This will mark only the parent blocks red if there's a child block with a task item. 
+We don't really care about highlighting the block itself that's marked as a task item */
+:is([data-refs*='"todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
     background-color: hsl(9, 100%, 64%, 0.8) !important;
 }
-:is([data-refs^='["todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+:is([data-refs*='"todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(9, 100%, 64%, 0.1) !important;
     border: 1px dashed hsl(9, 100%, 64%, 0.2) !important;
 }
+
 /* Bullet Container */
 .bullet-container.bullet-closed {
     border: 1px dashed hsl(var(--cl-text-color), 0.2);
     width: 13px;
     height: 13px;
 }
+
+/* Margin Left is a quick fix for the mis-aligned bullet threading issue. 
+This will set the margin space to the appropriate setting, 
+depending on when Bullet threading is enabled, and its variable is available */
+
 .bullet-container {
     width: 13px;
     height: 13px;
-    position: relative;
-    left: 1.5px;
+    margin-left: calc(var(--ls-block-bullet-threading-width-overwrite, var(--cl-block-bullet-fix)) * .05);
 }
 
 /* Guideline */
 .block-children-left-border:hover {
     background-color: hsl(var(--cl-primary), 1);
 }
+/* Fixes the children guideline so its aligned with the new size changes we made to bullet container */
 
 /* Block References */
 .block-ref {
@@ -931,6 +978,15 @@ body {
 /* Admonition Panels */
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
     margin-left: -3px;
+}
+/* //TODO: Fix this in the primary plugin */
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children > .ls-block:last-child > .flex {
+    position: relative;
+    left: -1px;
+    border-top-left-radius: 0px;
+}
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
+    border-left-color: transparent !important;
 }
 
 /* === GALLERY VIEW === */
@@ -1173,7 +1229,7 @@ a:hover>.bullet-container .bullet {
     display: -webkit-inline-box;
     min-width: 150px;
     max-width: 150px;
-    text-transform: capitalize;f
+    text-transform: capitalize;
     font-weight: 400;
 }
     
