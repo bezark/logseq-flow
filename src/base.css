@@ -2,7 +2,7 @@
 :root {
     --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility !important;
+    --cl-block-bullet-fix: 20px;
     --ls-main-content-max-width: 1000px;
     --ls-main-content-max-width-wide: 100%;
     --ls-page-title-size: 28px;
@@ -747,22 +747,28 @@ We don't really care about highlighting the block itself that's marked as a task
     border: 1px dashed hsl(9, 100%, 64%, 0.2) !important;
 }
 
-
 /* Bullet Container */
 .bullet-container.bullet-closed {
     border: 1px dashed hsl(var(--cl-text-color), 0.2);
     width: 13px;
     height: 13px;
 }
+
+/* Margin Left is a quick fix for the mis-aligned bullet threading issue. 
+This will set the margin space to the appropriate setting, 
+depending on when Bullet threading is enabled, and its variable is available */
+
 .bullet-container {
     width: 13px;
     height: 13px;
+    margin-left: calc(var(--ls-block-bullet-threading-width-overwrite, var(--cl-block-bullet-fix)) * .05);
 }
 
 /* Guideline */
 .block-children-left-border:hover {
     background-color: hsl(var(--cl-primary), 1);
 }
+/* Fixes the children guideline so its aligned with the new size changes we made to bullet container */
 
 /* Block References */
 .block-ref {
