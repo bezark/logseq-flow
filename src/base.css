@@ -547,6 +547,40 @@ blockquote {
     font-size: 108% !important;
 }
 
+/* === PRIORITIES === */
+a[priority]:not(a[priority=""])::before, a.priority::before {
+    font-size: 11px;
+    padding: 0px 4px;
+    font-family: 'tabler-icons';
+    margin-right: 3px;
+    border-radius: 2px;
+  }
+  a[priority]:not(a[priority=""]), a.priority {
+    font-size: 0px;
+    opacity: 0.8;
+    font-weight: 500;
+  }
+  a[priority="A"]::before, a.priority[href="#/page/A" i]::before {
+      content: "\ea66";
+      background-color: #ef444420;
+      color: #ef4444;
+    border: 1px solid #ef444410;
+  }
+  a[priority="B"]::before, a.priority[href="#/page/B" i]::before {
+    content: "\ee87";
+    background-color: #f59e0b20;
+    color: #f59e0b;
+    border: 1px solid #f59e0b10;
+    position: relative;
+    left: -1px;
+  }
+  a[priority="C"]::before, a.priority[href="#/page/C" i]::before {
+      content: "\ea5f";
+      background-color: #3b82f620;
+      color: #3b82f6;
+    border: 1px solid #3b82f610;
+  }
+
 /*  === Checkboxes ===  */
 .form-checkbox {
     background-color: var(--bg-dark);
@@ -651,24 +685,28 @@ a.tag:hover {
     border-left-color: hsl(var(--cl-primary), 0.4) !important; 
 }*/
 
+/* Gives the parent bullet a color change if child blocks have page-references */
 [data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
     background-color: hsl(var(--cl-primary), 0.8);
 }
+/* Re-shades the bullet closed background color and adds a border */
 [data-refs]:not([data-refs^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(var(--cl-primary), 0.1);
     border: 1px dashed hsl(var(--cl-primary), 0.2);
 }
-[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
+/* Gives the block itself a highlight change if it contains a page reference */
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container .bullet {
     background-color: hsl(var(--cl-primary), 0.8);
 }
-[data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+/* Again adds our background color and border for the block itself */
+[data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(var(--cl-primary), 0.1);
     border: 1px dashed hsl(var(--cl-primary), 0.2);
 }
-:is([data-refs^='["todo"'], [data-refs-self^='["doing"'], [data-refs-self^='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
+:is([data-refs^='["todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
     background-color: hsl(9, 100%, 64%, 0.8) !important;
 }
-:is([data-refs^='["todo"'], [data-refs-self^='["doing"'], [data-refs-self^='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+:is([data-refs^='["todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(9, 100%, 64%, 0.1) !important;
     border: 1px dashed hsl(9, 100%, 64%, 0.2) !important;
 }
@@ -702,10 +740,11 @@ a.tag:hover {
     transition: 0.2s;
 }
 .block-ref:before {
-    content: "";
+    content: "\ea02";
     color: hsl(var(--cl-primary));
-    font-family: 'tabler-icons';
+    font-family: 'tabler-icons-extension';
     margin: 0px 4px 0px 0px;
+    vertical-align: bottom;
 }
 
 .block-ref:hover {
