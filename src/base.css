@@ -719,8 +719,6 @@ a.tag:hover {
 .bullet-container {
     width: 13px;
     height: 13px;
-    position: relative;
-    left: 1.5px;
 }
 
 /* Guideline */
@@ -927,6 +925,15 @@ body {
 /* Admonition Panels */
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
     margin-left: -3px;
+}
+/* //TODO: Fix this in the primary plugin */
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children > .ls-block:last-child > .flex {
+    position: relative;
+    left: -1px;
+    border-top-left-radius: 0px;
+}
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
+    border-left-color: transparent !important;
 }
 
 /* === GALLERY VIEW === */
