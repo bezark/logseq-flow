@@ -293,6 +293,10 @@ h1.title {
     color: hsl(var(--cl-primary));
     font-family: "Raleway",-apple-system,system-ui,var(--ls-font-family),sans-serif;
 }
+/* Fixes the line-break for long page titles */
+.ls-page-title.title span {
+    white-space: normal !important;
+}
 
 /* References Section */
 .references h2.font-bold.opacity-80 {
@@ -562,13 +566,13 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
   }
   a[priority="A"]::before, a.priority[href="#/page/A" i]::before {
       content: "\ea66";
-      background-color: #ef444420;
+      background-color: #ef444430;
       color: #ef4444;
     border: 1px solid #ef444410;
   }
   a[priority="B"]::before, a.priority[href="#/page/B" i]::before {
     content: "\ee87";
-    background-color: #f59e0b20;
+    background-color: #f59e0b30;
     color: #f59e0b;
     border: 1px solid #f59e0b10;
     position: relative;
@@ -576,7 +580,7 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
   }
   a[priority="C"]::before, a.priority[href="#/page/C" i]::before {
       content: "\ea5f";
-      background-color: #3b82f620;
+      background-color: #3b82f630;
       color: #3b82f6;
     border: 1px solid #3b82f610;
   }
@@ -739,10 +743,10 @@ by Losgeq standards an empty data-ref attribute will show as "[]" */
 
 /* This will mark only the parent blocks red if there's a child block with a task item. 
 We don't really care about highlighting the block itself that's marked as a task item */
-:is([data-refs*='"todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
+:is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
     background-color: hsl(9, 100%, 64%, 0.8) !important;
 }
-:is([data-refs*='"todo"'], [data-refs^='["doing"'], [data-refs^='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
+:is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(9, 100%, 64%, 0.1) !important;
     border: 1px dashed hsl(9, 100%, 64%, 0.2) !important;
 }
@@ -768,7 +772,6 @@ depending on when Bullet threading is enabled, and its variable is available */
 .block-children-left-border:hover {
     background-color: hsl(var(--cl-primary), 1);
 }
-/* Fixes the children guideline so its aligned with the new size changes we made to bullet container */
 
 /* Block References */
 .block-ref {
