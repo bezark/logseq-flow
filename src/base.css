@@ -259,6 +259,11 @@ html[data-theme='light'] {
     color: hsl(var(--cl-primary));
 }
 
+/* Sets the colors for file icons, and other items */
+a svg {
+    color: hsl(var(--cl-primary)) !important;
+}
+
 /* Hides the Favorite & Recent Titles */
 /*.left-sidebar-inner .nav-content-item .header {
     visibility: hidden;
