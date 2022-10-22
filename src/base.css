@@ -829,10 +829,17 @@ depending on when Bullet threading is enabled, and its variable is available */
 Page References
 */
 .page-reference .bracket {
-    color: hsl(var(--cl-primary), 0.5);
     opacity: 0.2;
+    font-size: 0px;
 }
-
+.page-reference .bracket:first-child:before {
+    content: "{{";
+    font-size: 16px;
+}
+.page-reference .bracket:last-child:after {
+    content: "}}";
+    font-size: 16px;
+}
 /* Block Control Arrow */
 svg.h-4.w-4 {
     color: var(--ls-secondary-text-color);
