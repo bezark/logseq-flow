@@ -237,6 +237,12 @@
                 "name": "Obsidian",
                 "url": "./src/obsidian.css",
                 "description": "Obsidian",
+                "mode": "light"
+            },
+            {
+                "name": "Obsidian",
+                "url": "./src/obsidian.css",
+                "description": "Obsidian",
                 "mode": "dark"
             },
             {
