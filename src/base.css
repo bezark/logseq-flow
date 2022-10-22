@@ -381,7 +381,7 @@ span.mx-2.opacity-50:before {
 }
 .white-theme #main-content-container, .white-theme .sidebar-item {
     background-color: transparent;
-    background-image: radial-gradient(hsl(var(--cl-text-color), 0.02) 5%, var(--bg-color) 5%);
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.03) 5%, var(--bg-color) 5%);
     background-position: 0 0;
     background-size: 25px 25px;
 }
@@ -829,7 +829,7 @@ depending on when Bullet threading is enabled, and its variable is available */
 Page References
 */
 .page-reference .bracket {
-    opacity: 0.2;
+    opacity: 0.3;
     font-size: 0px;
 }
 .page-reference .bracket:first-child:before {
@@ -1010,7 +1010,7 @@ body {
 /* //TODO: Fix this in the primary plugin */
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children > .ls-block:last-child > .flex {
     position: relative;
-    left: -1px;
+    left: 1px;
     border-top-left-radius: 0px;
 }
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
@@ -1260,7 +1260,7 @@ a:hover>.bullet-container .bullet {
 .page-property-key[data-ref*="date"]:before {
     content: "\ea53";
 }
-
+/*
 .ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .inline.mr-1:before {
     content: "●";
     font-size: 8px;
@@ -1287,7 +1287,7 @@ a:hover>.bullet-container .bullet {
 .ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div {
       padding: 2px 0px;
       display: flex;
-}
+}*/
 
 /****
 Improving the default Logseq
