@@ -136,6 +136,13 @@ html[data-theme='dark'] {
     --color-level-4: var(--bg-color-4);
     --color-level-5: var(--bg-color-5);
     --color-level-6: var(--bg-color-5);
+    --ls-highlight-color-gray: #17171780;
+    --ls-highlight-color-red: #7f1d1d80;
+    --ls-highlight-color-yellow: #78350f80;
+    --ls-highlight-color-green: #14532d80;
+    --ls-highlight-color-blue: #1e3a8a80;
+    --ls-highlight-color-purple: #581c8780;
+    --ls-highlight-color-pink: #83184380;
 }
 
 .light-theme,
@@ -240,6 +247,13 @@ html[data-theme='light'] {
     --color-level-4: var(--bg-color-4);
     --color-level-5: var(--bg-color-5);
     --color-level-6: var(--bg-color-5);
+    --ls-highlight-color-gray: #a3a3a360;
+    --ls-highlight-color-red: #f8717160;
+    --ls-highlight-color-yellow: #fbbf2460;
+    --ls-highlight-color-green: #4ade8060;
+    --ls-highlight-color-blue: #60a5fa60;
+    --ls-highlight-color-purple: #c084fc60;
+    --ls-highlight-color-pink: #f472b660;
 }
 
 /*  ===== Base Settings =====  */
@@ -571,13 +585,13 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
   }
   a[priority="A"]::before, a.priority[href="#/page/A" i]::before {
       content: "\ea66";
-      background-color: #ef444430;
+      background-color: #ef444450;
       color: #ef4444;
     border: 1px solid #ef444410;
   }
   a[priority="B"]::before, a.priority[href="#/page/B" i]::before {
     content: "\ee87";
-    background-color: #f59e0b30;
+    background-color: #f59e0b50;
     color: #f59e0b;
     border: 1px solid #f59e0b10;
     position: relative;
@@ -585,7 +599,7 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
   }
   a[priority="C"]::before, a.priority[href="#/page/C" i]::before {
       content: "\ea5f";
-      background-color: #3b82f630;
+      background-color: #3b82f650;
       color: #3b82f6;
     border: 1px solid #3b82f610;
   }
@@ -809,6 +823,14 @@ depending on when Bullet threading is enabled, and its variable is available */
 .block-ref mark {
     padding: 0px 1px;
     border-radius: 0px;
+}
+
+/* 
+Page References
+*/
+.page-reference .bracket {
+    color: hsl(var(--cl-primary), 0.5);
+    opacity: 0.2;
 }
 
 /* Block Control Arrow */
@@ -1156,15 +1178,15 @@ a:hover>.bullet-container .bullet {
 /* Smart Plugins */
 .templater-btn {
     border: 1px solid hsl(var(--cl-text-color), 0.1);
-    white-space: initial;
-    padding: 0px 4px;
-    border-radius: 4px;
-    user-select: none;
-    cursor: default;
-    display: inline-block;
-    align-content: center;
+    padding: 0px 4px !important;
+    cursor: pointer !important;
+    display: inline-block !important;
     background-color: hsl(var(--cl-text-color), 0.1);
     line-height: 1.1;
+    font-size: smaller;
+}
+.templater-btn:hover {
+    filter:hue-rotate(90deg);
 }
 .lsp-hook-ui-slot {
     display: inline-block;
@@ -1198,7 +1220,7 @@ a:hover>.bullet-container .bullet {
     font-family: 'tabler-icons';
     padding-right: 4px;
     vertical-align: bottom;
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-text-color), 0.75);
 }
     
 .page-property-key[data-ref="source"]:before {
@@ -1209,6 +1231,27 @@ a:hover>.bullet-container .bullet {
 }
 .page-property-key[data-ref="summary"]:before {
     content: "\ee09";
+}
+.page-property-key[data-ref="file"]:before {
+    content: "\eaa4";
+}
+.page-property-key[data-ref="file-path"]:before {
+    content: "\eaa4";
+}
+.page-property-key[data-ref*="resource"]:before {
+    content: "\eff2";
+}
+.page-property-key[data-ref*="keywords"]:before {
+    content: "\eabc";
+}
+.page-property-key[data-ref*="tags"]:before {
+    content: "\ef86";
+}
+.page-property-key[data-ref*="status"]:before {
+    content: "\ea5e";
+}
+.page-property-key[data-ref*="date"]:before {
+    content: "\ea53";
 }
 
 .ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties .inline.mr-1:before {
@@ -1221,10 +1264,9 @@ a:hover>.bullet-container .bullet {
     
 .ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div > div > .page-property-key {
     display: -webkit-inline-box;
-    min-width: 150px;
-    max-width: 150px;
+    min-width: 220px;
+    max-width: 220px;
     text-transform: capitalize;
-    font-weight: 400;
 }
     
 .ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties {
@@ -1239,10 +1281,13 @@ a:hover>.bullet-container .bullet {
       padding: 2px 0px;
       display: flex;
 }
-.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div:first-child {
-      border-top: 0px solid hsl(var(--cl-text-color), 0.1);
-      border-bottom: 0px solid hsl(var(--cl-text-color), 0.1);
-}
-.ls-block[data-collapsed="false"] > .flex-row > .flex-col > .flex-row > .flex-1 > .block-content > .block-properties > div:last-child {
-      border-bottom: 1px dashed hsl(var(--cl-text-color), 0.05);
+
+/****
+Improving the default Logseq
+Block highlight function
+****/
+
+.inline.px-1.with-bg-color {
+    padding-bottom: 1px;
+    border-radius: 2px;
 }
