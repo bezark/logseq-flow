@@ -23,3 +23,14 @@ html[data-theme='dark'] {
     --primary-text-l: 75%;
     --cl-gray: rgb(68,75,106);
 }
+
+.white-theme,
+html[data-theme='light'] {
+    --background-color-h: 240;
+    --background-color-s: 33%;
+    --background-color-l: 99%;
+    --cl-text-color: 210,21%,11%;
+    --cl-primary: 189,68%,27%;
+    --cl-secondary: 348,35%,41%;
+    --cl-accent: 261,24%,38%;
+}
