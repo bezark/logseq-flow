@@ -1298,3 +1298,7 @@ Block highlight function
     padding-bottom: 1px;
     border-radius: 2px;
 }
+
+.ls-block .custom-query.mt-4 {
+    margin-top: var(--mt-4, 2em);
+}
