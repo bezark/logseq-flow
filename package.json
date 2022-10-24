@@ -48,6 +48,12 @@
                 "mode": "dark"
             },
             {
+                "name": "Bespin",
+                "url": "./src/bespin.css",
+                "description": "Bespin",
+                "mode": "dark"
+            },
+            {
                 "name": "Breeze",
                 "url": "./src/breeze.css",
                 "description": "Breeze",
@@ -192,6 +198,12 @@
                 "mode": "light"
             },
             {
+                "name": "Kanagawa",
+                "url": "./src/kanagawa.css",
+                "description": "Kanagawa",
+                "mode": "dark"
+            },
+            {
                 "name": "Material",
                 "url": "./src/material.css",
                 "description": "material",
@@ -213,6 +225,12 @@
                 "name": "Moonlight",
                 "url": "./src/moonlight.css",
                 "description": "Moonlight",
+                "mode": "dark"
+            },
+            {
+                "name": "Nebula",
+                "url": "./src/nebula.css",
+                "description": "Nebula",
                 "mode": "dark"
             },
             {
@@ -352,6 +370,12 @@
                 "url": "./src/tokyo.css",
                 "description": "Tokyo",
                 "mode": "dark"
+            },
+            {
+                "name": "Tokyo",
+                "url": "./src/tokyo.css",
+                "description": "Tokyo",
+                "mode": "light"
             },
             {
                 "name": "Tomorrow",
