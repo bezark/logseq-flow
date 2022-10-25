@@ -803,7 +803,7 @@ Live Query Styler by Nick Martin
 [data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .block-control {
     display: none;
 }
-a.tag[data-ref="live-query"] {
+a.tag[data-ref*="live-query"] {
     display: none;
 }
 [data-refs-self*="live-query"] .flex.flex-row.align-items.mt-2 {
@@ -845,7 +845,7 @@ a.tag[data-ref="live-query"] {
     margin-bottom: 0px;
   }
   
-.embed-block > .px-3 > .blocks-container > div > div > .ls-block .custom-query .my-2 > .flex > .content > .foldable-title {
+[data-refs-self*="notitle"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block .custom-query .my-2 > .flex > .content > .foldable-title {
     display: none;
 }
   
