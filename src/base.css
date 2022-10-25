@@ -845,9 +845,9 @@ a.tag[data-ref="live-query"] {
     margin-bottom: 0px;
   }
   
-  /*.embed-block > .px-3 > .blocks-container > div > div > .ls-block .custom-query .my-2 > .flex > .content > .foldable-title {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block .custom-query .my-2 > .flex > .content > .foldable-title {
     display: none;
-  }*/
+}
   
 [data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex > .lazy-visibility > .fade-enter > .my-2 > .flex > .initial > div > .blocks-container {
       background-color: transparent;
@@ -869,7 +869,12 @@ a.tag[data-ref="live-query"] {
   [data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex {
     margin-bottom: -25px;
   }
-
+[data-refs-self*='"live-query"'] > .flex-row > .mr-1 .bullet-container .bullet {
+    background-color: hsl(var(--cl-secondary), 0.8) !important;
+}
+[data-refs-self*='"live-query"'] > .flex-row > .mr-1 .bullet-container {
+    background-color: hsl(var(--cl-secondary), 0.1) !important;
+}
 /********************************************
 End of Live Query Styler
 ********************************************/
