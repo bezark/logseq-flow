@@ -888,7 +888,7 @@ End of Live Query Styler
 
 /* Bullet Container */
 .bullet-container.bullet-closed {
-    border: 1px dashed hsl(var(--cl-text-color), 0.2);
+    border: 0px dashed hsl(var(--cl-text-color), 0.2);
     width: 13px;
     height: 13px;
 }
