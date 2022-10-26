@@ -770,11 +770,11 @@ by Losgeq standards an empty data-ref attribute will show as "[]" */
 /* This will mark only the parent blocks red if there's a child block with a task item. 
 We don't really care about highlighting the block itself that's marked as a task item */
 :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
-    background-color: hsl(9, 100%, 64%, 0.8) !important;
+    background-color: hsla(39, 100%, 50%, 0.8) !important;
 }
 :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
-    background-color: hsl(9, 100%, 64%, 0.1) !important;
-    border: 1px dashed hsl(9, 100%, 64%, 0.2) !important;
+    background-color: hsla(39, 100%, 50%, 0.1) !important;
+    border: 1px dashed hsla(39, 100%, 50%, 0.2) !important;
 }
 
 /********************************************
