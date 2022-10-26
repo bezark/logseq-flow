@@ -1470,3 +1470,15 @@ Block highlight function
 .bullet-container {
     margin-top: -1.5px;
 }
+.absolute.rounded-md.shadow-lg.absolute-modal {
+    width: 800px !important;
+    border: 3px solid var(--bg-color-1);
+}
+.menu-link {
+    background-color: var(--bg-color-2);
+}
+.absolute.rounded-md.shadow-lg.absolute-modal mark {
+    background-color: transparent;
+    color: hsl(var(--cl-primary));
+    font-weight: 600;
+}
