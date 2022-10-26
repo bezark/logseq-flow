@@ -505,8 +505,8 @@ span.mx-2.opacity-50:before {
 
 /* Body Text */
 .flex.flex-row ~ .block-body > .is-paragraph {
-    font-size: 85%;
-    color: hsl(var(--cl-text-color), 0.7);
+    font-size: small;
+    color: hsl(var(--cl-text-color), 0.8);
     font-weight: 300;
 }
 
@@ -716,7 +716,7 @@ a.tag:hover {
 }*/
 
 /********************************************
-TANA BLOCK HIGHLIGHTER by Nick Martin
+TANA BULLET HIGHLIGHTER by Nick Martin
 ********************************************/
 
 /* ===== 
@@ -731,7 +731,7 @@ or task
 }
 [data-refs-self]:not([data-refs-self^="[]"], [data-refs-self^='["todo"'], [data-refs-self^='["done"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(var(--cl-primary), 0.1);
-    border: 1px dashed hsl(var(--cl-primary), 0.2);
+    border: 0px dashed hsl(var(--cl-primary), 0.2);
 }
 /* This will target blocks that are marked DONE but still have a page reference */
 [data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container .bullet {
@@ -739,7 +739,7 @@ or task
 }
 [data-refs-self]:not([data-refs-self^="[]"]) > .flex-row > .mr-1 .bullet-container.bullet-closed {
     background-color: hsl(var(--cl-primary), 0.1);
-    border: 1px dashed hsl(var(--cl-primary), 0.2);
+    border: 0px dashed hsl(var(--cl-primary), 0.2);
 }
 /* Target any blocks that only contain a task page-ref name and return those to normal color */
 [data-refs-self^='["todo"]'] .bullet-container .bullet, [data-refs-self^='["doing"]'] .bullet-container .bullet, [data-refs-self^='["now"]'] .bullet-container .bullet, [data-refs-self^='["wait"]'] .bullet-container .bullet, [data-refs-self^='["waiting"]'] .bullet-container .bullet {
@@ -897,12 +897,16 @@ End of Live Query Styler
 This will set the margin space to the appropriate setting, 
 depending on when Bullet threading is enabled, and its variable is available */
 
+.ls-block .ls-block > div > div.items-center::before {
+    bottom: 56% !important;
+}
+
 .bullet-container {
     width: 13px;
     height: 13px;
     margin-left: calc(var(--ls-block-bullet-threading-width-overwrite, var(--cl-block-bullet-fix)) * .05);
     position: relative;
-    /*top: -1.5px;*/
+    margin-top: -3.5px;
 }
 
 /* Guideline */
@@ -1467,12 +1471,12 @@ Block highlight function
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
 }
-.bullet-container {
-    margin-top: -1.5px;
-}
 .absolute.rounded-md.shadow-lg.absolute-modal {
     width: 800px !important;
+    max-width: 100% !important;
     border: 3px solid var(--bg-color-1);
+    max-height: 500px !important;
+    height: fit-content !important;
 }
 .menu-link {
     background-color: var(--bg-color-2);
@@ -1481,4 +1485,16 @@ Block highlight function
     background-color: transparent;
     color: hsl(var(--cl-primary));
     font-weight: 600;
+}
+.tippy-tooltip-content {
+    border: 2px solid var(--bg-color-1);
+    max-width: 50% !important;
+    border-radius: 4px;
+}
+.tippy-wrapper {
+    background-color: var(--bg-color) !important;
+}
+.block-control {
+    position: relative;
+    top: -2px;
 }
