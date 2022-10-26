@@ -1467,6 +1467,6 @@ Block highlight function
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
 }
-.flex.flex-col.block-content-wrapper {
-    margin-top: 1.5px;
+.bullet-container {
+    margin-top: -1.5px;
 }
