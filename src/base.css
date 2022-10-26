@@ -506,9 +506,8 @@ span.mx-2.opacity-50:before {
 /* Body Text */
 .flex.flex-row ~ .block-body > .is-paragraph {
     font-size: 85%;
-    color: hsl(var(--cl-text-color), 0.5);
-    filter: grayscale(0.7);
-    font-weight: 400;
+    color: hsl(var(--cl-text-color), 0.7);
+    font-weight: 300;
 }
 
 /* Inline Code */
@@ -572,11 +571,13 @@ blockquote {
 
 /* === PRIORITIES === */
 a[priority]:not(a[priority=""])::before, a.priority::before {
-    font-size: 11px;
-    padding: 0px 4px;
+    font-size: 9px;
+    padding: 0px 2px;
     font-family: 'tabler-icons';
-    margin-right: 3px;
+    margin-right: 0px;
     border-radius: 2px;
+    top: -1.5px;
+    position: relative;
   }
   a[priority]:not(a[priority=""]), a.priority {
     font-size: 0px;
@@ -607,12 +608,16 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
 /*  === Checkboxes ===  */
 .form-checkbox {
     background-color: var(--bg-dark);
-    border: 1.5px solid hsl(var(--cl-text-color), 0.15);
-    border-radius: var(--cl-border-minor);
+    border: 1px solid hsl(var(--cl-text-color), 0.15);
+    border-radius: 50%;
+    position: relative;
+    top: -1.6px;
+    width: 14px;
+    height: 14px;
 }
 .form-checkbox:checked {
     background-color: hsl(var(--cl-primary), 0.4);
-    border: 1.5px solid hsl(var(--cl-primary), 0.2);
+    border: 1px solid hsl(var(--cl-primary), 0.2);
     opacity: 0.6;
 }
 
@@ -894,6 +899,8 @@ depending on when Bullet threading is enabled, and its variable is available */
     width: 13px;
     height: 13px;
     margin-left: calc(var(--ls-block-bullet-threading-width-overwrite, var(--cl-block-bullet-fix)) * .05);
+    position: relative;
+    /*top: -1.5px;*/
 }
 
 /* Guideline */
@@ -984,32 +991,108 @@ svg.h-4.w-4 {
     color: hsl(var(--cl-secondary));
     opacity: 1;
 }
-.block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.WAIT, .block-marker.waiting, .block-marker.LATER {
+.block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.wait, .block-marker.waiting, .block-marker.LATER {
     font-size: 0px;
+}
+.block-marker:hover:before {
+    opacity: 1;
 }
 .block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.waiting:before, .block-marker.LATER:before {
     font-size: 16px;
     font-weight: 700;
-    color: hsl(var(--cl-secondary));
+    color: var(--ls-primary-text-color);
+    opacity: 0.7;
 }
+
 .block-marker.TODO:before {
-    content: "T";
+    content: " ";
+    background-color: dodgerblue;
+    font-size: 3px;
+    opacity: 1;
+    border-radius: 4px;
+    position: relative;
+    left: 3px;
+    top: 0px;
+    margin-left: -7px;
+    padding-right: 2px;
+    margin-right: 2px;
+    padding-top: 9px;
 }
 .block-marker.DOING:before {
-    content: "D";
+    content: " ";
+    background-color: orange;
+    font-size: 3px;
+    opacity: 1;
+    border-radius: 4px;
+    position: relative;
+    left: 3px;
+    top: 0px;
+    margin-left: -7px;
+    padding-right: 2px;
+    margin-right: 2px;
+    padding-top: 9px;
 }
 .block-marker.NOW:before {
-    content: "N";
+    content: " ";
+    background-color: firebrick;
+    font-size: 3px;
+    opacity: 1;
+    border-radius: 4px;
+    position: relative;
+    left: 3px;
+    top: 0px;
+    margin-left: -7px;
+    padding-right: 2px;
+    margin-right: 2px;
+    padding-top: 9px;
 }
-.block-marker.WAIT:before {
-    content: "W";
+.block-marker.wait:before {
+    content: " ";
+    background-color: darkgray;
+    font-size: 3px;
+    opacity: 1;
+    border-radius: 4px;
+    position: relative;
+    left: 3px;
+    top: 0px;
+    margin-left: -7px;
+    padding-right: 2px;
+    margin-right: 2px;
+    padding-top: 9px;
 }
 .block-marker.waiting:before {
+    content: " ";
+    background-color: darkgray;
+    font-size: 3px;
+    opacity: 1;
+    border-radius: 4px;
+    position: relative;
+    left: 3px;
+    top: 0px;
+    margin-left: -7px;
+    padding-right: 2px;
+    margin-right: 2px;
+    padding-top: 9px;
+}
+/*.block-marker.TODO:before {
+    content: "T";
+}*/
+/*.block-marker.DOING:before {
+    content: "D";
+}*/
+/*.block-marker.NOW:before {
+    content: "N";
+}*/
+/*.block-marker.WAIT:before {
     content: "W";
-}
-.block-marker.LATER:before {
+}*/
+/*
+.block-marker.waiting:before {
+    content: "W";
+}*/
+/*.block-marker.LATER:before {
     content: "L";
-}
+}*/
 
 .mr-1.flex.flex-row.items-center.sm\:mr-2 {
     position: relative;
@@ -1026,14 +1109,14 @@ a svg {
     background-color: hsl(var(--cl-red), (0,88%,68%));
 }*/
 
-/* Customer Query Panels */
+/******************************
+Reference Panel Styling by Nick Martin
+******************************/
 
-/* References Panel */
-/*** References Container ***/
-#main-container .lazy-visibility .color-level, .cp__right-sidebar .color-level .color-level {
+#main-container :not(.today-queries) .lazy-visibility .color-level, .cp__right-sidebar .color-level .color-level {
     background-color: transparent;
 }
-.references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
+:not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
     background-color: var(--bg-color-1);
     margin-bottom: 8px;
     padding-top: 12px;
@@ -1041,76 +1124,33 @@ a svg {
     border-radius: 4px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
-.references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
+:not(.today-queries) .references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
     box-shadow: none;
 }
-.initial > div:not(:first-child) .breadcrumb {
-    margin-top: 20px;
+:not(.today-queries) .initial > div:not(:first-child) .breadcrumb {
+    margin-top: 10px;
 }
-.flex > .lazy-visibility:nth-child(even) > .fade-enter > .color-level > .flex-col {
+:not(.today-queries) .flex > .lazy-visibility > .fade-enter > .color-level > .flex-col {
     border-left: 3px solid hsl(var(--cl-primary));
     border-radius: 4px;
     padding-left: 28px;
     margin-left: -28px;
 }
+/*---------------------------*/
 
-.flex > .lazy-visibility:nth-child(odd) > .fade-enter > .color-level > .flex-col {
-    border-left: 3px solid hsl(var(--cl-primary));
-    border-radius: 4px;
-    padding-left: 28px;
-    margin-left: -28px;
-}
-/* Fix today queries to align breadcrumb */
-/*.custom-query .color-level .breadcrumb {
-    padding: 0px 23px !important;
-}
-/* main references panel */
-/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div {
-    background-color: var(--bg-color-1);
-    padding: 5px 0px;
-    border-radius: var(--cl-border-minor);
-    margin: 10px -15px;
-    margin-top: 15px;
-    border-top-left-radius: var(--cl-border-minor);
-    border: 0px solid hsl(var(--cl-primary), 0.1);
-    padding-right: 20px;
-}
-/* Add padding to breadcrumbs in references panel to keep it from the edge */
-/*.lazy-visibility > .fade-enter > .color-level > .flex > .initial > div .breadcrumb {
-    padding: 0px 0px;
-}
-/* Styling block references in side the reference panel */
-/*.lazy-visibility > .fade-enter > .ls-block > .flex > .flex > .references-blocks > div > div > .content > .flex > .lazy-visibility > .fade-enter > .color-level > div > .initial > div {
-    background-color: var(--bg-color-2);
-}
-.color-level .flex-1.flex-row.foldable-title {
-    background-color: transparent;
-    padding: 0px 5px;
-    position: relative;
-    top: 16.2px;
-    left: -15px;
-    display: inline-block;
-    border-top-left-radius: var(--cl-border-minor);
-    border-top-right-radius: var(--cl-border-minor);
-}*/
+/******************************
+** TYPOGRAPHY SETTINGS
+******************************/
 
-/*    ====== TYPOGRAPHY ======    */
 .ls-block {
     padding: 1px 0px;
 }
-/* give extra padding to spread out sections by headers */
-/*.ls-block:is([level="1"]):first-child > .flex > .flex > .flex > .flex-1 > .block-content > .flex > .flex-1 > :is(h1,h2,h3,h4,h5,h6) {
-    padding-top: 0px;
-}
-.ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .flex > .flex-1 > :is(h1,h2,h3,h4,h5,h6) {
-    padding-top: 15px;
-}*/
-/*#main-content-container {
-    font-size: 1em;
-}
-body {
-    font-size: 14px;
-}*/
+
+/*---------------------------*/
+
+/******************************
+** Admonition Panels
+******************************/
 
 /* Admonition Panels */
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
@@ -1410,4 +1450,7 @@ Block highlight function
 
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
+}
+.flex.flex-col.block-content-wrapper {
+    margin-top: 1.5px;
 }
