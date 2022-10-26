@@ -29,19 +29,7 @@ html[data-theme='light'] {
     --background-color-s: 27%;
     --background-color-l: 92%;
     --cl-text-color: 222,16%,28%;
-    --primary-color-h: 193;
-    --primary-color-s: 53%;
-    --primary-color-l: 50%;
-    --cl-primary: 193,53%,50%;
-    --secondary-color-h: 179;
-    --secondary-color-s: 39%;
-    --secondary-color-l: 55%;
-    --cl-secondary: 179,39%,55%;
-    --accent-color-h: 312;
-    --accent-color-s: 32%;
-    --accent-color-l: 56%;
-    --cl-accent: 312,32%,56%;
-    --primary-text-h: 222;
-    --primary-text-s: 16%;
-    --primary-text-l: 28%;
+    --cl-primary: 192,45%,56%;
+    --cl-secondary: 210,34%,53%;
+    --cl-accent: 94,28%,55%;
 }
