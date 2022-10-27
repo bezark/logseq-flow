@@ -424,7 +424,8 @@ span.mx-2.opacity-50:before {
 .pre-wrap-white-space {
     background-color: hsl(var(--cl-primary), 0.1);
     display: inline-block;
-    color: hsl(var(--cl-primary), 1);
+    border: 1px solid;
+    border-color: hsl(var(--cl-primary), 0.2);
 }
 
 /* CodeMirror Blocks */
