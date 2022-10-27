@@ -422,8 +422,9 @@ span.mx-2.opacity-50:before {
 
 /* Example BLocks */
 .pre-wrap-white-space {
-    background-color: hsl(var(--cl-primary), 0.2);
+    background-color: hsl(var(--cl-primary), 0.1);
     display: inline-block;
+    color: hsl(var(--cl-primary), 1);
 }
 
 /* CodeMirror Blocks */
@@ -697,9 +698,10 @@ a.tag {
     display: inline-block;
     border-radius: 2px;
     font-size: 14px;
-    line-height: 1.3;
+    line-height: 1.2;
     border: 1px solid;
-    border-color: hsl(var(--cl-accent), 0.15);
+    border-color: hsl(var(--cl-accent), 0.05);
+    font-weight: 600;
 }
 a.tag:hover {
     color: hsl(var(--cl-accent), 1);
