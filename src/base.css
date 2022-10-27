@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css');
 :root {
     --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
@@ -632,6 +633,7 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
 .page-properties a.tag {
     background-color: transparent;
     padding: 0px;
+    border: 0px solid;
     color: hsl(var(--cl-accent));
     font-weight: 400;
 }
@@ -669,6 +671,7 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
     background-color: transparent;
     padding: 0px;
     color: hsl(var(--cl-accent));
+    border: 0px solid;
     font-weight: 400;
     font-size: 13px;
 }
@@ -695,6 +698,8 @@ a.tag {
     border-radius: 2px;
     font-size: 14px;
     line-height: 1.3;
+    border: 1px solid;
+    border-color: hsl(var(--cl-accent), 0.15);
 }
 a.tag:hover {
     color: hsl(var(--cl-accent), 1);
@@ -999,6 +1004,8 @@ svg.h-4.w-4 {
 }
 .block-marker.TODO, .block-marker.DOING, .block-marker.NOW, .block-marker.wait, .block-marker.waiting, .block-marker.LATER {
     font-size: 0px;
+    color: hsl(var(--cl-secondary));
+    font-weight: 600;
 }
 .block-marker:hover:before {
     opacity: 1;
@@ -1006,10 +1013,10 @@ svg.h-4.w-4 {
 .block-marker.TODO:before, .block-marker.DOING:before, .block-marker.NOW:before, .block-marker.WAIT:before, .block-marker.waiting:before, .block-marker.LATER:before {
     font-size: 16px;
     font-weight: 700;
-    color: var(--ls-primary-text-color);
+    color: hsl(var(--cl-secondary));
     opacity: 0.7;
 }
-
+/*
 .block-marker.TODO:before {
     content: " ";
     background-color: forestgreen;
@@ -1094,25 +1101,26 @@ svg.h-4.w-4 {
     margin-right: 2px;
     padding-top: 6px;
 }
-/*.block-marker.TODO:before {
+*/
+.block-marker.TODO:before {
     content: "T";
-}*/
-/*.block-marker.DOING:before {
+}
+.block-marker.DOING:before {
     content: "D";
-}*/
-/*.block-marker.NOW:before {
+}
+.block-marker.NOW:before {
     content: "N";
-}*/
-/*.block-marker.WAIT:before {
+}
+.block-marker.WAIT:before {
     content: "W";
-}*/
-/*
+}
+
 .block-marker.waiting:before {
     content: "W";
-}*/
-/*.block-marker.LATER:before {
+}
+.block-marker.LATER:before {
     content: "L";
-}*/
+}
 
 .mr-1.flex.flex-row.items-center.sm\:mr-2 {
     position: relative;
@@ -1508,4 +1516,13 @@ Block highlight function
 .block-control {
     position: relative;
     top: -2px;
+}
+
+div[data-refs-self*='"card"'] {
+    background-color: var(--bg-color-1);
+    border-radius: 4px;
+    margin-bottom: 8px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
