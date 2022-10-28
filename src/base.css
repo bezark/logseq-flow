@@ -541,8 +541,19 @@ mark>code:before, mark>code:after {
 }
 /* Blockquotes */
 blockquote {
-    border-left-color: hsl(var(--cl-secondary));
+    border-color: hsl(var(--cl-secondary), 0.2) !important;
     background-color: hsl(var(--cl-secondary), 0.1);
+    color: var(--ls-primary-text-color);
+    border: 0px solid;
+    border-radius: 4px;
+    display: flex;
+    padding-left: 10px;
+}
+blockquote:before {
+    content: "\efbe";
+    font-family: 'tabler-icons';
+    padding-right: 5px;
+    align-self: center;
     color: hsl(var(--cl-secondary));
 }
 
