@@ -1507,6 +1507,7 @@ Block highlight function
     background-color: transparent;
     color: hsl(var(--cl-primary));
     font-weight: 600;
+    padding: 0px !important;
 }
 .tippy-tooltip-content {l
     border-radius: 4px;
