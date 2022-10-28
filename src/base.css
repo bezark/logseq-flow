@@ -372,7 +372,6 @@ span.mx-2.opacity-50:before {
     padding-top: 32px;
     box-shadow: var(--box-shadow-med);
     border: 1px solid var(--ls-border-color);
-    z-index: 9;
 }
 .dark-theme #main-content-container, .dark-theme .sidebar-item {
     background-color: transparent;
@@ -1528,4 +1527,11 @@ div[data-refs-self*='"card"'] {
     padding-bottom: 12px;
     padding-top: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.menu-links-outer, .menu-links-wrapper, .dropdown-wrapper {
+    background-color: var(--bg-color-2);
+}
+.menu-separator {
+    border-color: var(--bg-color-2);
 }
