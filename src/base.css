@@ -1187,7 +1187,7 @@ Reference Panel Styling by Nick Martin
     border-bottom-right-radius: 8px !important;
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
-.references .breadcrumb, .color-level .breadcrumb {
+.references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
     padding-left: 1.5rem;
     background-color: hsl(var(--cl-text-color), 0.1);
     padding-top: 8px !important;
