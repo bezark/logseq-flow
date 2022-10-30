@@ -257,7 +257,9 @@ html[data-theme='light'] {
     --ls-highlight-color-pink: #f472b660;
 }
 
-/*  ===== Base Settings =====  */
+/********************************************
+              BASE SETTINGS
+********************************************/
 ::selection {
     color: hsl(var(--cl-primary));
 }
@@ -267,8 +269,9 @@ html[data-theme='light'] {
     color: hsl(var(--cl-primary));
 }
 
-/*  ===== Main Interface =====  */
-
+/********************************************
+         INTERFACE IMPROVEMENTS
+********************************************/
 /* Match Button's to primary color */
 .button i, .ti {
     color: hsl(var(--cl-primary));
@@ -284,6 +287,30 @@ a svg {
     visibility: hidden;
 }*/
 
+/********************************************
+             MENU IMPROVEMENTS
+********************************************/
+
+.absolute.rounded-md.shadow-lg.absolute-modal {
+    width: 800px !important;
+    max-width: 100% !important;
+    border: 3px solid var(--bg-color-1);
+    max-height: 500px !important;
+    height: fit-content !important;
+}
+.menu-link {
+    background-color: var(--bg-color-2);
+}
+.menu-links-outer, .menu-links-wrapper, .dropdown-wrapper {
+    background-color: var(--bg-color-2);
+}
+.menu-separator {
+    border-color: var(--bg-color-2);
+}
+
+/********************************************
+         LEFT SIDEBAR IMPROVEMENTS
+********************************************/
 /* Color Left Sidebar Items */
 a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th {
     color: hsl(var(--cl-primary));
@@ -299,7 +326,9 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
     background-color: hsl(var(--cl-primary), 0.1);
     border-radius: var(--cl-border-minor);
 }
-
+/********************************************
+        RIGHT SIDEBAR IMPROVEMENTS
+********************************************/
 /* Color Right Sidebar */
 .sidebar-item-list > .sidebar-item {
     background-color: var(--bg-color);
@@ -308,7 +337,9 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
     background-color: var(--bg-color-1);
 }
 
-/* Page Titles */
+/********************************************
+           PAGE TITLE ELEMENTS
+********************************************/
 h1.title {
     color: hsl(var(--cl-primary));
     font-family: "Raleway",-apple-system,system-ui,var(--ls-font-family),sans-serif;
@@ -316,30 +347,6 @@ h1.title {
 /* Fixes the line-break for long page titles */
 .ls-page-title.title span {
     white-space: normal !important;
-}
-
-/* References Section */
-.references h2.font-bold.opacity-80 {
-    color: hsl(var(--cl-accent));
-}
-.references h2.font-bold.opacity-50 {
-    color: hsl(var(--cl-accent));
-    opacity: 0.8;
-}
-
-/* Dimming out breadcrumbs except the last block */
-
-
-/* Hide the fat arrow in breadcrumbs & replace it */
-span.mx-2.opacity-50 {
-    font-size: 0px;
-}
-span.mx-2.opacity-50:before {
-    font-size: 16px;
-    content: "\ea61";
-    font-family: 'tabler-icons';
-    vertical-align: bottom;
-    color: hsl(var(--cl-text-color), 0.4)
 }
 
 /* Fixing the default query space-between */
@@ -417,7 +424,79 @@ span.mx-2.opacity-50:before {
     transform: translateY(-4px);
 }
 
-/*          ===== MARKDOWN  =====           */
+/********************************************
+               CODEMIRROR
+********************************************/
+
+.extensions__code-lang {
+    margin: 2px;
+    background-color: transparent;
+    color: hsl(var(--cl-secondary));
+}
+
+.cp__fenced-code-block {
+    margin-top: 10px;
+}
+.cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
+    background-color: hsl(var(--cl-text-color), 0.05);
+    text-shadow: none;
+    color: var(--ls-primary-text-color);
+    border: 1px solid var(--bg-color-2);
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+    background-color: var(--bg-color-2);
+}
+.color-level .cm-s-solarized.cm-s-dark, .color-level .cm-s-solarized.cm-s-light {
+    background-color: var(--bg-color);
+    text-shadow: none;
+    color: var(--ls-primary-text-color);
+}
+.color-level .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .color-level .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+    background-color: var(--bg-color-2);
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber, .cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+    text-shadow: none;
+    color: var(--ls-secondary-text-color);
+    text-align: -webkit-center;
+}
+
+.extensions__code-lang {
+    color: hsl(var(--cl-secondary));
+}
+
+/* === Coloring CodeMirror Keywords === */
+.cm-s-solarized .cm-keyword {
+    color: hsl(var(--cl-primary));
+}
+.cm-s-solarized .cm-operator {
+    color: hsl(var(--cl-primary));
+}
+.cm-s-solarized .cm-property {
+    color: hsl(var(--cl-secondary));
+}
+.cm-s-solarized .cm-builtin {
+    color: hsl(var(--cl-secondary));
+}
+.cm-s-solarized .cm-number {
+    color: var(--color-accent);
+}
+.cm-s-solarized .cm-string {
+    color: var(--color-accent);
+}
+.cm-s-solarized .cm-comment {
+    color: slategray;
+}
+.cm-s-solarized .cm-variable {
+    color: var(--ls-primary-text-color);
+}
+.cm-s-solarized .cm-def,
+.cm-s-solarized .cm-attribute {
+    color: hsl(var(--cl-primary));
+}
+
+/********************************************
+          MARKDOWN ENHANCEMENTS
+********************************************/
 
 /* Example BLocks */
 .pre-wrap-white-space {
@@ -435,74 +514,6 @@ span.mx-2.opacity-50:before {
     vertical-align: bottom;
     align-self: center;
     color: hsl(var(--cl-secondary));
-}
-
-/* CodeMirror Blocks */
-.cp__fenced-code-block {
-    margin-top: 10px;
-}
-.cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
-    background-color: var(--bg-color-1);
-    text-shadow: none;
-    color: var(--ls-primary-text-color);
-}
-.cm-s-solarized.cm-s-dark .CodeMirror-gutters, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
-    background-color: var(--bg-color-2);
-}
-.color-level .cm-s-solarized.cm-s-dark, .color-level .cm-s-solarized.cm-s-light {
-    background-color: var(--bg-color);
-    text-shadow: none;
-    color: var(--ls-primary-text-color);
-}
-.color-level .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .color-level .cm-s-solarized.cm-s-light .CodeMirror-gutters {
-    background-color: var(--bg-color-2);
-}
-.cm-s-solarized.cm-s-dark .CodeMirror-linenumber, .cm-s-solarized.cm-s-light .CodeMirror-linenumber {
-    text-shadow: none;
-    color: var(--ls-secondary-text-color);
-}
-
-.extensions__code-lang {
-    color: hsl(var(--cl-secondary));
-}
-
-/* Code Mirror Colors */
-
-.cm-s-solarized .cm-keyword {
-    color: hsl(var(--cl-primary));
-}
-
-.cm-s-solarized .cm-operator {
-    color: hsl(var(--cl-primary));
-}
-
-.cm-s-solarized .cm-property {
-    color: hsl(var(--cl-secondary));
-}
-
-.cm-s-solarized .cm-builtin {
-    color: hsl(var(--cl-secondary));
-}
-
-.cm-s-solarized .cm-number {
-    color: var(--color-accent);
-}
-
-.cm-s-solarized .cm-string {
-    color: var(--color-accent);
-}
-
-.cm-s-solarized .cm-comment {
-    color: slategray;
-}
-
-.cm-s-solarized .cm-variable {
-    color: var(--ls-primary-text-color);
-}
-
-.cm-s-solarized .cm-def,
-.cm-s-solarized .cm-attribute {
-    color: hsl(var(--cl-primary));
 }
 
 .external-link {
@@ -1167,14 +1178,37 @@ Reference Panel Styling by Nick Martin
 #main-container :not(.today-queries) .lazy-visibility .color-level, .cp__right-sidebar .color-level .color-level {
     background-color: transparent;
 }
+/* This will modify the style of the body of the block */
 :not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
-    background-color: var(--bg-color-1);
+    background-color: hsl(var(--cl-text-color), 0.025);
     margin-bottom: 8px;
     padding-top: 12px;
     padding-bottom: 12px;
-    border-radius: 4px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    border-left: 1.5px solid;
+    border-right: 1.5px solid;
+    border-bottom: 1.5px solid;
+    border-color: hsl(var(--cl-text-color), 0.05);
+    border-bottom-left-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
 }
+/* Adjusts the breadcrumbs that are above the body of the block */
+.references-blocks .breadcrumb {
+    padding-left: 1.5rem;
+    background-color: hsl(var(--cl-text-color), 0.07);
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    border-bottom: 1.5px solid;
+    border-top-right-radius: 8px !important;
+    border-top-left-radius: 8px !important;
+    margin-left: 0px !important;
+    border-left: 1.5px solid;
+    border-top: 1.5px solid;
+    border-right: 1.5px solid;
+    border-color: hsl(var(--cl-text-color), 0.03);
+}
+/* Hides the block-shadow style from blocks tagged with card */
 :not(.today-queries) .references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
     box-shadow: none;
 }
@@ -1182,15 +1216,51 @@ Reference Panel Styling by Nick Martin
     margin-top: 10px;
 }
 :not(.today-queries) .flex > .lazy-visibility > .fade-enter > .color-level > .flex-col {
-    border-left: 3px solid hsl(var(--cl-primary));
+    border-left: 0px solid hsl(var(--cl-primary));
     border-radius: 4px;
     padding-left: 28px;
     margin-left: -28px;
 }
-/*---------------------------*/
+
+/* Gives each panel enough space from each other so they're not crowded */
+.references-blocks .breadcrumb.block-parents.flex-row.flex-1.my-2 {
+    margin-top: 25px !important;
+    margin-bottom: 0px !important;
+}
+
+/* Sets page reference titles to center */
+.references .color-level .foldable-title .items-center {
+    justify-content: center;
+}
+
+/* Makes the reference panel width fit the container size of the normal pane */
+.sm\:px-7 {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
 
 /******************************
-** TYPOGRAPHY SETTINGS
+**       Breadcrumbs        **
+******************************/
+
+/* Replace the fat arrow in breadcrumbs with chevron arrow */
+span.mx-2.opacity-50 {
+    font-size: 0px;
+}
+span.mx-2.opacity-50:before {
+    font-size: 16px;
+    content: "\ea61";
+    font-family: 'tabler-icons';
+    vertical-align: bottom;
+    color: hsl(var(--cl-text-color), 0.4)
+}
+/* Adds some color to the ellipsis */
+.breadcrumb.block-parents.flex-row.flex-1.my-2 > .opacity-70 {
+    color: hsl(var(--cl-primary));
+}
+
+/******************************
+**    TYPOGRAPHY SETTINGS    **
 ******************************/
 
 .ls-block {
@@ -1198,22 +1268,6 @@ Reference Panel Styling by Nick Martin
 }
 
 /*---------------------------*/
-
-/******************************
-** Admonition Panels
-******************************/
-
-/* Admonition Panels */
-:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
-    margin-left: -3px;
-}
-/* //TODO: Fix this in the primary plugin */
-:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children > .ls-block:last-child > .flex {
-    position: relative;
-    left: 1px;
-    border-top-left-radius: 0px;
-}
-:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
     border-left-color: transparent !important;
 }
 
@@ -1336,70 +1390,6 @@ Reference Panel Styling by Nick Martin
 
 /*--------------------------------------------- gallery end-- */
 
-/* START Bullet & Bullet Container */
-
-/*.block-children-left-border {
-	transition: all 0.0s ease-in-out;
-}
-
-.block-children-left-border:hover {
-	background-color: hsl(var(--cl-primary));
-	transition: var(--transition);
-}
-
-a:hover>.bullet-container .bullet {
-	background-color: hsl(var(--cl-primary));
-	box-shadow: 0 0 0 2px var(--ls-primary-background-color),
-		0 0 0 4px hsl(var(--cl-primary));
-    transform: scale(1.0);
-	transition: all 0.3s ease-in-out;
-}
-
-.ls-block .bullet {
-	background-color: hsl(var(--cl-primary));
-	box-shadow: 0 0 0 2px var(--ls-primary-background-color),
-		0 0 0 4px hsl(var(--cl-primary));
-	display: block;
-	transition: all 0.3s ease-in-out;
-}
-
-
-/*=========================================================*/
-/* === START highlight current path by cannibalox v0.2 ===*/
-/*=========================================================*/
-
-/*.ls-block:not(:focus-within) .bullet {
-	background-color: var(--ls-block-bullet-color);
-	box-shadow: none;
-}
-
-/*========================================================*/
-/* === highlight current path by cannibalox v0.2  END ===*/
-/*========================================================*/
-
-/* .block-children-container:focus-within > .block-children-left-border {
-  border-left: 1px solid rgba(var(--havelock-blue), 0.6);
-  /* display: block; */
-/* }  */
-
-/* Smart Plugins */
-.templater-btn {
-    border: 1px solid hsl(var(--cl-text-color), 0.1);
-    padding: 0px 4px !important;
-    cursor: pointer !important;
-    display: inline-block !important;
-    background-color: hsl(var(--cl-text-color), 0.1);
-    line-height: 1.1;
-    font-size: smaller;
-}
-.templater-btn:hover {
-    filter:hue-rotate(90deg);
-}
-.lsp-hook-ui-slot {
-    display: inline-block;
-}
-
-
 /* Test Area
 .ls-block[data-refs-self*="literature note"] > .block-children-container > .block-children > .ls-block > .flex-row > .block-content-wrapper {
     padding: 5px;
@@ -1423,13 +1413,10 @@ a:hover>.bullet-container .bullet {
 
 /********************************************
 TANA TABLES LAYOUT by Nick Martin
-
 Gives page properties a table style look
 but does not affect regular block properties
 ********************************************/
 
-
-/* This gives the TANA stlye properties layout ONLY when a block is not collapsed.. When collapsed we return to a clean layout */
 .page-property-key:before {
     content: "\f25b";
     font-family: 'tabler-icons';
@@ -1514,16 +1501,7 @@ Block highlight function
 .ls-block .custom-query.mt-4 {
     margin-top: var(--mt-4, 2em);
 }
-.absolute.rounded-md.shadow-lg.absolute-modal {
-    width: 800px !important;
-    max-width: 100% !important;
-    border: 3px solid var(--bg-color-1);
-    max-height: 500px !important;
-    height: fit-content !important;
-}
-.menu-link {
-    background-color: var(--bg-color-2);
-}
+
 .absolute.rounded-md.shadow-lg.absolute-modal mark {
     background-color: transparent;
     color: hsl(var(--cl-primary));
@@ -1551,9 +1529,34 @@ div[data-refs-self*='"card"'] {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.menu-links-outer, .menu-links-wrapper, .dropdown-wrapper {
-    background-color: var(--bg-color-2);
+/************ PLUGINS SECTION **************/
+
+/********************************************
+**            Code Block Copy              **
+********************************************/
+.copy-button {
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-left: 0px !important;
+    height: 1rem;
+    transform: scale(0.8);
 }
-.menu-separator {
-    border-color: var(--bg-color-2);
+.copy-button:hover {
+    background-color: transparent;
+}
+
+/******************************
+**    Admonition Panels     **
+******************************/
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
+    margin-left: -3px;
+}
+/* //TODO: Fix this in the primary plugin */
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children > .ls-block:last-child > .flex {
+    position: relative;
+    left: 1px;
+    border-top-left-radius: 0px;
+}
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
+    border-left-color: transparent !important;
 }
