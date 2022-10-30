@@ -955,21 +955,14 @@ depending on when Bullet threading is enabled, and its variable is available */
 
 /* Block References */
 .block-ref {
-    border-bottom: 1px solid hsl(var(--cl-primary), 0.4);
+    border-bottom: 1px dashed hsl(var(--cl-primary), 0.4);
     color: var(--ls-primary-text-color);
-    padding: 0px 3px;
+    padding: 0px;
     display: inline;
     background-color: transparent;
     border-radius: 0px;
     opacity: 1;
     transition: 0.2s;
-}
-.block-ref:before {
-    content: "\ea02";
-    color: hsl(var(--cl-primary));
-    font-family: 'tabler-icons-extension';
-    margin: 0px 4px 0px 0px;
-    vertical-align: bottom;
 }
 
 .block-ref:hover {
@@ -1190,11 +1183,11 @@ Reference Panel Styling by Nick Martin
     border-right: 0px solid;
     border-bottom: 0px solid;
     border-color: hsl(var(--cl-text-color), 0.05);
-    border-bottom-left-radius: 14px !important;
-    border-bottom-right-radius: 14px !important;
+    border-bottom-left-radius: 8px !important;
+    border-bottom-right-radius: 8px !important;
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
-.references-blocks .breadcrumb {
+.references .breadcrumb, .color-level .breadcrumb {
     padding-left: 1.5rem;
     background-color: hsl(var(--cl-text-color), 0.1);
     padding-top: 8px !important;
@@ -1207,6 +1200,9 @@ Reference Panel Styling by Nick Martin
     border-top: 0px solid;
     border-right: 0px solid;
     border-color: hsl(var(--cl-text-color), 0.03);
+}
+.breadcrumb.block-parents.flex-row.flex-1.my-2 {
+    margin-bottom: 0px;
 }
 /* Hides the block-shadow style from blocks tagged with card */
 :not(.today-queries) .references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
@@ -1223,7 +1219,7 @@ Reference Panel Styling by Nick Martin
 }
 
 /* Give page references some color in the breadcrumb view */
-.references .breadcrumb a .page-reference {
+.breadcrumb a .page-reference {
     color: hsl(var(--cl-primary)) !important;
 }
 
