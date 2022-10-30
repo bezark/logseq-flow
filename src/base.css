@@ -1517,7 +1517,7 @@ Block highlight function
 }
 .block-control {
     position: relative;
-    top: -2px;
+    top: -1px;
 }
 
 div[data-refs-self*='"card"'] {
