@@ -1183,8 +1183,8 @@ Reference Panel Styling by Nick Martin
     border-right: 0px solid;
     border-bottom: 0px solid;
     border-color: hsl(var(--cl-text-color), 0.05);
-    border-bottom-left-radius: 8px !important;
-    border-bottom-right-radius: 8px !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
 .references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
@@ -1193,13 +1193,14 @@ Reference Panel Styling by Nick Martin
     padding-top: 8px !important;
     padding-bottom: 8px !important;
     border-bottom: 1.5px solid;
-    border-top-right-radius: 8px !important;
-    border-top-left-radius: 8px !important;
+    border-top-right-radius: 4px !important;
+    border-top-left-radius: 4px !important;
     margin-left: 0px !important;
     border-left: 0px solid;
     border-top: 0px solid;
     border-right: 0px solid;
     border-color: hsl(var(--cl-text-color), 0.03);
+    min-height: 35px;
 }
 .breadcrumb.block-parents.flex-row.flex-1.my-2 {
     margin-bottom: 0px;
@@ -1209,7 +1210,7 @@ Reference Panel Styling by Nick Martin
     box-shadow: none;
 }
 :not(.today-queries) .initial > div:not(:first-child) .breadcrumb {
-    margin-top: 10px;
+    margin-top: 25px;
 }
 :not(.today-queries) .flex > .lazy-visibility > .fade-enter > .color-level > .flex-col {
     border-left: 0px solid hsl(var(--cl-primary));
@@ -1224,9 +1225,12 @@ Reference Panel Styling by Nick Martin
 }
 
 /* Gives each panel enough space from each other so they're not crowded */
-.references-blocks .breadcrumb.block-parents.flex-row.flex-1.my-2 {
+.references-blocks .initial > div > .breadcrumb.block-parents.flex-row.flex-1.my-2:not(:first-child) {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
+}
+.references-blocks .breadcrumb.block-parents.flex-row.flex-1.my-2:first-child {
+    margin-top: 0px;
 }
 
 /* Sets page reference titles to center */
@@ -1560,4 +1564,25 @@ div[data-refs-self*='"card"'] {
 }
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
     border-left-color: transparent !important;
+}
+
+span.link-highlight {
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--cl-secondary));
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1px;
+    background-color: transparent !important;
+}
+
+table {
+    margin: 4px 0px;;
+}
+.table-wrapper {
+    max-width: 100% !important;
+}
+tr:nth-child(odd) {
+    background-color: hsl(var(--cl-primary), 0.2);
+}
+tr:nth-child(2n) {
+    background-color: transparent;
 }
