@@ -438,21 +438,23 @@ span.mx-2.opacity-50:before {
     margin-top: 10px;
 }
 .cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
-    background-color: hsl(var(--cl-text-color), 0.05);
+    background-color: var(--bg-dark);
     text-shadow: none;
     color: var(--ls-primary-text-color);
-    border: 1px solid var(--bg-color-2);
+    border: 0px solid var(--bg-color-2);
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-dark);
 }
 .color-level .cm-s-solarized.cm-s-dark, .color-level .cm-s-solarized.cm-s-light {
-    background-color: var(--bg-color);
+    background-color: var(--bg-dark);
     text-shadow: none;
     color: var(--ls-primary-text-color);
 }
 .color-level .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .color-level .cm-s-solarized.cm-s-light .CodeMirror-gutters {
-    background-color: var(--bg-color-2);
+    background-color: var(--bg-dark);
 }
 .cm-s-solarized.cm-s-dark .CodeMirror-linenumber, .cm-s-solarized.cm-s-light .CodeMirror-linenumber {
     text-shadow: none;
@@ -500,6 +502,31 @@ span.mx-2.opacity-50:before {
 
 /* Example BLocks */
 .pre-wrap-white-space {
+    background-color: hsl(var(--cl-secondary), 0.05);
+    color: var(--ls-primary-text-color);
+    display: flex;
+    padding-left: 0px;
+    border-left: 2px solid hsl(var(--cl-secondary));
+    padding-top: 15px;
+    padding-bottom: 15px;
+    overflow: unset;
+    border-radius: 0px;
+}
+
+.pre-wrap-white-space:before {
+    content: "\ef40";
+    font-family: 'tabler-icons';
+    align-self: center;
+    color: hsl(var(--cl-secondary));
+    position: relative;
+    left: -9px;
+    z-index: 3;
+    background-color: var(--bg-color);
+    padding-bottom: 2px;
+    border-radius: 1px;
+}
+/*
+.pre-wrap-white-space {
     background-color: hsl(var(--cl-secondary), 0.1);
     display: inline-block;
     border: 1px solid;
@@ -514,7 +541,7 @@ span.mx-2.opacity-50:before {
     vertical-align: bottom;
     align-self: center;
     color: hsl(var(--cl-secondary));
-}
+}*/
 
 .external-link {
     padding: 2px 4px;
@@ -562,20 +589,26 @@ mark>code:before, mark>code:after {
 }
 /* Blockquotes */
 blockquote {
-    border-color: hsl(var(--cl-secondary), 0.05) !important;
-    background-color: hsl(var(--cl-secondary), 0.1);
+    background-color: hsl(var(--cl-primary), 0.05);
     color: var(--ls-primary-text-color);
-    border: 1px solid;
-    border-radius: 4px;
     display: flex;
-    padding-left: 10px;
+    padding-left: 0px;
+    border-left: 2px solid hsl(var(--cl-primary));
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
+
 blockquote:before {
-    content: "\efbe";
+    content: "\ee09";
     font-family: 'tabler-icons';
-    padding-right: 15px;
     align-self: center;
-    color: hsl(var(--cl-secondary));
+    color: hsl(var(--cl-primary));
+    position: relative;
+    left: -9px;
+    z-index: 3;
+    background-color: var(--bg-color);
+    padding-bottom: 2px;
+    border-radius: 1px;
 }
 
 /*  === Headings ===  */
