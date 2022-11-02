@@ -382,13 +382,13 @@ span.mx-2.opacity-50:before {
 }
 .dark-theme #main-content-container, .dark-theme .sidebar-item {
     background-color: transparent;
-    background-image: radial-gradient(hsl(var(--cl-text-color), 0.01) 5%, var(--bg-color) 5%);
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.01) 2%, var(--bg-color) 5%);
     background-position: 0 0;
     background-size: 25px 25px;
 }
 .white-theme #main-content-container, .white-theme .sidebar-item {
     background-color: transparent;
-    background-image: radial-gradient(hsl(var(--cl-text-color), 0.03) 5%, var(--bg-color) 5%);
+    background-image: radial-gradient(hsl(var(--cl-text-color), 0.03) 3%, var(--bg-color) 5%);
     background-position: 0 0;
     background-size: 25px 25px;
 }
@@ -1219,9 +1219,12 @@ Reference Panel Styling by Nick Martin
     padding-bottom: 12px;
     border-radius: 0px !important;
     box-shadow: none !important;
-    border-left: 2px solid var(--bg-color-3);
-    border-bottom-left-radius: 2px !important;
-    border-bottom-right-radius: 2px !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: hsl(var(--cl-text-color), 0.01);
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
 .references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
@@ -1229,11 +1232,14 @@ Reference Panel Styling by Nick Martin
     font-family: var(--ls-font-family) !important;
     background-color: hsl(var(--cl-text-color), 0.05);
     padding-top: 4px !important;
-    padding-bottom: 0px !important;
+    padding-bottom: 4px !important;
     margin-left: 0px !important;
-    border-left: 2px solid var(--bg-color-3);
-    border-top-right-radius: 2px !important;
-    border-top-left-radius: 2px !important;
+    border-top-right-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+    border-left: 1px solid;
+    border-right: 1px solid;
+    border-top: 1px solid;
+    border-color: hsl(var(--cl-text-color), 0.01);
 }
 /*.references .breadcrumb, .lazy-visibility .color-level .breadcrumb:before {
     content: "\ea02";
@@ -1263,23 +1269,10 @@ Reference Panel Styling by Nick Martin
     margin-left: -28px;
 }
 
-/* Give page references some color in the breadcrumb view */
-.breadcrumb a .page-reference {
-    color: hsl(var(--cl-primary)) !important;
-}
-
 /* Gives each panel enough space from each other so they're not crowded */
 .references-blocks .initial > div > .breadcrumb.block-parents.flex-row.flex-1.my-2:not(:first-child) {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
-}
-.references-blocks .breadcrumb.block-parents.flex-row.flex-1.my-2:first-child {
-    margin-top: 0px;
-}
-
-/* Sets page reference titles to center */
-.references .color-level .foldable-title .items-center {
-    justify-content: center;
 }
 
 /* Makes the reference panel width fit the container size of the normal pane */
@@ -1619,26 +1612,27 @@ span.link-highlight {
 }
 
 table {
-    margin: 4px 0px;;
+    margin: 4px 0px;
+    border: 2px solid var(--bg-color-1);
 }
 .table-wrapper {
     max-width: 100% !important;
 }
-tr:nth-child(odd) {
-    background-color: hsl(var(--cl-primary), 0.2);
-}
-tr:nth-child(2n) {
-    background-color: transparent;
+th {
+    border-bottom: 1px solid var(--ls-border-color);
+    color: var(--ls-primary-text-color);
+    font-size: 14px;
+    font-weight: 400;
+    padding: 10px 8px;
 }
 
 #journals .journal-item:not(:first-child):before {
-    content: "\ebda";
+    content: "\ec00";
     font-family: 'tabler-icons';
     color: hsl(var(--cl-primary));
     position: relative;
-    top: -44.3px;
+    top: -37.3px;
     left: calc(100% - 50%);
-    font-size: 25px;
 }
 .admonition-icon {
     display: none;
