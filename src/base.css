@@ -589,11 +589,11 @@ mark>code:before, mark>code:after {
 }
 /* Blockquotes */
 blockquote {
-    background-color: hsl(var(--cl-primary), 0.05);
+    background-color: hsl(var(--cl-accent), 0.05);
     color: var(--ls-primary-text-color);
     display: flex;
     padding-left: 0px;
-    border-left: 2px solid hsl(var(--cl-primary));
+    border-left: 2px solid hsl(var(--cl-accent));
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -602,7 +602,7 @@ blockquote:before {
     content: "\ee09";
     font-family: 'tabler-icons';
     align-self: center;
-    color: hsl(var(--cl-primary));
+    color: hsl(var(--cl-accent));
     position: relative;
     left: -9px;
     z-index: 3;
@@ -1213,35 +1213,39 @@ Reference Panel Styling by Nick Martin
 }
 /* This will modify the style of the body of the block */
 :not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
-    background-color: hsl(var(--cl-text-color), 0.045);
+    background-color: hsl(var(--cl-text-color), 0.05);
     margin-bottom: 8px;
-    padding-top: 12px;
+    padding-top: 2px;
     padding-bottom: 12px;
     border-radius: 0px !important;
     box-shadow: none !important;
-    border-left: 0px solid;
-    border-right: 0px solid;
-    border-bottom: 0px solid;
-    border-color: hsl(var(--cl-text-color), 0.05);
-    border-bottom-left-radius: 4px !important;
-    border-bottom-right-radius: 4px !important;
+    border-left: 2px solid hsl(var(--cl-primary));
+    border-bottom-left-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
 .references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
     padding-left: 1.5rem;
-    background-color: hsl(var(--cl-text-color), 0.1);
-    padding-top: 8px !important;
-    padding-bottom: 8px !important;
-    border-bottom: 1.5px solid;
-    border-top-right-radius: 4px !important;
-    border-top-left-radius: 4px !important;
+    font-family: var(--ls-font-family) !important;
+    background-color: hsl(var(--cl-text-color), 0.05);
+    padding-top: 4px !important;
+    padding-bottom: 0px !important;
     margin-left: 0px !important;
-    border-left: 0px solid;
-    border-top: 0px solid;
-    border-right: 0px solid;
-    border-color: hsl(var(--cl-text-color), 0.03);
-    min-height: 35px;
+    border-left: 2px solid hsl(var(--cl-primary));
+    border-top-right-radius: 2px !important;
+    border-top-left-radius: 2px !important;
 }
+/*.references .breadcrumb, .lazy-visibility .color-level .breadcrumb:before {
+    content: "\ea02";
+    font-family: 'tabler-icons-extension';
+    position: relative;
+    left: -35px;
+    background-color: var(--bg-color) !important;
+    top: calc(100% - 10%);
+    color: hsl(var(--cl-primary));
+    border-radius: 1px;
+    height: 100%;
+}*/
 .breadcrumb.block-parents.flex-row.flex-1.my-2 {
     margin-bottom: 0px;
 }
@@ -1625,4 +1629,133 @@ tr:nth-child(odd) {
 }
 tr:nth-child(2n) {
     background-color: transparent;
+}
+
+#journals .journal-item:not(:first-child):before {
+    content: "\ebda";
+    font-family: 'tabler-icons';
+    color: hsl(var(--cl-primary));
+    position: relative;
+    top: -44.3px;
+    left: calc(100% - 50%);
+    font-size: 25px;
+}
+.admonition-icon {
+    display: none;
+}
+.abstract, .admonitionblock {
+    margin: 0px;
+}
+.color-level .flex.flex-row.admonitionblock.align-items:is(.note, .tip, .warning, .important, .caution, .pinned):before {
+    background-color: var(--bg-color-1);
+}
+.flex.flex-row.admonitionblock.align-items.note {
+    background-color: #448aff0d;
+    color: var(--ls-primary-text-color);
+    display: flex;
+    padding-left: 0px;
+    border-left: 2px solid #448aff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 12px;
+}
+.flex.flex-row.admonitionblock.align-items.note:before {
+    content: "\eb04";
+    font-family: 'tabler-icons';
+    align-self: center;
+    color: #448aff;
+    position: relative;
+    left: -9px;
+    z-index: 3;
+    background-color: var(--bg-color);
+    padding-bottom: 2px;
+    border-radius: 1px;
+}
+.flex.flex-row.admonitionblock.align-items.tip {
+    background-color: #1ebfa50d;
+    color: var(--ls-primary-text-color);
+    display: flex;
+    padding-left: 0px;
+    border-left: 2px solid #1ebfa5;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 12px;
+}
+.flex.flex-row.admonitionblock.align-items.tip:before {
+    content: "\ea51";
+    font-family: 'tabler-icons';
+    align-self: center;
+    color: #1ebfa5;
+    position: relative;
+    left: -9px;
+    z-index: 3;
+    background-color: var(--bg-color);
+    padding-bottom: 2px;
+    border-radius: 1px;
+}
+.flex.flex-row.admonitionblock.align-items.important {
+    background-color: #ff52520d;
+    color: var(--ls-primary-text-color);
+    display: flex;
+    padding-left: 0px;
+    border-left: 2px solid #ff5252;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 12px;
+}
+.flex.flex-row.admonitionblock.align-items.important:before {
+    content: "\eb48";
+    font-family: 'tabler-icons';
+    align-self: center;
+    color: #ff5252;
+    position: relative;
+    left: -9px;
+    z-index: 3;
+    background-color: var(--bg-color);
+    padding-bottom: 2px;
+    border-radius: 1px;
+}
+.flex.flex-row.admonitionblock.align-items:is(.warning, .caution) {
+    background-color: #ff91000d;
+    color: var(--ls-primary-text-color);
+    display: flex;
+    padding-left: 0px;
+    border-left: 2px solid #ff9100;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 12px;
+}
+.flex.flex-row.admonitionblock.align-items:is(.warning, .caution):before {
+    content: "\ea06";
+    font-family: 'tabler-icons';
+    align-self: center;
+    color: #ff9100;
+    position: relative;
+    left: -9px;
+    z-index: 3;
+    background-color: var(--bg-color);
+    padding-bottom: 2px;
+    border-radius: 1px;
+}
+.flex.flex-row.admonitionblock.align-items.pinned {
+    background-color: #7c4dff0d;
+    color: var(--ls-primary-text-color);
+    display: flex;
+    padding-left: 0px;
+    border-left: 2px solid #7c4dff;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 12px;
+}
+.flex.flex-row.admonitionblock.align-items.pinned:before {
+    content: "\ed60";
+    font-family: 'tabler-icons';
+    align-self: center;
+    color: #7c4dff;
+    position: relative;
+    left: -9px;
+    z-index: 3;
+    background-color: var(--bg-color);
+    padding-bottom: 2px;
+    border-radius: 1px;
 }
