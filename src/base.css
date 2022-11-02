@@ -1219,7 +1219,7 @@ Reference Panel Styling by Nick Martin
     padding-bottom: 12px;
     border-radius: 0px !important;
     box-shadow: none !important;
-    border-left: 2px solid hsl(var(--cl-primary));
+    border-left: 2px solid var(--bg-color-3);
     border-bottom-left-radius: 2px !important;
     border-bottom-right-radius: 2px !important;
 }
@@ -1231,7 +1231,7 @@ Reference Panel Styling by Nick Martin
     padding-top: 4px !important;
     padding-bottom: 0px !important;
     margin-left: 0px !important;
-    border-left: 2px solid hsl(var(--cl-primary));
+    border-left: 2px solid var(--bg-color-3);
     border-top-right-radius: 2px !important;
     border-top-left-radius: 2px !important;
 }
