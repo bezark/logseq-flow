@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
-@import url('https://pvinis.github.io/iosevka-webfont/3.4.1/iosevka.css');
+
 :root {
     --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
@@ -525,23 +525,6 @@ span.mx-2.opacity-50:before {
     padding-bottom: 2px;
     border-radius: 1px;
 }
-/*
-.pre-wrap-white-space {
-    background-color: hsl(var(--cl-secondary), 0.1);
-    display: inline-block;
-    border: 1px solid;
-    border-color: hsl(var(--cl-secondary), 0.05);
-    display: flex;
-    color: var(--ls-primary-text-color);
-}
-.pre-wrap-white-space:before {
-    content: "\eb6b";
-    font-family: 'tabler-icons';
-    padding-right: 15px;
-    vertical-align: bottom;
-    align-self: center;
-    color: hsl(var(--cl-secondary));
-}*/
 
 .external-link {
     padding: 2px 4px;
@@ -1215,31 +1198,22 @@ Reference Panel Styling by Nick Martin
 :not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
     background-color: hsl(var(--cl-text-color), 0.05);
     margin-bottom: 8px;
-    padding-top: 2px;
-    padding-bottom: 12px;
+    padding-top: 4px;
+    padding-bottom: 8px;
     border-radius: 0px !important;
-    box-shadow: none !important;
     border-bottom-left-radius: 4px !important;
     border-bottom-right-radius: 4px !important;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    border-bottom: 1px solid;
-    border-color: hsl(var(--cl-text-color), 0.01);
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
 .references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
     padding-left: 1.5rem;
     font-family: var(--ls-font-family) !important;
     background-color: hsl(var(--cl-text-color), 0.05);
-    padding-top: 4px !important;
-    padding-bottom: 4px !important;
+    padding-top: 8px !important;
+    padding-bottom: 0px !important;
     margin-left: 0px !important;
     border-top-right-radius: 4px !important;
     border-top-left-radius: 4px !important;
-    border-left: 1px solid;
-    border-right: 1px solid;
-    border-top: 1px solid;
-    border-color: hsl(var(--cl-text-color), 0.01);
 }
 /*.references .breadcrumb, .lazy-visibility .color-level .breadcrumb:before {
     content: "\ea02";
