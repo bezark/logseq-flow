@@ -1749,16 +1749,16 @@ th {
     border-left: 1px solid var(--ls-guideline-color);
     margin-left: -17px;
 }
-.references-blocks .breadcrumb {
+.color-level .breadcrumb {
     font-size: 80%;
     margin-bottom: 0px;
     margin-top: 1px;
     margin-left: 33px;
 }
-.references-blocks .breadcrumb a {
+.color-level .breadcrumb a {
     color: hsl(var(--cl-text-color), 1);
 }
-.references-blocks .breadcrumb .bracket {
+.color-level .breadcrumb .bracket {
     display: none;
 }
 .flex.flex-col > .lazy-visibility:not(:first-child) {
