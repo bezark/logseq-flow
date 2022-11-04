@@ -1778,6 +1778,6 @@ th {
 .color-level .foldable-title:hover:before {
     color: hsl(var(--cl-primary));
 }
-.color-level .awLi-icon {
+.lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center .awLi-icon {
     display: none;
 }
