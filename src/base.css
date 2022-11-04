@@ -98,7 +98,7 @@ html[data-theme='dark'] {
     --ls-mark-color: hsl(var(--cl-primary));
     --ls-border-color: var(--bg-color-1);
     --ls-secondary-border-color: hsl(var(--cl-secondary));
-    --ls-guideline-color: hsl(var(--cl-text-color), 0.05);
+    --ls-guideline-color: hsl(var(--cl-text-color), 0.1);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
@@ -209,7 +209,7 @@ html[data-theme='light'] {
     --ls-mark-color: hsl(var(--cl-primary));
     --ls-border-color: var(--bg-color-1);
     --ls-secondary-border-color: hsl(var(--cl-secondary));
-    --ls-guideline-color: hsl(var(--cl-text-color), 0.05);
+    --ls-guideline-color: hsl(var(--cl-text-color), 0.1);
     --ls-guideline-references-color: hsl(var(--primary-text-h), var(--primary-text-s), var(--primary-text-l), 0.3);
     --ls-menu-hover-color: var(--ls-secondary-background-color);
     --ls-primary-text-color: hsl(var(--cl-text-color));
@@ -437,6 +437,7 @@ span.mx-2.opacity-50:before {
 
 .cp__fenced-code-block {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 .cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
     background-color: var(--bg-dark);
@@ -445,6 +446,7 @@ span.mx-2.opacity-50:before {
     border: 0px solid var(--bg-color-2);
     border-radius: 4px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding-right: 10px;
 }
 .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
     background-color: var(--bg-dark);
@@ -1196,7 +1198,7 @@ Reference Panel Styling by Nick Martin
     background-color: transparent;
 }
 /* This will modify the style of the body of the block */
-:not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
+/*:not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
     background-color: hsl(var(--cl-text-color), 0.05);
     margin-bottom: 8px;
     padding-top: 4px;
@@ -1206,7 +1208,7 @@ Reference Panel Styling by Nick Martin
     border-bottom-right-radius: 4px !important;
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
-.references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
+/*.references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
     padding-left: 1.5rem;
     font-family: var(--ls-font-family) !important;
     background-color: hsl(var(--cl-text-color), 0.05);
@@ -1232,11 +1234,11 @@ Reference Panel Styling by Nick Martin
     border-radius: 1px;
     height: 100%;
 }*/
-.breadcrumb.block-parents.flex-row.flex-1.my-2 {
+/*.breadcrumb.block-parents.flex-row.flex-1.my-2 {
     margin-bottom: 0px;
 }
 /* Hides the block-shadow style from blocks tagged with card */
-:not(.today-queries) .references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
+/*:not(.today-queries) .references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
     box-shadow: none;
 }
 :not(.today-queries) .initial > div:not(:first-child) .breadcrumb {
@@ -1250,16 +1252,16 @@ Reference Panel Styling by Nick Martin
 }
 
 /* Gives each panel enough space from each other so they're not crowded */
-.references-blocks .initial > div > .breadcrumb.block-parents.flex-row.flex-1.my-2:not(:first-child) {
+/*.references-blocks .initial > div > .breadcrumb.block-parents.flex-row.flex-1.my-2:not(:first-child) {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
 }
 
 /* Makes the reference panel width fit the container size of the normal pane */
-.sm\:px-7 {
+/*.sm\:px-7 {
     padding-left: 0px !important;
     padding-right: 0px !important;
-}
+}*/
 
 /******************************
 **       Breadcrumbs        **
@@ -1733,4 +1735,41 @@ th {
     background-color: var(--bg-color);
     padding-bottom: 2px;
     border-radius: 1px;
+}
+
+.color-level .foldable-title:before {
+    content: "\ea2a";
+    font-family: 'tabler-icons';
+    position: relative;
+    left: -24px;
+    top: 25px;
+    color: var(--ls-block-bullet-color);
+}
+.color-level .initial {
+    border-left: 1px solid var(--ls-guideline-color);
+    margin-left: -17px;
+}
+.references-blocks .breadcrumb {
+    font-size: 80%;
+    margin-bottom: 0px;
+    margin-top: 1px;
+    margin-left: 33px;
+}
+.references-blocks .breadcrumb a {
+    color: hsl(var(--cl-text-color), 1);
+}
+.references-blocks .breadcrumb .bracket {
+    display: none;
+}
+.flex.flex-col > .lazy-visibility:not(:first-child) {
+    margin-top: -52px;
+}
+.block-control svg {
+    fill: transparent;
+}
+.color-level .foldable-title:hover:before {
+    color: hsl(var(--cl-primary));
+}
+.color-level .awLi-icon {
+    display: none;
 }
