@@ -1764,7 +1764,7 @@ th {
 .flex.flex-col > .lazy-visibility:not(:first-child) {
     margin-top: -52px;
 }
-.block-control svg {
+.lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control svg {
     fill: transparent;
 }
 .color-level .foldable-title:hover:before {
