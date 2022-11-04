@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import './fonts.css';
 
 :root {
     --ls-font-family: "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
+    --cl-background: var(--background-color-h), var(--background-color-s), var(--background-color-l);
     --cl-block-bullet-fix: 20px;
     --ls-main-content-max-width: 1000px;
     --ls-main-content-max-width-wide: 100%;
@@ -843,51 +844,51 @@ We don't really care about highlighting the block itself that's marked as a task
 Live Query Styler by Nick Martin
 ********************************************/
 
-[data-refs-self*="live-query"] .flex > .flex > .flex > .flex-1 > .block-content > .flex > .flex-1 > .inline > .embed-block {
+.flex > .flex > .flex > .flex-1 > .block-content > .flex > .flex-1 > .inline > .embed-block {
     background-color: transparent;
 }
-[data-refs-self*="live-query"] .px-3.pt-1.pb-2 > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 > .mr-1 {
+.px-3.pt-1.pb-2 > .blocks-container > div > div > .ls-block > .flex.flex-row.pr-2 > .mr-1 {
     display: none;
 }
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title > .flex > .title-text:before {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title > .flex > .title-text:before {
     content: "\eb1c";
     padding-right: 2px;
     font-family: 'tabler-icons';
 }
-[data-refs-self*="live-query"] .color-level.embed-block > :is(.pt-1, .pb-2, .px-3) {
+.color-level.embed-block > :is(.pt-1, .pb-2, .px-3) {
     padding-top: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
 }
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title {
     flex-basis: content;
 }
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content {
     margin-bottom: 2px;
 }
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query {
     margin-top: 0px;
 }
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .block-control {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .block-control {
     display: none;
 }
 a.tag[data-ref*="live-query"] {
     display: none;
 }
-[data-refs-self*="live-query"] .flex.flex-row.align-items.mt-2 {
+.flex.flex-row.align-items.mt-2 {
     display: none;
 }
-[data-refs-self*="live-query"] a.opacity-70.hover\:opacity-100.svg-small.inline {
+a.opacity-70.hover\:opacity-100.svg-small.inline {
     display: none;
 }
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title > .flex > a.opacity-70.hover\:opacity-100.svg-small.inline {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title > .flex > a.opacity-70.hover\:opacity-100.svg-small.inline {
     display: inline-block;
 }
-[data-refs-self*="live-query"] .open-block-ref-link {
+.open-block-ref-link {
     display: none;
 }
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title > .flex > .title-text {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .content > .flex-1 > .flex > .custom-query-title > .flex > .title-text {
     font-size: 12px;
     border: 1px solid hsl(var(--cl-text-color), 0.1);
     padding: 1px 3px;
@@ -899,7 +900,7 @@ a.tag[data-ref*="live-query"] {
     display: none;
   }*/
   
-  [data-refs-self*="live-query"] .flex > .lazy-visibility > .fade-enter > .color-level > .flex-col, [data-refs-self*="live-query"] .sm\:px-7 {
+  .flex > .lazy-visibility > .fade-enter > .color-level > .flex-col, [data-refs-self*="live-query"] .sm\:px-7 {
     border-left: 0px solid !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
@@ -907,7 +908,7 @@ a.tag[data-ref*="live-query"] {
     padding-right: 0px !important;
   }
   
-  [data-refs-self*="live-query"] .color-level.embed-block .py-2, [data-refs-self*="live-query"] .color-level.embed-block .my-2 {
+  .color-level.embed-block .py-2, [data-refs-self*="live-query"] .color-level.embed-block .my-2 {
     padding-bottom: 0px;
     padding-top: 0px;
     margin-top: 0px;
@@ -918,7 +919,7 @@ a.tag[data-ref*="live-query"] {
     display: none;
 }
   
-[data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex > .lazy-visibility > .fade-enter > .my-2 > .flex > .initial > div > .blocks-container {
+.embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex > .lazy-visibility > .fade-enter > .my-2 > .flex > .initial > div > .blocks-container {
       background-color: transparent;
       margin-bottom: 0px;
       padding-top: 0px;
@@ -926,16 +927,16 @@ a.tag[data-ref*="live-query"] {
       border-radius: 0px;
       box-shadow: none;
 }
-  [data-refs-self*="live-query"] .color-level.embed-block .content {
+  .color-level.embed-block .content {
     margin-top: 0px !important;
     margin-left: 0px !important;
   }
   
-  [data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex > .lazy-visibility > .fade-enter > .my-2 > .flex-col > .initial {
+  .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex > .lazy-visibility > .fade-enter > .my-2 > .flex-col > .initial {
       margin-left: -14px;
       margin-bottom: 0px;
   }
-  [data-refs-self*="live-query"] .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex {
+  .embed-block > .px-3 > .blocks-container > div > div > .ls-block > .flex > .flex > .flex > .flex-1 > .block-content > .block-body > .lazy-visibility > .fade-enter > .custom-query > .flex > .initial > div > .content > .flex {
     margin-bottom: -25px;
   }
 [data-refs-self*='"live-query'] > .flex-row > .mr-1 .bullet-container .bullet {
@@ -1214,6 +1215,11 @@ Reference Panel Styling by Nick Martin
     margin-left: 0px !important;
     border-top-right-radius: 4px !important;
     border-top-left-radius: 4px !important;
+    font-size: 85%;
+}
+.breadcrumb a, .breadcrumb .page-reference .bracket:first-child:before, .breadcrumb .page-reference .bracket:last-child:after {
+    font-size: 13.5px;
+    color: hsl(var(--cl-text-color), 0.5);
 }
 /*.references .breadcrumb, .lazy-visibility .color-level .breadcrumb:before {
     content: "\ea02";
@@ -1265,6 +1271,7 @@ span.mx-2.opacity-50 {
 }
 span.mx-2.opacity-50:before {
     font-size: 16px;
+    font-size: 13.5px;
     content: "\ea61";
     font-family: 'tabler-icons';
     vertical-align: bottom;
