@@ -1578,12 +1578,21 @@ div[data-refs-self*='"card"'] {
 /* //TODO: Fix this in the primary plugin */
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children > .ls-block:last-child > .flex {
     position: relative;
-    left: 1px;
+    left: 0px;
     border-top-left-radius: 0px;
 }
 :is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
     border-left-color: transparent !important;
 }
+:is(.content > .blocks-container) .ls-block[data-refs-self*='admon-'] > div > div > div > div > div > .block-content-inner {
+    margin-left: -1px;
+}
+:is(.content > .blocks-container) .ls-block[data-refs-self*='admon-'] > .flex > .flex > .flex > .flex-1 > .block-content > .block-body {
+    margin-left: -1px;
+}
+/******************************
+**    End of Admonition Panels     **
+******************************/
 
 span.link-highlight {
     text-decoration: underline;
@@ -1767,7 +1776,7 @@ th {
     display: none;
 }
 .flex.flex-col > .lazy-visibility:not(:first-child) {
-    margin-top: -52px;
+    margin-top: -30px;
 }
 .lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control svg {
     fill: transparent;
