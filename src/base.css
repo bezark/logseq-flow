@@ -1591,7 +1591,7 @@ div[data-refs-self*='"card"'] {
     margin-left: -1px;
 }
 /******************************
-**    End of Admonition Panels     **
+**  End of Admonition Panels **
 ******************************/
 
 span.link-highlight {
@@ -1602,7 +1602,7 @@ span.link-highlight {
     background-color: transparent !important;
 }
 
-table {
+/*table {
     margin: 4px 0px;
     border: 2px solid var(--bg-color-1);
 }
@@ -1615,7 +1615,7 @@ th {
     font-size: 14px;
     font-weight: 400;
     padding: 10px 8px;
-}
+}*/
 
 #journals .journal-item:not(:first-child):before {
     content: "\ec00";
@@ -1771,6 +1771,11 @@ th {
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb a {
     color: hsl(var(--cl-text-color), 0.5);
+    text-decoration: underline;
+}
+.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb a .external-link {
+    text-decoration: none;
+    color: hsl(var(--cl-secondar));
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb .bracket {
     display: none;
