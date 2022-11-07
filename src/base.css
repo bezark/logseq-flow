@@ -1441,7 +1441,7 @@ Gives page properties a table style look
 but does not affect regular block properties
 ********************************************/
 
-/*.page-property-key:before {
+.page-property-key:before {
     content: "\f25b";
     font-family: 'tabler-icons';
     padding-right: 4px;
@@ -1480,7 +1480,7 @@ but does not affect regular block properties
     content: "\ea53";
 }
 
-.page-properties .inline.mr-1:before {
+/*.page-properties .inline.mr-1:before {
     content: "●";
     font-size: 8px;
     color: var(--ls-block-bullet-color);
