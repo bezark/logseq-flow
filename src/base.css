@@ -1749,12 +1749,13 @@ th {
     content: "\ea2a";
     font-family: 'tabler-icons';
     position: relative;
-    left: -24px;
-    top: 25px;
+    left: -5.5px;
     color: var(--ls-block-bullet-color);
+    top: 0px;
 }
 .color-level .foldable-title {
-    display: inline-block;
+    display: flex;
+    margin-left: -19px;
 }
 .my-2.color-level.px-2 .foldable-title:hover {
     color: hsl(var(--cl-primary));
@@ -1762,6 +1763,7 @@ th {
 .lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .initial {
     border-left: 1px solid var(--ls-guideline-color);
     margin-left: -17px;
+    /*margin-bottom: -25px;*/
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     font-size: 80%;
@@ -1781,7 +1783,11 @@ th {
     display: none;
 }
 .flex.flex-col > .lazy-visibility:not(:first-child) {
-    margin-top: -30px;
+    margin-top: -12px;
+}
+.my-2.color-level.px-2.sm\:px-7.py-2.rounded {
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 .lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center > .block-control svg {
     fill: transparent;
