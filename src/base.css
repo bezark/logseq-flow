@@ -1272,7 +1272,6 @@ span.mx-2.opacity-50 {
 }
 span.mx-2.opacity-50:before {
     font-size: 16px;
-    font-size: 13.5px;
     content: "\ea61";
     font-family: 'tabler-icons';
     vertical-align: bottom;
@@ -1772,8 +1771,11 @@ th {
     margin-left: 33px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb a {
-    color: hsl(var(--cl-text-color), 0.5);
+    color: hsl(var(--cl-text-color), 0.7);
     text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-style: dashed;
+    text-decoration-color: var(--ls-guideline-color);
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb a .external-link {
     text-decoration: none;
@@ -1781,6 +1783,9 @@ th {
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb .bracket {
     display: none;
+}
+.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb span.mx-2.opacity-50:before {
+    font-size: 13.4px;
 }
 .flex.flex-col > .lazy-visibility:not(:first-child) {
     margin-top: -12px;
@@ -1796,6 +1801,9 @@ th {
     position: relative;
     top: 2px;
     left: 4px;
+}
+.mx-auto.pb-24 > div > div:nth-child(2) {
+    border-top: 1px solid var(--ls-guideline-color);
 }
 .my-2.color-level.px-2 .foldable-title:hover:before {
     color: hsl(var(--cl-primary));
