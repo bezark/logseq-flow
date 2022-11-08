@@ -1441,11 +1441,13 @@ but does not affect regular block properties
 ********************************************/
 
 .page-property-key:before {
-    content: "\f25b";
+    content: "\ee8f";
     font-family: 'tabler-icons';
     padding-right: 4px;
     vertical-align: bottom;
     color: hsl(var(--cl-text-color), 0.75);
+    font-weight: 100;
+    vertical-align: baseline;
 }
     
 .page-property-key[data-ref="source"]:before {
@@ -1481,10 +1483,10 @@ but does not affect regular block properties
 
 /*.page-properties .inline.mr-1:before {
     content: "●";
-    font-size: 8px;
     color: var(--ls-block-bullet-color);
     padding-right: 10px;
     vertical-align: middle;
+    font-size: 8px;
 }
     
 .page-properties > div > .page-property-key {
@@ -1492,6 +1494,7 @@ but does not affect regular block properties
     min-width: 220px;
     max-width: 220px;
     text-transform: capitalize;
+    font-weight: 400;
 }
     
 .page-properties {
@@ -1801,9 +1804,6 @@ th {
     position: relative;
     top: 2px;
     left: 4px;
-}
-.mx-auto.pb-24 > div > div:nth-child(2) {
-    border-top: 1px solid var(--ls-guideline-color);
 }
 .my-2.color-level.px-2 .foldable-title:hover:before {
     color: hsl(var(--cl-primary));
