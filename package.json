@@ -198,6 +198,18 @@
                 "mode": "light"
             },
             {
+                "name": "Humanoid",
+                "url": "./src/humanoid.css",
+                "description": "Humanoid",
+                "mode": "dark"
+            },
+            {
+                "name": "Humanoid",
+                "url": "./src/humanoid.css",
+                "description": "Humanoid",
+                "mode": "light"
+            },
+            {
                 "name": "Kanagawa",
                 "url": "./src/kanagawa.css",
                 "description": "Kanagawa",
