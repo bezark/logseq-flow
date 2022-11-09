@@ -26,24 +26,11 @@ html[data-theme='dark'] {
 
 .white-theme,
 html[data-theme='light'] {
-    --bg-gradient: radial-gradient(circle, rgba(44,38,33,1) 82%, rgba(242,78,66,1) 100%);
     --background-color-h: 0;
     --background-color-s: 0%;
     --background-color-l: 93%;
     --cl-text-color: 0,0%,27%;
-    --primary-color-h: 198;
-    --primary-color-s: 100%;
-    --primary-color-l: 26%;
     --cl-primary: 198,100%,26%;
-    --secondary-color-h: 286;
-    --secondary-color-s: 100%;
-    --secondary-color-l: 34%;
-    --cl-secondary: 286,100%,34%;
-    --accent-color-h: 322;
-    --accent-color-s: 100%;
-    --accent-color-l: 42%;
+    --cl-secondary: 153,100%,34%;
     --cl-accent: 322,100%,42%;
-    --primary-text-h: 0;
-    --primary-text-s: 0%;
-    --primary-text-l: 27%;
 }
