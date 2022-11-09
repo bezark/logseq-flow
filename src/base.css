@@ -558,10 +558,13 @@ span.mx-2.opacity-50:before {
 
 /* Highlights */
 mark {
-    background-color: hsl(var(--cl-primary), 0.15);
-    color: hsl(var(--cl-primary));
-    padding: 1px 4px !important;
+    background-color: transparent;
+    padding: 0px !important;
     border-radius: 1px;
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--cl-primary), 1);
+    text-decoration-thickness: 2px;
+    color: var(--ls-primary-text-color);
 
 }
 mark>code {
