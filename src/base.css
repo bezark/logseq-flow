@@ -1190,7 +1190,7 @@ Reference Panel Styling by Nick Martin
     background-color: transparent;
 }
 /* This will modify the style of the body of the block */
-/*:not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
+:not(.today-queries) .references-blocks .blocks-container.flex-1, .custom-query .blocks-container.flex-1 {
     background-color: hsl(var(--cl-text-color), 0.05);
     margin-bottom: 8px;
     padding-top: 4px;
@@ -1200,7 +1200,7 @@ Reference Panel Styling by Nick Martin
     border-bottom-right-radius: 4px !important;
 }
 /* Adjusts the breadcrumbs that are above the body of the block */
-/*.references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
+.references .breadcrumb, .lazy-visibility .color-level .breadcrumb {
     padding-left: 1.5rem;
     font-family: var(--ls-font-family) !important;
     background-color: hsl(var(--cl-text-color), 0.05);
@@ -1219,18 +1219,18 @@ Reference Panel Styling by Nick Martin
     content: "\ea02";
     font-family: 'tabler-icons-extension';
     position: relative;
-    left: -35px;
+    left: -33px;
     background-color: var(--bg-color) !important;
     top: calc(100% - 10%);
     color: hsl(var(--cl-primary));
     border-radius: 1px;
     height: 100%;
 }*/
-/*.breadcrumb.block-parents.flex-row.flex-1.my-2 {
+.breadcrumb.block-parents.flex-row.flex-1.my-2 {
     margin-bottom: 0px;
 }
 /* Hides the block-shadow style from blocks tagged with card */
-/*:not(.today-queries) .references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
+:not(.today-queries) .references-blocks div[data-refs-self*='"card"'], .custom-query div[data-refs-self*='"card"'] {
     box-shadow: none;
 }
 :not(.today-queries) .initial > div:not(:first-child) .breadcrumb {
@@ -1244,7 +1244,7 @@ Reference Panel Styling by Nick Martin
 }
 
 /* Gives each panel enough space from each other so they're not crowded */
-/*.references-blocks .initial > div > .breadcrumb.block-parents.flex-row.flex-1.my-2:not(:first-child) {
+.references-blocks .initial > div > .breadcrumb.block-parents.flex-row.flex-1.my-2:not(:first-child) {
     margin-top: 25px !important;
     margin-bottom: 0px !important;
 }
@@ -1740,7 +1740,7 @@ th {
     padding-bottom: 2px;
     border-radius: 1px;
 }
-
+/*
 .my-2.color-level.px-2 .foldable-title:before {
     content: "\ea2a";
     font-family: 'tabler-icons';
@@ -1759,7 +1759,6 @@ th {
 .lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .initial {
     border-left: 1px solid var(--ls-guideline-color);
     margin-left: -17px;
-    /*margin-bottom: -25px;*/
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     font-size: 80%;
