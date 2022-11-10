@@ -4,9 +4,9 @@
 html[data-theme='dark'] {
     --background-color-h: 240;
     --background-color-s: 7%;
-    --background-color-l: 3%;
+    --background-color-l: 6%;
     --cl-text-color: 0,0%,99%;
-    --cl-primary: 186, 100%, 26%;
+    --cl-primary: 186, 100%, 36%;
     --cl-secondary: 140, 66%, 39%;
     --cl-accent: 35, 100%, 51%;
 }
