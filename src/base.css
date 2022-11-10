@@ -563,9 +563,9 @@ mark {
     border-radius: 1px;
     text-decoration: underline;
     text-decoration-color: var(--cl-yellow, #eedd27);
-    text-decoration-thickness: 3px;
+    text-decoration-thickness: 4px;
     color: var(--ls-primary-text-color);
-    text-underline-offset: 3px;
+    text-underline-offset: 0px;
     text-decoration-skip-ink: none;
 }
 mark>code {
