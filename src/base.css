@@ -630,13 +630,9 @@ blockquote:before {
 
 /* === PRIORITIES === */
 a[priority]:not(a[priority=""])::before, a.priority::before {
-    font-size: 9px;
-    padding: 0px 2px;
+    font-size: 16px;
     font-family: 'tabler-icons';
-    margin-right: 0px;
-    border-radius: 2px;
-    top: -1.5px;
-    position: relative;
+    vertical-align: bottom;;
   }
   a[priority]:not(a[priority=""]), a.priority {
     font-size: 0px;
@@ -645,22 +641,15 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
   }
   a[priority="A"]::before, a.priority[href="#/page/A" i]::before {
       content: "\ea66";
-      background-color: #ef4444;
-      color: white;
+      color: #ef4444;
   }
   a[priority="B"]::before, a.priority[href="#/page/B" i]::before {
     content: "\ee87";
-    background-color: #f59e0b;
-    color: white;
-    position: relative;
-    left: -1px;
+    color: #f59e0b;
   }
   a[priority="C"]::before, a.priority[href="#/page/C" i]::before {
       content: "\ea5f";
-      background-color: #3b82f6;
-      color: white;
-    position: relative;
-    left: -1px;
+      color: #3b82f6;
   }
 
 /*  === Checkboxes ===  */
