@@ -565,6 +565,7 @@ mark {
     text-decoration-color: hsl(var(--cl-primary), 1);
     text-decoration-thickness: 2px;
     color: var(--ls-primary-text-color);
+    text-underline-offset: 2px;
 
 }
 mark>code {
