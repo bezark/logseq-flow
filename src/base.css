@@ -558,9 +558,15 @@ span.mx-2.opacity-50:before {
 
 /* Highlights */
 mark {
-    background-color: var(--cl-yellow, #eedd27);
-    padding: 0px 3px !important;
-    border-radius: 0px;
+    background-color: transparent;
+    padding: 0px !important;
+    border-radius: 1px;
+    text-decoration: underline;
+    text-decoration-color: #eedd27;
+    text-decoration-thickness: 3px;
+    color: var(--ls-primary-text-color);
+    text-underline-offset: 3px;
+    text-decoration-skip-ink: none;
 }
 mark>code {
     background-color: transparent !important;
