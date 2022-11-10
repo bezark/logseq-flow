@@ -562,7 +562,7 @@ mark {
     padding: 0px !important;
     border-radius: 1px;
     text-decoration: underline;
-    text-decoration-color: #eedd27;
+    text-decoration-color: var(--cl-yellow, #eedd27);
     text-decoration-thickness: 3px;
     color: var(--ls-primary-text-color);
     text-underline-offset: 3px;
