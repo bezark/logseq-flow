@@ -558,15 +558,9 @@ span.mx-2.opacity-50:before {
 
 /* Highlights */
 mark {
-    background-color: transparent;
-    padding: 0px !important;
-    border-radius: 1px;
-    text-decoration: underline;
-    text-decoration-color: hsl(var(--cl-primary), 1);
-    text-decoration-thickness: 2px;
-    color: var(--ls-primary-text-color);
-    text-underline-offset: 2px;
-    text-decoration-skip-ink: none;
+    background-color: var(--cl-yellow, #eedd27);
+    padding: 0px 3px !important;
+    border-radius: 0px;
 }
 mark>code {
     background-color: transparent !important;
@@ -1525,11 +1519,10 @@ Block highlight function
     margin-top: var(--mt-4, 2em);
 }
 
-.absolute.rounded-md.shadow-lg.absolute-modal mark {
+mark.p-0.rounded-none {
     background-color: transparent;
     color: hsl(var(--cl-primary));
     font-weight: 600;
-    padding: 0px !important;
 }
 .tippy-tooltip-content {
     border-radius: 4px;
