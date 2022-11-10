@@ -558,7 +558,7 @@ span.mx-2.opacity-50:before {
 
 /* Highlights */
 mark {
-    background-color: var(--cl-yellow, #eedd27);
+    background-color: hsl(var(--cl-primary));
     padding: 0px 3px !important;
     border-radius: 0px;
 }
