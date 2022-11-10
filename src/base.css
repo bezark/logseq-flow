@@ -566,7 +566,7 @@ mark {
     text-decoration-thickness: 2px;
     color: var(--ls-primary-text-color);
     text-underline-offset: 2px;
-
+    text-decoration-skip-ink: none;
 }
 mark>code {
     background-color: transparent !important;
