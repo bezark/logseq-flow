@@ -1187,7 +1187,7 @@ Reference Panel Styling by Nick Martin
 ******************************/
 
 #main-container :not(.today-queries) .lazy-visibility .color-level, .cp__right-sidebar .color-level .color-level {
-    background-color: hsl(var(--cl-text-color), 0.02);
+    background-color: hsl(var(--cl-text-color), 0.04);
     border: 1px solid hsl(var(--cl-text-color), 0.02);
     padding-top: 10px;
     padding-bottom: 10px;
@@ -1529,6 +1529,7 @@ mark.p-0.rounded-none {
     background-color: transparent;
     color: hsl(var(--cl-primary));
     font-weight: 600;
+    text-decoration: none;
 }
 .tippy-tooltip-content {
     border-radius: 4px;
@@ -1743,41 +1744,16 @@ th {
     border-radius: 1px;
 }
 
-.my-2.color-level.px-2 .foldable-title:before {
-    content: "\ea2a";
-    font-family: 'tabler-icons';
-    position: relative;
-    left: -5.5px;
-    color: var(--ls-block-bullet-color);
-    top: 0px;
-}
-.color-level .foldable-title {
-    display: flex;
-    margin-left: -19px;
-}
 .my-2.color-level.px-2 .foldable-title:hover {
     color: hsl(var(--cl-primary));
-}
-.lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .initial {
-    border-left: 1px solid hsl(var(--cl-text-color), 0.05);
-    margin-left: -17px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb {
     font-size: 80%;
     margin-bottom: 0px;
     margin-top: 1px;
-    margin-left: 33px;
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb a {
     color: hsl(var(--cl-text-color), 0.7);
-    text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-decoration-style: dashed;
-    text-decoration-color: var(--ls-guideline-color);
-}
-.lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb a .external-link {
-    text-decoration: none;
-    color: hsl(var(--cl-secondar));
 }
 .lazy-visibility > .fade-enter > .color-level > .flex.flex-col > .initial > div > .breadcrumb .bracket {
     display: none;
@@ -1802,7 +1778,4 @@ th {
 }
 .my-2.color-level.px-2 .foldable-title:hover:before {
     color: hsl(var(--cl-primary));
-}
-.lazy-visibility > .fade-enter > .my-2.color-level.px-2 > .flex.flex-col > .content > .flex-1.flex-row.foldable-title > .flex.flex-row.items-center .awLi-icon {
-    display: none;
 }
