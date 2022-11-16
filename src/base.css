@@ -1780,3 +1780,7 @@ th {
 .my-2.color-level.px-2 .foldable-title:hover:before {
     color: hsl(var(--cl-primary));
 }
+
+.journal-item > .flex-1.journal.page > .flex.flex-col + #today-queries + .flex.flex-col {
+    margin-top: 30px;
+}
