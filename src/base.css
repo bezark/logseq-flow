@@ -661,6 +661,7 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
     border-color: hsl(var(--cl-text-color), 0.15);
     border-radius: var(--cl-checkbox-border, 50%);
     position: relative;
+    opacity: var(--cl-checkbox-opacity, 1);
     top: -1.6px;
     width: 14px;
     height: 14px;
