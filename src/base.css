@@ -655,7 +655,7 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
 
 /*  === Checkboxes ===  */
 .form-checkbox {
-    background-color: var(--bg-dark);
+    background-color: var(--cl-checkbox-background, --bg-dark);
     border: 1px solid hsl(var(--cl-text-color), 0.15);
     border-radius: var(--cl-checkbox-border, 50%);
     position: relative;
