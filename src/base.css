@@ -1061,7 +1061,7 @@ svg.h-4.w-4 {
     font-size: 16px;
     font-weight: 700;
     color: hsl(var(--cl-secondary));
-    opacity: 0.7;
+    opacity: 0.9;
 }
 /*
 .block-marker.TODO:before {
