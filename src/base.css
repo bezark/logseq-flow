@@ -113,7 +113,7 @@ html[data-theme='dark'] {
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.6);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
@@ -224,7 +224,7 @@ html[data-theme='light'] {
     --ls-slide-background-color: var(--ls-primary-background-color);
     --ls-block-bullet-border-color: hsl(var(--cl-text-color), 0.1);
     --ls-block-bullet-references-border-color: hsl(var(--cl-primary), 0.1);
-    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.4);
+    --ls-block-bullet-color: hsl(var(--cl-text-color), 0.6);
     --ls-block-highlight-color: var(--color-level-3);
     --ls-selection-background-color: hsl(var(--cl-primary), 0.1);
     --ls-page-checkbox-color: var(--cl-transparent-text);
