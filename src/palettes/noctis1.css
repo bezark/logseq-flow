@@ -1,0 +1,49 @@
+@import '../code/base.css';
+
+.dark-theme,
+html[data-theme='dark'] {
+    --background-color-h: 338;
+    --background-color-s: 9%;
+    --background-color-l: 15%;
+    --cl-text-color: 342,11%,77%;
+    --primary-color-h: 155;
+    --primary-color-s: 78%;
+    --primary-color-l: 60%;
+    --cl-primary: 155,78%,60%;
+    --secondary-color-h: 347;
+    --secondary-color-s: 62%;
+    --secondary-color-l: 67%;
+    --cl-secondary: 347,62%,67%;
+    --accent-color-h: 187;
+    --accent-color-s: 78%;
+    --accent-color-l: 60%;
+    --cl-accent: 187,78%,60%;
+    --primary-text-h: 342;
+    --primary-text-s: 11%;
+    --primary-text-l: 77%;
+    --cl-gray: rgb(140,166,166);
+}
+
+.white-theme,
+html[data-theme='light'] {
+    --background-color-h: 40;
+    --background-color-s: 90%;
+    --background-color-l: 96%;
+    --cl-text-color: 187,100%,17%;
+    --primary-color-h: 339;
+    --primary-color-s: 100%;
+    --primary-color-l: 67%;
+    --cl-primary: 339,100%,67%;
+    --secondary-color-h: 155;
+    --secondary-color-s: 100%;
+    --secondary-color-l: 35%;
+    --cl-secondary: 155,100%,35%;
+    --accent-color-h: 187;
+    --accent-color-s: 100%;
+    --accent-color-l: 42%;
+    --cl-accent: 187,100%,42%;
+    --primary-text-h: 187;
+    --primary-text-s: 100%;
+    --primary-text-l: 17%;
+    --cl-gray: rgb(140,166,166);
+}

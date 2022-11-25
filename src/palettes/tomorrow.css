@@ -1,0 +1,24 @@
+@import '../code/base.css';
+
+.white-theme,
+html[data-theme='light'] {
+    --background-color-h: 0;
+    --background-color-s: 0%;
+    --background-color-l: 100%;
+    --cl-text-color: 60,1%,30%;
+    --secondary-color-h: 214;
+    --secondary-color-s: 45%;
+    --secondary-color-l: 47%;
+    --cl-secondary: 214,45%,47%;
+    --primary-color-h: 184;
+    --primary-color-s: 44%;
+    --primary-color-l: 43%;
+    --cl-primary: 184,44%,43%;
+    --accent-color-h: 276;
+    --accent-color-s: 31%;
+    --accent-color-l: 50%;
+    --cl-accent: 276,31%,50%;
+    --primary-text-h: 60;
+    --primary-text-s: 1%;
+    --primary-text-l: 30%;
+}

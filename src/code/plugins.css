@@ -1,0 +1,48 @@
+/************ PLUGINS SECTION **************/
+
+/********************************************
+**            Code Block Copy              **
+********************************************/
+.copy-button {
+    padding: 0px !important;
+    margin: 0px !important;
+    margin-left: 0px !important;
+    height: 1rem;
+    transform: scale(0.8);
+}
+.copy-button:hover {
+    background-color: transparent;
+}
+
+/******************************
+**    Admonition Panels     **
+******************************/
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
+    margin-left: -3px;
+}
+/* //TODO: Fix this in the primary plugin */
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children > .ls-block:last-child > .flex {
+    position: relative;
+    left: 0px;
+    border-top-left-radius: 0px;
+}
+:is(.content > .blocks-container) .ls-block[data-refs-self*="admon-"] > .block-children-container > .block-children {
+    border-left-color: transparent !important;
+}
+:is(.content > .blocks-container) .ls-block[data-refs-self*='admon-'] > div > div > div > div > div > .block-content-inner {
+    margin-left: -1px;
+}
+:is(.content > .blocks-container) .ls-block[data-refs-self*='admon-'] > .flex > .flex > .flex > .flex-1 > .block-content > .block-body {
+    margin-left: -1px;
+}
+/******************************
+**  End of Admonition Panels **
+******************************/
+
+span.link-highlight {
+    text-decoration: underline;
+    text-decoration-color: hsl(var(--cl-secondary));
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1px;
+    background-color: transparent !important;
+}
