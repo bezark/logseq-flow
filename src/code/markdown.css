@@ -59,8 +59,9 @@
     content: "\ea61";
     color: hsl(var(--cl-accent));
     font-family: 'tabler-icons';
-    vertical-align: middle;
+    vertical-align: baseline;
     margin-left: -4px;
+    font-size: x-small;
 }
 
 /* Highlights */
