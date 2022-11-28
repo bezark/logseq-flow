@@ -58,13 +58,14 @@ a.tag[data-ref*="live-query"] {
   display: none;
 }*/
   
+/* TODO: Re-add after we fix live query for latest LS version
 [data-refs-self*="live-query"] .flex > .lazy-visibility > .fade-enter > .color-level > .flex-col, [data-refs-self*="live-query"] .sm\:px-7 {
     border-left: 0px solid !important;
     margin-left: 0px !important;
     margin-right: 0px !important;
     padding-left: 0px !important;
     padding-right: 0px !important;
-}
+}*/
   
 [data-refs-self*="live-query"] .color-level.embed-block .py-2, [data-refs-self*="live-query"] .color-level.embed-block .my-2 {
     padding-bottom: 0px;
