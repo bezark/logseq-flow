@@ -2,7 +2,7 @@
          INTERFACE IMPROVEMENTS
 ********************************************/
 /* Match Button's to primary color */
-.button i, .ti {
+.ui__icon {
     color: hsl(var(--cl-primary));
 }
 
