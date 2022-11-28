@@ -217,3 +217,18 @@ a svg {
     border: 1px solid hsl(var(--cl-background), 0.3);
     border-radius: 2px;
 }
+
+/******************************
+**    Custom Queries    **
+******************************/
+.ls-block .custom-query-title.flex.justify-between.w-full {
+    margin-bottom: 20px;
+}
+.ls-block .custom-query-title > .flex.items-center > .title-text > .inline.mr-1 {
+    background-color: var(--ls-page-properties-background-color);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-weight: 500;
+    color: var(--ls-primary-text-color);
+    font-size: 14px;
+}
