@@ -1,13 +1,14 @@
 @import './fonts.css';
-@import './live-query.css';
 @import './interface.css';
 @import './code-mirror.css';
 @import './markdown.css';
 @import './tana-bullets.css';
 @import './plugins.css';
+@import './live-query.css';
+@import './logseq.css';
 
 :root {
-    --ls-font-family: "Figtree", "Euclid Circular A", "Poppins", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
+    --ls-font-family: "Euclid Circular A", "Poppins", "Rubik", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
     -webkit-font-smoothing: antialiased;
     --cl-background: var(--background-color-h), var(--background-color-s), var(--background-color-l);
     --cl-block-bullet-fix: 20px;
@@ -129,7 +130,7 @@ html[data-theme='dark'] {
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-primary));
     --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
-    --ls-scrollbar-foreground-color: hsl(var(--cl-accent), 0.4);
+    --ls-scrollbar-foreground-color: hsl(var(--cl-text-color), 0.4);
     --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0.1);
     --ls-scrollbar-thumb-hover-color: hsl(var(--cl-primary));
     --ls-head-text-color: var(--ls-link-text-color);
@@ -240,7 +241,7 @@ html[data-theme='light'] {
     --ls-page-blockquote-border-color: var(--ls-border-color);
     --ls-page-inline-code-color: hsl(var(--cl-primary));
     --ls-page-inline-code-bg-color: hsl(var(--cl-primary), 0.1);
-    --ls-scrollbar-foreground-color: hsl(var(--cl-accent), 0.4);
+    --ls-scrollbar-foreground-color: hsl(var(--cl-text-color), 0.4);
     --ls-scrollbar-background-color: hsl(var(--cl-text-color), 0.1);
     --ls-scrollbar-thumb-hover-color: hsl(var(--cl-primary));
     --ls-head-text-color: var(--ls-link-text-color);
@@ -329,95 +330,6 @@ html[data-theme='light'] {
     margin-top: 5px;
 }
 
-/* Block Properties */
-.page-properties, .color-level .page-properties {
-    letter-spacing: 0px !important;
-    word-spacing: normal !important;
-    font-family: var(--ls-font-family) !important;
-    background-color: hsl(var(--cl-primary), 0.15);
-    border: 1.5px dashed hsl(var(--cl-primary), 0.4);
-    border-radius: 2px;
-    padding: 2px 5px !important;
-    margin: 0px !important;
-}
-.page-properties a.tag {
-    background-color: transparent;
-    padding: 0px;
-    border: 0px solid;
-    color: hsl(var(--cl-accent));
-    font-weight: 400;
-}
-.page-properties a.tag:hover {
-    color: hsl(var(--cl-accent));
-}
-.page-properties a.tag .awLinks-page-icon {
-    display: none;
-}
-/* Some values take on important to avoid style plugins from overriding these settings */
-.block-properties:not(.page-properties) {
-    background-color: var(--bg-color-1);
-    border-radius: var(--cl-border-minor);
-    display: contents;
-    margin: 0px;
-    margin-bottom: 0px;
-    padding: 0px 0px !important;
-    font-size: smaller !important;
-    letter-spacing: 0px !important;
-    word-spacing: normal !important;
-    font-family: var(--ls-font-family) !important;
-    color: hsl(var(--cl-text-color), 0.75);
-}
-/* dim out properties */
-.page-property-key, .page-property-key + .mr-1 {
-    color: hsl(var(--cl-primary), 1);
-}
-
-/* hide icons for properties */
-.block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
-    display: none;
-}
-/* Tags inside block properties */
-.block-properties:not(.page-properties) a.tag {
-    background-color: transparent;
-    padding: 0px;
-    color: hsl(var(--cl-accent));
-    border: 0px solid;
-    font-weight: 400;
-    font-size: 13px;
-}
-.block-properties:not(.page-properties) a.tag:hover {
-    color: hsl(var(--cl-accent));
-}
-.block-properties:not(.page-properties) .bracket {
-    display: none;
-}
-.block-properties :not(page-properties) + .block-body {
-    padding-top: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-}
-/* Tags */
-a.tag {
-    background-color: hsl(var(--cl-accent), 0.15);
-    color: hsl(var(--cl-accent), 1);
-    opacity: 1;
-    padding: 0px 4px;
-    text-align: center;
-    display: inline-block;
-    border-radius: 2px;
-    font-size: 14px;
-    line-height: 1.2;
-    border: 1px solid;
-    border-color: hsl(var(--cl-accent), 0.15);
-    transition: 0.2s;
-}
-a.tag:hover {
-    color: hsl(var(--cl-accent), 1);
-    filter: brightness(1.2);
-    opacity: 1;
-}
-
 /*      ====== LOGSEQ MARKUP ======      */
 
 /* Makes blocks that do not contain child blocks a dim gray */
@@ -458,54 +370,6 @@ depending on when Bullet threading is enabled, and its variable is available */
 .block-children-left-border:hover {
     background-color: hsl(var(--cl-primary), 1);
 }
-
-/* Block References */
-.block-ref {
-    border-bottom: 1px dashed hsl(var(--cl-primary), 0.4);
-    color: var(--ls-primary-text-color);
-    padding: 0px;
-    display: inline;
-    background-color: transparent;
-    border-radius: 0px;
-    opacity: 1;
-    transition: 0.2s;
-}
-
-.block-ref:hover {
-    background-color: hsl(var(--cl-primary), 0.1);
-    cursor: pointer;
-    color: var(--ls-primary-text-color);
-    border-radius: var(--cl-border-radius);
-    opacity: 0.8;
-    transition: 0.2s;
-}
-
-.block-ref mark {
-    padding: 0px 1px;
-    border-radius: 0px;
-}
-
-/* 
-Page References
-*/
-.page-reference .bracket {
-    opacity: 0.3;
-    color: hsl(var(--cl-text-color), 0.6);
-}
-/* Block Control Arrow */
-svg.h-4.w-4 {
-    color: var(--ls-secondary-text-color);
-}
-/* Block Properties */
-.page-property-key {
-    color: hsl(var(--cl-primary));
-    text-transform: lowercase;
-}
-.page-property-key:hover {
-    color: hsl(var(--cl-primary));
-    background-color: transparent;
-}
-
 /******************************
 **    TYPOGRAPHY SETTINGS    **
 ******************************/

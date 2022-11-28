@@ -5,23 +5,9 @@ html[data-theme='dark'] {
     --background-color-h: 30;
     --background-color-s: 4%;
     --background-color-l: 20%;
-    --primary-color: 148,28%,65%;
-    --secondary-color: 185,15%,65%;
-    --accent-color: 45,70%,58%;
+    --cl-background: 30,4%,30%;
     --cl-text-color: 24,10%,80%;
-    --primary-color-h: 148;
-    --primary-color-s: 28%;
-    --primary-color-l: 65%;
     --cl-primary: 148,28%,65%;
-    --secondary-color-h: 185;
-    --secondary-color-s: 15%;
-    --secondary-color-l: 65%;
     --cl-secondary: 185,15%,65%;
-    --accent-color-h: 45;
-    --accent-color-s: 70%;
-    --accent-color-l: 58%;
     --cl-accent: 45,70%,58%;
-    --primary-text-h: 24;
-    --primary-text-s: 10%;
-    --primary-text-l: 80%;
 }

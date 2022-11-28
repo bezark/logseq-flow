@@ -29,30 +29,38 @@
 }
 
 .external-link {
+    color: hsl(var(--cl-secondary));
     padding: 2px 4px;
     border-radius: 3px;
     border: 0;
     text-decoration: underline;
     text-decoration-style: dashed;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 0px;
     text-underline-offset: 2px;
 }
 
 /* Body Text */
 .flex.flex-row ~ .block-body > .is-paragraph {
-    font-size: small;
+    font-size: smaller;
     color: hsl(var(--cl-text-color), 0.8);
-    font-weight: 300;
 }
-
+.flex.flex-row ~ .block-body > .is-paragraph .block-ref {
+    color: hsl(var(--cl-text-color), 0.8);
+}
 /* Inline Code */
-:not(pre):not(mark)>code:before, :not(pre):not(mark)>code:after {
-    content: "`";
-}
 :not(pre):not(mark)>code {
-    padding: 2px 5px !important;
-    background-color: hsl(var(--cl-primary), 0.05);
-    color: hsl(var(--cl-primary));
+    padding: 1px 6px !important;
+    background-color: hsl(var(--cl-text-color), 0.1);
+    color: var(--ls-primary-text-color);
+    border-radius: 3px;
+    font-family: "SF Mono",MonoLisa,Fira Code,Monaco,Menlo,Consolas,COURIER NEW,monospace;
+}
+:not(pre):not(mark)>code:before {
+    content: "\ea61";
+    color: hsl(var(--cl-accent));
+    font-family: 'tabler-icons';
+    vertical-align: middle;
+    margin-left: -4px;
 }
 
 /* Highlights */
@@ -61,7 +69,7 @@ mark {
     padding: 0px !important;
     border-radius: 1px;
     text-decoration: underline;
-    text-decoration-color: var(--cl-yellow, #eedd27);
+    text-decoration-color: hsl(var(--cl-secondary));
     text-decoration-thickness: 4px;
     color: var(--ls-primary-text-color);
     text-underline-offset: 0px;
@@ -102,30 +110,16 @@ blockquote:before {
 
 /*  === Headings ===  */
 .editor-inner .multiline-block:is(.h1,.h2,.h3,.h4,.h5,.h6):first-line, .editor-inner .uniline-block:is(.h1,.h2,.h3,.h4,.h5,.h6), .ls-block :is(h1,h2,h3,h4,h5,h6) {
-    font-weight: 400;
+    font-weight: 600;
 }
 .editor-inner .uniline-block:is(.h1,.h2), .ls-block :is(h1,h2) {
     margin: 0px;
 }
 .ls-block h1, .editor-inner .uniline-block.h1 {
-    font-size: 128% !important;
     border-bottom: 0px;
   }
 .ls-block h2, .editor-inner .uniline-block.h2 {
-    font-size: 124% !important;
     border-bottom: 0px;
-}
-.ls-block h3, .editor-inner .uniline-block.h3 {
-    font-size: 120% !important;
-}
-.ls-block h4, .editor-inner .uniline-block.h4 {
-    font-size: 116% !important;
-}
-.ls-block h5, .editor-inner .uniline-block.h5 {
-    font-size: 112% !important;
-}
-.ls-block h6, .editor-inner .uniline-block.h6 {
-    font-size: 108% !important;
 }
 
 /* === PRIORITIES === */
@@ -166,14 +160,12 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
     height: 14px;
 }
 .form-checkbox:checked {
-    background-color: hsl(var(--cl-primary), 0.4);
-    border: 1px solid hsl(var(--cl-primary), 0.2);
-    opacity: 0.6;
+    background-color: #5e9b71 !important;
+    opacity: 1;
 }
 
 /* TASK NAMES */
 .block-marker {
-    font-family: "SF Pro Text", "Euclid Circular A", Inter;
     font-size: inherit;
     color: hsl(var(--cl-secondary), (0, 0, 50));
     opacity: 0.5;
@@ -196,6 +188,15 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
     font-weight: 700;
     color: hsl(var(--cl-marker-color, --cl-secondary));
     opacity: 0.9;
+}
+h1.todo .block-marker.TODO:before, h1.todo .block-marker.DOING:before, h1.todo .block-marker.NOW:before, h1.todo .block-marker.WAIT:before, h1.todo .block-marker.waiting:before, h1.todo .block-marker.LATER:before {
+    font-size: 32px;
+}
+h2.todo .block-marker.TODO:before, h2.todo .block-marker.DOING:before, h2.todo .block-marker.NOW:before, h2.todo .block-marker.WAIT:before, h2.todo .block-marker.waiting:before, h2.todo .block-marker.LATER:before {
+    font-size: 24px;
+}
+h3.todo .block-marker.TODO:before, h3.todo .block-marker.DOING:before, h3.todo .block-marker.NOW:before, h3.todo .block-marker.WAIT:before, h3.todo .block-marker.waiting:before, h3.todo .block-marker.LATER:before {
+    font-size: 18.72px;
 }
 /*
 .block-marker.TODO:before {
@@ -500,4 +501,107 @@ a[priority]:not(a[priority=""])::before, a.priority::before {
     background-color: var(--bg-color);
     padding-bottom: 2px;
     border-radius: 1px;
+}
+
+/* Block Control Arrow */
+svg.h-4.w-4 {
+    color: var(--ls-secondary-text-color);
+}
+/* Block Properties */
+.page-property-key {
+    color: hsl(var(--cl-text-color));
+    text-transform: lowercase;
+}
+.page-property-key:hover {
+    color: hsl(var(--cl-text-color));
+    background-color: transparent;
+}
+
+/* Block Properties */
+.page-properties, .color-level .page-properties {
+    letter-spacing: 0px !important;
+    word-spacing: normal !important;
+    font-family: var(--ls-font-family) !important;
+    background-color: hsl(var(--cl-background), 0.35);
+    border-radius: 2px;
+    padding: 2px 5px !important;
+    margin: 0px !important;
+}
+.page-properties a.tag {
+    background-color: transparent;
+    padding: 0px;
+    border: 0px solid;
+    color: hsl(var(--cl-accent));
+    font-weight: 400;
+}
+.page-properties a.tag:hover {
+    color: hsl(var(--cl-accent));
+}
+.page-properties a.tag .awLinks-page-icon {
+    display: none;
+}
+/* Some values take on important to avoid style plugins from overriding these settings */
+.block-properties:not(.page-properties) {
+    background-color: var(--bg-color-1);
+    border-radius: var(--cl-border-minor);
+    display: contents;
+    margin: 0px;
+    margin-bottom: 0px;
+    padding: 0px 0px !important;
+    font-size: smaller !important;
+    letter-spacing: 0px !important;
+    word-spacing: normal !important;
+    font-family: var(--ls-font-family) !important;
+    color: hsl(var(--cl-text-color), 0.75);
+}
+
+/* hide icons for properties */
+.block-properties:not(.page-properties) .page-ref .awLinks-page-icon {
+    display: none;
+}
+/* Tags inside block properties */
+.block-properties:not(.page-properties) a.tag {
+    background-color: transparent;
+    padding: 0px;
+    color: hsl(var(--cl-accent));
+    border: 0px solid;
+    font-weight: 400;
+    font-size: 13px;
+}
+.block-properties:not(.page-properties) a.tag:hover {
+    color: hsl(var(--cl-accent));
+}
+.block-properties:not(.page-properties) .bracket {
+    display: none;
+}
+.block-properties :not(page-properties) + .block-body {
+    padding-top: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+/* Tags */
+a.tag {
+    background-color: hsl(var(--cl-accent), 0.2);
+    color: hsl(var(--cl-accent), 0.85);
+    opacity: 1;
+    padding: 0px 5px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 2px;
+    font-size: small;
+    border: 0px solid;
+    border-color: hsl(var(--cl-accent), 0.15);
+    transition: 0.2s;
+    vertical-align: middle;
+    font-weight: 500;
+    position: relative;
+    top: -1px;
+}
+a.tag:hover {
+    color: hsl(var(--cl-accent), 1);
+    opacity: 1;
+}
+.ls-block :is(h1, h2, h3, h4, h5, h6) a.tag {
+    font-weight: bold;
 }

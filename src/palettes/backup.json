@@ -1,16 +1,4 @@
 {
-    "name": "Vue",
-    "url": "./vue.css",
-    "description": "Vue",
-    "mode": "dark"
-},
-{
-    "name": "Teady",
-    "url": "./teady.css",
-    "description": "Teady",
-    "mode": "dark"
-},
-{
     "name": "Noctis 1",
     "url": "./noctis1.css",
     "description": "Light Default with Improvements",

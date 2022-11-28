@@ -1,0 +1,77 @@
+/******************************,
+**    Page References    **
+******************************/
+.page-reference .bracket {
+    opacity: 0.3;
+    color: hsl(var(--cl-text-color), 1);
+    margin: 0px 1px;
+}
+.ls-block .page-ref {
+    text-decoration: none;
+    text-underline-offset: 3px;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-decoration-color: hsl(var(--cl-text-color), 0.15);
+}
+.ls-block .page-reference:hover {
+    background-color: transparent !important;
+    color: hsl(var(--cl-primary), 1);
+    filter: brightness(1.2);
+}
+
+/******************************,
+**    Block References    **
+******************************/
+.block-ref:before {
+    content: " ";
+    color: hsl(var(--cl-primary), 1);
+    vertical-align: middle;
+    background-color: hsl(var(--cl-accent), 1);
+    border-radius: 1px;
+    font-size: 10px;
+    position: relative;
+    top: -1.5px;
+    margin-right: 5px;
+}
+.block-ref {
+    border-bottom: 0px solid var(--ls-guideline-color);
+    color: var(--ls-primary-text-color);
+    padding: 0px;
+    background-color: transparent;
+    border-radius: 0px;
+    opacity: 1;
+    transition: 0.2s;
+}
+.block-ref:hover {
+    background-color: hsl(var(--cl-primary), 0.1);
+    cursor: pointer;
+    color: var(--ls-primary-text-color);
+    border-radius: var(--cl-border-radius);
+    opacity: 0.8;
+    transition: 0.2s;
+}
+.block-ref mark {
+    padding: 0px 1px;
+    border-radius: 0px;
+}
+.block-ref .external-link {
+    text-underline-offset: 4px !important;
+}
+/******************************,
+**    Reference Panel    **
+******************************/
+
+/******************************,
+**    Embeds    **
+******************************/
+
+/******************************
+**    Block Children Border    **
+******************************/
+
+.block-children-left-border {
+    background-color: var(--cl-children-left-border, transparent);
+}
+.block-children {
+    border-left-color: var(--cl-children-border-color, var(--ls-guideline-color));
+}

@@ -71,7 +71,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 ********************************************/
 h1.title {
     color: hsl(var(--cl-primary));
-    font-family: "Raleway",-apple-system,system-ui,var(--ls-font-family),sans-serif;
+    font-family: "Poppins", "Raleway",-apple-system,system-ui,var(--ls-font-family),sans-serif;
 }
 /* Fixes the line-break for long page titles */
 .ls-page-title.title span {
@@ -105,8 +105,8 @@ Reference Panel Styling by Nick Martin
 ******************************/
 
 #main-container :not(.today-queries) .lazy-visibility .color-level, .cp__right-sidebar .color-level .color-level {
-    background-color: hsl(var(--cl-text-color), 0.05);
-    border: 1px solid hsl(var(--cl-text-color), 0.04);
+    background-color: hsl(var(--cl-background), 0.35);
+    border: 1px solid hsl(var(--cl-background), 0.25);
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 15px;
@@ -207,4 +207,13 @@ a svg {
 ******************************/
 .journal-item > .flex-1.journal.page > .flex.flex-col + #today-queries + .flex.flex-col {
     margin-top: 30px;
+}
+
+/******************************
+**    Embeds    **
+******************************/
+.color-level.embed-block.bg-base-2 {
+    background-color: hsl(var(--cl-background), 0.4);
+    border: 1px solid hsl(var(--cl-background), 0.3);
+    border-radius: 2px;
 }

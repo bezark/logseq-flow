@@ -5,21 +5,10 @@ html[data-theme='dark'] {
     --background-color-h: 190;
     --background-color-s: 31%;
     --background-color-l: 10%;
-    --secondary-color-h: 5;
-    --secondary-color-s: 62%;
-    --secondary-color-l: 62%;
+    --cl-background: 190,31%,20%;
     --cl-secondary: 5,62%,62%;
-    --primary-color-h: 185;
-    --primary-color-s: 55%;
-    --primary-color-l: 50%;
     --cl-primary: 185,55%,50%;
-    --accent-color-h: 149;
-    --accent-color-s: 58%;
-    --accent-color-l: 74%;
     --cl-accent: 149,58%,74%;
-    --primary-text-h: 140;
-    --primary-text-s: 11%;
-    --primary-text-l: 78%;
     --cl-text-color: 140,11%,78%;
 }
 
@@ -28,20 +17,9 @@ html[data-theme='light'] {
     --background-color-h: 190;
     --background-color-s: 31%;
     --background-color-l: 98%;
-    --secondary-color-h: 353;
-    --secondary-color-s: 86%;
-    --secondary-color-l: 54%;
+    --cl-background: 190,31%,88%;
     --cl-secondary: 353,86%,54%;
-    --primary-color-h: 185;
-    --primary-color-s: 100%;
-    --primary-color-l: 35%;
     --cl-primary: 185,100%,35%;
-    --accent-color-h: 168;
-    --accent-color-s: 53%;
-    --accent-color-l: 48%;
     --cl-accent: 168,53%,48%;
-    --primary-text-h: 215;
-    --primary-text-s: 50%;
-    --primary-text-l: 23%;
     --cl-text-color: 215,50%,23%;
 }

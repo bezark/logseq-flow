@@ -5,6 +5,7 @@ html[data-theme='dark'] {
     --background-color-h: 229;
     --background-color-s: 19%;
     --background-color-l: 23%;
+    --cl-background: 229,19%,33%;
     --cl-text-color: 227, 70%, 87%;
     --cl-primary: 96, 44%, 68%;
     --cl-secondary: 172, 39%, 65%;

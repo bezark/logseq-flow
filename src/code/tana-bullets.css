@@ -53,16 +53,16 @@ by Losgeq standards an empty data-ref attribute will show as "[]" */
 /* This will mark only the parent blocks red if there's a child block with a task item. 
 We don't really care about highlighting the block itself that's marked as a task item */
 .dark-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
-    background-color: rgb(239 68 68 / 100%) !important;
+    background-color: hsl(var(--cl-accent)) !important;
 }
 .dark-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
-    background-color: rgb(239 68 68 / 20%) !important;
-    border: 1px dashed rgb(239 68 68 / 30%) !important;
+    background-color: hsl(var(--cl-accent), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-accent), 0.3) !important;
 }
 .white-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container .bullet {
-    background-color: rgb(248 113 113 / 100%) !important;
+    background-color: hsl(var(--cl-accent)) !important;
 }
 .white-theme :is([data-refs*='"todo"'], [data-refs*='["doing"'], [data-refs*='["now"']) > .flex-row > .mr-1 .bullet-container.bullet-closed {
-    background-color: rgb(248 113 113 / 20%) !important;
-    border: 1px dashed rgb(248 113 113 / 30%) !important;
+    background-color: hsl(var(--cl-accent), 0.2) !important;
+    border: 1px dashed hsl(var(--cl-accent), 0.3) !important;
 }
