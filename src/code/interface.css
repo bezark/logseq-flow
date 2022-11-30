@@ -71,7 +71,7 @@ a.flex.items-center.text-sm.font-medium.rounded-md.wrap-th:hover {
 ********************************************/
 h1.title {
     color: hsl(var(--cl-primary));
-    font-family: "Poppins", "Raleway",-apple-system,system-ui,var(--ls-font-family),sans-serif;
+    font-family: Inter;
 }
 /* Fixes the line-break for long page titles */
 .ls-page-title.title span {
