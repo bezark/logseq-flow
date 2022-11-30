@@ -152,6 +152,7 @@ html[data-theme='dark'] {
     --ls-highlight-color-blue: #1e3a8a80;
     --ls-highlight-color-purple: #581c8780;
     --ls-highlight-color-pink: #83184380;
+    --ls-success-text-color: var(--color-green-500);
 }
 
 .light-theme,
@@ -263,6 +264,7 @@ html[data-theme='light'] {
     --ls-highlight-color-blue: #60a5fa60;
     --ls-highlight-color-purple: #c084fc60;
     --ls-highlight-color-pink: #f472b660;
+    --ls-success-text-color: var(--color-green-500);
 }
 
 /********************************************
