@@ -8,7 +8,7 @@
 @import './logseq.css';
 
 :root {
-    --ls-font-family: "Euclid Circular A", "Poppins", "Rubik", "SF Pro Text", Inter, "FiraCode Nerd Font", system;
+    --ls-font-family: var(--cl-font-family, Inter);
     -webkit-font-smoothing: antialiased;
     --cl-background: var(--background-color-h), var(--background-color-s), var(--background-color-l);
     --cl-block-bullet-fix: 20px;
