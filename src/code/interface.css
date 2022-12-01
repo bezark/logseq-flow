@@ -2,12 +2,12 @@
          INTERFACE IMPROVEMENTS
 ********************************************/
 /* Match Button's to primary color */
-.ui__icon {
+.ui__icon:not(.ls-icon-filter) {
     color: hsl(var(--cl-primary));
 }
 
 /* Sets the colors for file icons, and other items */
-a svg {
+a:not(.filter) svg {
     color: hsl(var(--cl-primary)) !important;
 }
 
@@ -195,11 +195,6 @@ span.mx-2.opacity-50:before {
 /* Adds some color to the ellipsis */
 .breadcrumb.block-parents.flex-row.flex-1.my-2 > .opacity-70 {
     color: hsl(var(--cl-primary));
-}
-
-/* Block Control Arrow */
-a svg {
-    color: var(--ls-block-bullet-color);
 }
 
 /******************************
