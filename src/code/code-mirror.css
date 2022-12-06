@@ -1,0 +1,73 @@
+/********************************************
+               CODEMIRROR
+********************************************/
+
+.extensions__code-lang {
+    margin: 2px;
+    background-color: transparent;
+    color: hsl(var(--cl-secondary));
+}
+
+.cp__fenced-code-block {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cm-s-solarized.cm-s-dark, .cm-s-solarized.cm-s-light {
+    background-color: var(--bg-dark);
+    text-shadow: none;
+    color: var(--ls-primary-text-color);
+    border: 0px solid var(--bg-color-2);
+    border-radius: 4px;
+    box-shadow: 0 0px 10px 2px rgb(0 0 0 / 10%);
+    padding-right: 10px;
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-gutters, .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+    background-color: var(--bg-dark);
+}
+.color-level .cm-s-solarized.cm-s-dark, .color-level .cm-s-solarized.cm-s-light {
+    background-color: var(--bg-dark);
+    text-shadow: none;
+    color: var(--ls-primary-text-color);
+}
+.color-level .cm-s-solarized.cm-s-dark .CodeMirror-gutters, .color-level .cm-s-solarized.cm-s-light .CodeMirror-gutters {
+    background-color: var(--bg-dark);
+}
+.cm-s-solarized.cm-s-dark .CodeMirror-linenumber, .cm-s-solarized.cm-s-light .CodeMirror-linenumber {
+    text-shadow: none;
+    color: var(--ls-secondary-text-color);
+    text-align: -webkit-center;
+}
+
+.extensions__code-lang {
+    color: hsl(var(--cl-secondary));
+}
+
+/* === Coloring CodeMirror Keywords === */
+.cm-s-solarized .cm-keyword {
+    color: hsl(var(--cl-primary));
+}
+.cm-s-solarized .cm-operator {
+    color: hsl(var(--cl-primary));
+}
+.cm-s-solarized .cm-property {
+    color: hsl(var(--cl-secondary));
+}
+.cm-s-solarized .cm-builtin {
+    color: hsl(var(--cl-secondary));
+}
+.cm-s-solarized .cm-number {
+    color: var(--color-accent);
+}
+.cm-s-solarized .cm-string {
+    color: var(--color-accent);
+}
+.cm-s-solarized .cm-comment {
+    color: slategray;
+}
+.cm-s-solarized .cm-variable {
+    color: var(--ls-primary-text-color);
+}
+.cm-s-solarized .cm-def,
+.cm-s-solarized .cm-attribute {
+    color: hsl(var(--cl-primary));
+}
