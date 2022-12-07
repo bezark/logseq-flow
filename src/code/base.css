@@ -12,7 +12,7 @@
     -webkit-font-smoothing: antialiased;
     --cl-background: var(--background-color-h), var(--background-color-s), var(--background-color-l);
     --cl-block-bullet-fix: 20px;
-    --ls-main-content-max-width: var(--cl-page-width, 1000px);
+    --ls-main-content-max-width: var(--cl-page-width, 750px);
     --ls-main-content-max-width-wide: 100%;
     --ls-page-title-size: 28px;
     --ls-left-sidebar-width: 200px;
@@ -626,3 +626,27 @@ th {
 .my-2.color-level.px-2 .foldable-title:hover:before {
     color: hsl(var(--cl-primary));
 }
+
+
+/*Hidden Top Bar */
+
+@media (hover: hover) { 
+  
+    .cp__header, 
+    .cp__right-sidebar-topbar { 
+      height: 10px; 
+      opacity: 0; 
+      transition: all 150ms ease-in-out; 
+    } 
+   
+    .cp__header:hover, 
+    .cp__right-sidebar-topbar:hover { 
+      height: 44px; 
+      opacity: 1; 
+    } 
+   
+    .r.flex { 
+      flex-grow: 1; 
+    } 
+  }
+ 

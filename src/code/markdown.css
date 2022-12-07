@@ -286,23 +286,23 @@ h3.todo .block-marker.TODO:before, h3.todo .block-marker.DOING:before, h3.todo .
 }
 */
 .block-marker.TODO:before {
-    content: "T";
+    content: "TODO";
 }
 .block-marker.DOING:before {
-    content: "D";
+    content: "DOING";
 }
 .block-marker.NOW:before {
-    content: "N";
+    content: "NOW";
 }
 .block-marker.WAIT:before {
-    content: "W";
+    content: "WAIT";
 }
 
 .block-marker.waiting:before {
-    content: "W";
+    content: "WAITING";
 }
 .block-marker.LATER:before {
-    content: "L";
+    content: "LATER";
 }
 .mr-1.flex.flex-row.items-center.sm\:mr-2 {
     position: relative;
