@@ -10,7 +10,6 @@ html[data-theme='dark'] {
     --cl-primary: 197,100%,77%;
     --cl-secondary: 350,100%,81%;
     --cl-accent: 39,100%,71%;
-    --cl-gray: rgb(140,166,166);
 }
 
 .white-theme,
@@ -19,9 +18,8 @@ html[data-theme='light'] {
     --background-color-s: 0%;
     --background-color-l: 98%;
     --cl-background: 0,0%,88%;
-    --cl-text-color: 200,16%,52%;
+    --cl-text-color: 200,16%,42%;
     --cl-primary: 184,52%,44%;
-    --cl-secondary: 36,77%,56%;
-    --cl-accent: 85,40%,48%;
-    --cl-gray: rgb(144,164,174);
+    --cl-secondary: 275, 70%, 55%;
+    --cl-accent: 76, 40%, 54%;
 }

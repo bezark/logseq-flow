@@ -22,7 +22,7 @@
 /******************************,
 **    Block References    **
 ******************************/
-.block-ref:before {
+/* .block-ref:before {
     content: " ";
     color: hsl(var(--cl-primary), 1);
     vertical-align: middle;
@@ -33,7 +33,7 @@
     top: -1.5px;
     margin-right: 5px;
     margin-left: 2px;
-}
+} */
 .block-ref {
     border-bottom: 0px solid var(--ls-guideline-color);
     color: var(--ls-primary-text-color);

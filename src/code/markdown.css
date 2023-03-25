@@ -603,6 +603,6 @@ a.tag:hover {
     color: hsl(var(--cl-accent), 1);
     opacity: 1;
 }
-.ls-block :is(h1, h2, h3, h4, h5, h6) a.tag {
+/* .ls-block :is(h1, h2, h3, h4, h5, h6) a.tag {
     font-weight: bold;
-}
+} */
